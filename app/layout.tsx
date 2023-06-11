@@ -1,3 +1,4 @@
+import Topnavbar from '@/components/topnavbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className='flex justify-center'>
+        <main className='border xl:w-[1440px] w-full'>
+          <Topnavbar />
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
