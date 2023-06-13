@@ -6,7 +6,7 @@ import { ArrowLongRightIcon } from '@heroicons/react/24/outline'
 
 const ProjectCard = () => {
   return (
-    <div className='flex items-center gap-12 even:flex-row-reverse'>
+    <div className='flex flex-col items-center gap-12 md:odd:flex-row md:even:flex-row-reverse'>
       <div className="image-ct">
         <Image src={ProjectImage} width={610} height={560} alt='project image' />
       </div>

@@ -3,7 +3,7 @@ import React from 'react'
 function Herosection() {
   return (
     <section className='xl:h-[42.875rem] hero-background'>
-      <div className="flex flex-col items-center h-full content-container py-[6.25rem] gap-12">
+      <div className="flex flex-col items-center h-full content-container py-[6.25rem] px-8 gap-12">
         <h1 className='md:text-7xl text-4xl font-sora !leading-[100%] text-center'><span className='radial-gradient font-sora'>Good</span> Design <br />
           tell no tales
         </h1>
