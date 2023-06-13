@@ -14,6 +14,15 @@ background-clip: text;
 text-fill-color: transparent;
 }
 
+.black-radial-gradient {
+  background: radial-gradient(105.22% 228.71% at 10.74% -24.35%, #FDFDFD 0%, #000000 52.08%, rgba(254, 254, 254, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+
 .hero-background{
   background: url('/images/herobackground.png');
   background-size: cover;
