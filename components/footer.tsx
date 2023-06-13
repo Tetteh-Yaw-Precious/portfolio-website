@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center py-20 border ">
-      <div className=" flex justify-center py-32 h-[31.25rem] rounded-[16px] xl:w-[1240px] items-center bg-brandblack"
+    <footer className="flex justify-center md:py-16 ">
+      <div className=" flex justify-center py-32 h-[31.25rem] rounded-[16px] w-[77.5rem] items-center bg-brandblack"
         id="contact">
 
         <div className="flex items-center justify-center w-full">
-          <div className=" md:w-[70%] flex flex-col items-center justify-center gap-8">
+          <div className=" w-[100%] flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col items-center w-full md:flex md:flex-col md:items-center md:justify-center">
               <h1 className="md:text-xl font-outfit font-extralight md:text-start text-center !text-white">
                 Let’s stay in touch, it’d be nice speaking to you
@@ -32,7 +32,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="hhttps://www.behance.net/yaw_precious"
-                className="flex items-center font-outfit justify-center gap-2 px-10 rounded-[8px] py-3 text-lg text-center text-white shadow-neubrutalism-white transition ease-in border-2 delay-2"
+                className="flex items-center font-outfit justify-center gap-2 px-10 rounded-[0.5rem] py-3 text-lg text-center text-white shadow-neubrutalism-white transition ease-in border-2 delay-2"
               >
                 <div className="flex border-white ">
                   <i className="text-white ri-behance-line ri-lg"></i>
@@ -59,7 +59,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://github.com/Tetteh-Yaw-Precious"
-                className="flex items-center font-outfit justify-center gap-2 px-12 py-3 text-lg text-center text-white transition shadow-neubrutalism-white ease-in border-2 rounded-[8px] delay-2 rounded-75xl"
+                className="flex items-center font-outfit justify-center gap-2 px-12 py-3 text-lg text-center text-white transition shadow-neubrutalism-white ease-in border-2 rounded-[0.5rem] delay-2 rounded-75xl"
               >
                 <div className="flex border-white ">
                   <i className="text-white ri-github-line ri-lg"></i>

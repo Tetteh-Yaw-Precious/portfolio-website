@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='flex justify-center'>
-        <main className='border xl:w-[1440px] w-full'>
+        <main className='xl:w-[90rem] w-full'>
           <Topnavbar />
           {children}
           <Footer />
