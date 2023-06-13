@@ -12,18 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      gray: {
-        25: '#fcfcfd',
-        50: '#f9fafb',
-        100: '#f2f4f7',
-        200: '#e4e7ec',
-        300: '#d0d5dd',
-        400: '#98a2b3',
-        500: '#667085',
-        600: '#475467',
-        700: '#344054',
-        800: '#1d2939',
-        900: '#101828',
+      colors: {
+        brandblack: '#100300',
+        gray: {
+          25: '#fcfcfd',
+          50: '#f9fafb',
+          100: '#f2f4f7',
+          200: '#e4e7ec',
+          300: '#d0d5dd',
+          400: '#98a2b3',
+          500: '#667085',
+          600: '#475467',
+          700: '#344054',
+          800: '#1d2939',
+          900: '#101828',
+        },
       },
       fontSize: 
    { xs: '0.625rem',
@@ -38,7 +41,10 @@ module.exports = {
      '6xl': '4.75rem',
      '7xl': '5.9375rem' },
   fontFamily: { outfit: 'Outfit', 'mona-sans': 'Mona-Sans', sora: 'Sora' },
-  boxShadow: { 'neubrutalism-button': '4px 4px 0px 0px rgba(16,3,0,1)' },
+  boxShadow: {
+     'neubrutalism-button': '4px 4px 0px 0px rgba(16,3,0,1)',
+     "neubrutalism-white": "4px 4px 0px 0px rgba(255,255,255,1)"
+ },
   borderRadius: 
   { none: '0',
     xs: '0.06837993115186691rem',
