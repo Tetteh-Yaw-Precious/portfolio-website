@@ -1,24 +1,13 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import myLogo from '../public/images/logo.png'
-import { Bars3Icon } from '@heroicons/react/24/outline'
+
+import React, { useEffect } from 'react'
 import { gsap } from 'gsap';
-import Link from 'next/link'
+// import '@/animation/testgsap'
 
-function Topnavbar() {
-
-  const [menuOpen, setMenuOpen] = useState(false)
-
+const TestHero = () => {
   let menuBar = gsap.timeline();
   let tl = gsap.timeline({ paused: false });
 
-  const menuLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Work', href: '#' },
-    { label: 'Contact', href: '#' },
-  ]
 
   useEffect(() => {
     // menuBar.fromTo('.bar-1', {
@@ -52,6 +41,11 @@ function Topnavbar() {
     //   ease: 'power2.inOut'
     // }, 'start');
 
+
+    // menuBar.reverse();
+
+
+
     tl.to('.fullpage-menu', {
       duration: 0,
       display: "block",
@@ -83,22 +77,33 @@ function Topnavbar() {
     tl.reverse();
   }, [menuBar, tl])
 
-  const handlemenu = (): void => {
-    menuBar.reversed(!menuBar.reversed());
-    tl.reversed(!tl.reversed());
-  }
+
+
 
 
   return (
     <div>
-      <div className="header-row">
-        <Image src={myLogo} width={'143'} alt="Yaw Precious Logo" />
-        <a className='z-50 p-2 !border shadow-neubrutalism-button hover:shadow-none border-black rounded-full menu-toggle' id="menuToggle" onClick={() => {
-          handlemenu()
-        }}>
-          <Bars3Icon className='w-6 h-6 md:w-12 md:h-12' />
-        </a>
-      </div>
+      <header>
+        <div className="header-row">
+          <div className="brand-logo">
+            <a href="#">
+              {/* <img src="white-logo.svg" alt="" /> */}
+            </a>
+          </div>
+          <button className="menu-toggle" id="menuToggle" onClick={() => {
+            menuBar.reversed(!menuBar.reversed());
+            tl.reversed(!tl.reversed());
+          }}>
+            <svg viewBox="0 0 12 10" className="hamburger" height="40px" width="40px">
+              <path d="M10,2 L2,2" className="bar-1"></path>
+              <path d="M2,5 L10,5" className="bar-2"></path>
+              <path d="M10,8 L2,8" className="bar-3"></path>
+
+            </svg>
+          </button>
+        </div>
+      </header>
+
       <section className="fullpage-menu">
         <div className="fullpage-menu-inner">
           <div className="menu-bg">
@@ -109,30 +114,30 @@ function Topnavbar() {
 
           <nav>
             <ul className="main-menu">
-              {menuLinks.map((menuItem, index) => (
-                <li key={index}>
-                  <Link href={menuItem.href} onClick={handlemenu}>
-                    {menuItem.label}
-                  </Link>
-                </li>
-              ))}
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Work</a></li>
+              <li><a href="">Contact</a></li>
             </ul>
           </nav>
 
           <div className="header-nav-footer">
-            <ul className="social-links font-outfit">
+            <ul className="social-links">
               <li><a href="#">Facebook</a></li>
               <li><a href="#">Instagram</a></li>
               <li><a href="#">Twitter</a></li>
-              <li className='text-white'>&copy;2023</li>
+              <li>&copy;2021</li>
             </ul>
           </div>
 
         </div>
       </section>
 
+      <section className="placeholder-title">
+        <h1>Fullpage Navigation Menu with <span>GSAP</span></h1>
+      </section>
     </div>
   )
 }
 
-export default Topnavbar
+export default TestHero
