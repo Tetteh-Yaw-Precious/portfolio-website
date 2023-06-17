@@ -15,9 +15,10 @@ function Topnavbar() {
 
   const menuLinks = [
     { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Work', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'Projects', href: '#' },
+    { label: 'Blog', href: '#' },
+    { label: 'Resources', href: '#' },
+    { label: 'Contact Me', href: '#' },
   ]
 
   useEffect(() => {
@@ -108,7 +109,7 @@ function Topnavbar() {
           </div>
 
           <nav>
-            <ul className="main-menu">
+            <ul className="main-menu font-outfit">
               {menuLinks.map((menuItem, index) => (
                 <li key={index}>
                   <Link href={menuItem.href} onClick={handlemenu}>
@@ -120,7 +121,7 @@ function Topnavbar() {
           </nav>
 
           <div className="header-nav-footer">
-            <ul className="social-links font-outfit">
+            <ul className="social-links font-sora">
               <li><a href="#">Facebook</a></li>
               <li><a href="#">Instagram</a></li>
               <li><a href="#">Twitter</a></li>
