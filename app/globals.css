@@ -111,7 +111,7 @@ header{
 .menu-bg span{
     height: 33.334%;
     width: 100%;
-    background: #1E0900;
+    background: #110500;
     display: block;
 }
 
@@ -185,6 +185,72 @@ nav li:hover{
     .social-links li{
         font-size: 16px;
     }
+}
+
+
+/* Loading Page */
+.container {
+  background-color: black;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #110500;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+#svg {
+  height: 100px;
+  width: 300px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 1px;
+  stroke-dasharray: 4500;
+  animation: draw 40s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+
+  }
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  font-weight: regular;
 }
 
 @tailwind base;
