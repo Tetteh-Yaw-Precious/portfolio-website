@@ -3,34 +3,41 @@ import React, { useEffect } from 'react'
 import { gsap } from 'gsap';
 
 const PageLoader = () => {
+
+  const tl = gsap.timeline({ paused: false })
   useEffect(() => {
-    gsap.fromTo(
+    tl.fromTo(
       ".loading-page",
-      { opacity: 1 },
       {
-        y: 0,
+        opacity: 1,
+        ease: 'Expo.easeInOut',
+      },
+      {
+        y: '100%',
+        duration: 0.7,
         display: "none",
-        opacity: 0,
-        duration: 0.5,
-        background: 'none !important',
-        delay: 4,
+        position: "absolute",
+        top: 0,
+        left: 0,
+        delay: 2.5,
+        ease: 'Expo.easeInOut',
       }
     );
 
-    gsap.fromTo(
-      ".logo-name",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        delay: 0.5,
-      }
-    );
-  }, [])
+    // tl.fromTo(
+    //   ".logo-name",
+    //   {
+    //     y: 0,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     y: 50,
+    //     opacity: 1,
+    //     duration: 4,
+    //     delay: 0.4,
+    //   }
+    // );
+  }, [tl])
 
 
 
