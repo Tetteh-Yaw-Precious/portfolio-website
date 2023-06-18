@@ -17,6 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="description" content="Hello I'm Yaw Precious, a Product Designer.
+        I love to untangle difficult problems by tagging along from conceptualisation to 
+        the actualisation of a product. Skills: Brand Strategy & Design | User Research | UI Design | ReactJs | NextJs <typescript>" />
+      </head>
       <body className='flex justify-center'>
         <main className='xl:w-[90rem] w-full'>
           <Topnavbar />
