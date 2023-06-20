@@ -6,8 +6,8 @@ import Link from 'next/link'
 const NewsCard = () => {
   return (
     <Link href={'#'} className='hover:cursor-pointer'>
-      <div className='w-[17.5rem] border border-black min-h-[19rem] rounded-[8px] flex flex-col gap-4 items-center py-[10px]'>
-        <div className="image-ct w-[260px] h-[200px] rounded-[8px] relative">
+      <div className=' w-[260px] rounded-[8px] flex flex-col gap-4'>
+        <div className="image-ct h-[200px] rounded-[8px] relative">
           <Image src={newsImage} alt='' />
           <p className='absolute p-2 text-sm font-sora bg-white opacity-90 rounded-[8px] text-center left-3 bottom-3 min-w-28 !font-normal'>Brand Design</p>
         </div>

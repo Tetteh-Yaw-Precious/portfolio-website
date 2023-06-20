@@ -2,6 +2,7 @@ import Herosection from "@/components/homepage/herosection";
 import NewsSection from "@/components/homepage/newssection";
 import PageLoader from "@/components/homepage/pageLoader";
 import ProjectSection from "@/components/homepage/projectsection";
+import ResourcesSection from "@/components/homepage/resourcessection";
 import TestHero from "@/components/homepage/testhero";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Herosection />
       <ProjectSection />
       <NewsSection />
+      <ResourcesSection />
     </main>
   )
 }

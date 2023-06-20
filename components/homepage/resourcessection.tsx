@@ -1,11 +1,11 @@
 import React from 'react'
-import NewsCard from './newscard'
+import NewsCard from './newscard';
 
-const NewsSection = () => {
+const ResourcesSection = () => {
   return (
     <div className="flex flex-col items-center gap-12 px-8 py-12">
       <div>
-        <h2 className="text-3xl text-center md:text-6xl heading-text font-sora"><span className="black-radial-gradient">My</span> NewsLetter</h2>
+        <h2 className="text-3xl text-center md:text-6xl heading-text font-sora"><span className="black-radial-gradient">The</span> Gift Shop</h2>
         <p className='md:text-xl text-lg text-center !font-extralight font-outfit'>I love to share my ideas on a few topics ranging from design & more</p>
       </div>
       <div className="flex gap-4 news-list">
@@ -21,4 +21,4 @@ const NewsSection = () => {
   )
 }
 
-export default NewsSection
+export default ResourcesSection;
