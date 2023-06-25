@@ -1,18 +1,19 @@
-'use client'
-import { client } from '@/client'
+
 import { useEffect } from 'react';
 import { groq } from 'next-sanity';
-
-
-async function getProjects() {
-  const res = await client.fetch(groq`*[_title == "Projects"]`)
-  return res
+import { getProject } from '@/sanity/sanity-utils';
+type props = {
+  params: { project: string }
 }
-export default function Page({ params }: { params: { slug: string } }) {
 
-  const data = getProjects()
-  useEffect(() => {
-    console.log(data)
-  }, [data])
-  return <div>My Post: {params.slug}</div>
+export default async function Page({ params }: props) {
+  const slug = params.project
+
+  const project = getProject(slug)
+  console.log(project)
+  return (
+    <div>
+
+    </div>
+  )
 }
