@@ -9,12 +9,11 @@ type props = {
 
 
 
-export default async function Page({ params }: props) {
+export default async function Page({ params }: props, name: any) {
   const slug = params.slug
   console.log(slug[0])
-
-  console.log(slug[0])
-  const project = getProject(slug[0])
+  const project = await getProject(slug[0])
+  console.log(project)
 
   // useEffect(() => {
   //   console.log(slug[0])
@@ -24,7 +23,7 @@ export default async function Page({ params }: props) {
 
   return (
     <div>
-
+      {project.name}
     </div>
   )
 }
