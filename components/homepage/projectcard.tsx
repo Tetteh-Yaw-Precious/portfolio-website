@@ -9,9 +9,10 @@ type projectTypes = {
   image?: 'string' | any,
   title?: 'string' | any,
   shortdescription?: 'string' | any
+  link: 'string' | any
 }
 
-const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, ...props }) => {
+const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, ...props }) => {
   return (
     <div className='flex flex-col items-center gap-12 md:odd:flex-row md:even:flex-row-reverse'>
       <div className="image-ct">
@@ -26,7 +27,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, ...prop
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <Link href={'#'} className='text-base font-light underline font-outfit'>
+          <Link href={link} className='text-base font-light underline font-outfit'>
             Read Case Study
           </Link>
           <ArrowLongRightIcon className='w-6 h-6' />
