@@ -21,7 +21,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, .
       <div className="flex flex-col gap-8 content-ct">
         <div className="flex flex-col gap-2 content">
           <h5 className='text-2xl font-semibold font-sora'>{title}</h5>
-          <div className='text-base font-outfit font-light border w-[31rem] leading-[150%]'>
+          <div className='text-base font-outfit font-light w-[31rem] leading-[150%]'>
             <PortableText value={shortdescription} />
           </div>
         </div>
