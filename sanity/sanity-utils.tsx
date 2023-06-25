@@ -33,7 +33,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
     apiVersion: "2022-02-03"
   })
 
-  const result = client.fetch(
+  return client.fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
@@ -46,5 +46,4 @@ export async function getProject(slug: string): Promise<ProjectType> {
     { slug }
   )
 
-  return result;
 }
