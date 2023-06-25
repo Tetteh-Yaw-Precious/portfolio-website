@@ -100,7 +100,7 @@ function Topnavbar() {
           <Bars3Icon className='w-6 h-6 md:w-12 md:h-12' />
         </a>
       </div>
-      <section className="fullpage-menu">
+      {/* <section className="fullpage-menu">
         <div className="fullpage-menu-inner">
           <div className="menu-bg">
             <span></span>
@@ -130,7 +130,7 @@ function Topnavbar() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
     </div>
   )

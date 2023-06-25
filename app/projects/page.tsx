@@ -1,10 +1,18 @@
-import Herosection from '@/components/projects/herosection';
 import React from 'react'
+import Herosection from '@/components/projects/herosection';
+import { getProjects } from "@/sanity/sanity-utils";
+import '@sanity/asset-utils'
 
-const Projects = () => {
+export default function Project() {
+
   return (
-    <Herosection />
+    <>
+
+      <div className='h-16 border-4 border-red-500'>
+        kljlkj
+      </div>
+    </>
   )
 }
 
-export default Projects;
+

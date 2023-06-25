@@ -4,12 +4,12 @@ function Herosection() {
   return (
     <section className='xl:h-[30.875rem] hero-background'>
       <div className="flex flex-col items-center h-full content-container py-[6.25rem] px-8 gap-20">
-        <h1 className='md:text-6xl font-medium text-4xl font-sora !leading-[100%] w-[840px] text-center'>
+        <h1 className='md:text-6xl font-semibold text-4xl font-sora !leading-[100%] w-[840px] text-center'>
           I love to write about what I know
         </h1>
         <div className='flex gap-4'>
           <button className='w-56 border-2 md:text-lg text-base text-gray-700 rounded-[0.5rem] font-outfit border-black md:h-14 h-12 shadow-neubrutalism-button font-light'>
-            Explore my work
+            All
           </button>
           <button className='w-56 border-2 md:text-lg text-base text-gray-700 rounded-[0.5rem] font-outfit border-black md:h-14 h-12 shadow-neubrutalism-button font-light'>
             Design
