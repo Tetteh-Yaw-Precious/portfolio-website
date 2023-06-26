@@ -7,8 +7,6 @@ type props = {
   params: { slug: string }
 }
 
-
-
 export default async function Page({ params }: props, name: any) {
   const slug = params.slug
   console.log(slug[0])
