@@ -3,7 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/footer'
 import Head from 'next/head'
-
+import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -25,13 +25,17 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
 
       </Head>
+
       <body className='flex justify-center'>
-        <main className='xl:w-[90rem] w-full'>
-          <Topnavbar />
-          {children}
-          <Footer />
-        </main>
+        <Providers>
+          <main className='xl:w-[90rem] w-full'>
+            <Topnavbar />
+            {children}
+            <Footer />
+          </main>
+        </Providers>
       </body>
     </html>
+
   )
 }
