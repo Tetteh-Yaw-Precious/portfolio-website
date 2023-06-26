@@ -1,10 +1,8 @@
 import Topnavbar from '@/components/topnavbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
 import Footer from '@/components/footer'
 import Head from 'next/head'
 import { Providers } from './providers'
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Yaw Precious | Product Designer',
