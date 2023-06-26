@@ -251,34 +251,7 @@ nav li:hover{
   font-weight: regular;
 }
 
-.button-hover{
-        background: var(--white);
-        height: 75px;
-        border-radius: 10px 50px 50px;
-        /* border: solid 2px red;
-        box-shadow: 0px 8px 0px 0px black; */
-        display: inline-flex;
-        -webkit-box-align: center;
-        align-items: center;
-        text-decoration: none;
-        padding: 0px 70px;
-        font-size: 20px;
-        line-height: 26px;
-        font-weight: 700;
-        position: relative;
-        cursor: pointer;
-        z-index: 12;
-        transition: all 0.2s ease 0s;
-        transition-duration: 0.2s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
-        transition-property: all;
-}
 
-.button-hover:hover {
-    box-shadow: 2px 2px 0px 0px rgba(16,3,0,1);
-    transform: translateY(5px);
-}
 
 @tailwind base;
 @tailwind components;
