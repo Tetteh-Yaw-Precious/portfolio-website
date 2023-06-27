@@ -5,6 +5,7 @@ export type ProjectType = {
   _createdAt: Date
   name: string
   slug: string
+  thumbnail: string
   image: string
   url: string
   content: PortableTextBlock[]
