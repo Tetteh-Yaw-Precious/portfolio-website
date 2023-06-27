@@ -19,7 +19,8 @@ export async function getProjects(): Promise<ProjectType[]> {
       "image": image.asset->url,
       "thumbnail": thumbnail.asset->url,
       url,
-      content
+      content,
+      shortdescription
     }`
   )
 
@@ -39,11 +40,13 @@ export async function getProject(slug: string): Promise<ProjectType> {
       _id,
       _createdAt,
       name,
+      description,
       "slug": slug.current,
       "image": image.asset->url,
       "thumbnail": image.asset->url,
       url,
-      content
+      content,
+      shortdescription
     }`,
     { slug }
   )

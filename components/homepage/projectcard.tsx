@@ -10,6 +10,7 @@ type projectTypes = {
   title?: 'string' | any,
   shortdescription?: 'string' | any
   link: 'string' | any
+
 }
 
 const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, ...props }) => {

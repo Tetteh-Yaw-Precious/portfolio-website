@@ -26,7 +26,7 @@ const projectSection = async () => {
                 <option value=''>No property found</option>
               ) : projects?.map((project) => {
                 return (
-                  <ProjectCard title={project.name} shortdescription={project.content} image={project.image} key={project._id} link={`/projects/${project.slug}`} />
+                  <ProjectCard title={project.name} image={project.image} shortdescription={project.description} key={project._id} link={`/projects/${project.slug}`} />
                 )
               })}
             </div>
