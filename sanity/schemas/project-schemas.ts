@@ -11,6 +11,9 @@ const projectType = [
     title: 'Product Design', value: 'product-design'
   },
   {
+    title: 'Web Design', value: 'web-design'
+  },
+  {
     title: 'Brand Design', value: 'brand-design'
   },
   {
