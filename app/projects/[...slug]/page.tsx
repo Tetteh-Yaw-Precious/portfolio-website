@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import { groq } from 'next-sanity';
 import { getProject } from '@/sanity/sanity-utils';
+import Image from 'next/image';
+import { PortableText } from '@portabletext/react';
 type props = {
   params: { slug: string }
 }
@@ -13,15 +15,32 @@ export default async function Page({ params }: props, name: any) {
   const project = await getProject(slug[0])
   console.log(project)
 
-  // useEffect(() => {
-  //   console.log(slug[0])
-  //   const project = getProject(slug[0])
-  //   console.log(project)
-  // }, [])
-
   return (
-    <div>
-      {project.name}
-    </div>
+    <section className='case-study-detail px-[5%] flex flex-col gap-8'>
+      <div className="image-ct">
+        <Image src={project.image} width={1280} height={600} alt='project image' />
+      </div>
+      <div className='flex justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
+        <div className="flex-1 h-[4rem] px-8 border-r flex items-center justify-end w-full border-black role">
+          <div>
+            <h5 className='text-xl font-semibold text-blue-950 font-sora'>Role</h5>
+            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
+              <p >{project.role}</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 h-[6rem] px-8 flex items-center justify-end  role">
+          <div>
+            <h5 className='text-xl font-semibold text-blue-950 font-sora'>Project Duration</h5>
+            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
+              <p >{project.role}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border border-black case-study-content">
+        <PortableText value={project.content} />
+      </div>
+    </section>
   )
 }

@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+h1{
+    font-weight: 900;
+}
+
 .radial-gradient {
   background: radial-gradient(105.22% 228.71% at 10.74% -24.35%, 
   #FDFDFD 0%, #F45107 52.08%, rgba(254, 254, 254, 0) 100%);
