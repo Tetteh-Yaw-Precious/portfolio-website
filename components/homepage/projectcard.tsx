@@ -23,7 +23,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         <div className="flex flex-col gap-4 content">
           <div>
             <h5 className='text-xl font-semibold font-sora'>{title}</h5>
-            <h6 className='font-medium !text-gray-500 text-sm font-outfit'>Role: {role}</h6>
+            <h6 className='font-medium !text-gray-500 text-normal font-outfit'>Role: {role}</h6>
           </div>
           <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
             <p >{shortdescription}</p>
