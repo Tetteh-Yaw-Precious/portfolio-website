@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="flex items-center justify-center w-full">
           <div className=" w-[100%] flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col items-center w-full md:flex md:flex-col md:items-center md:justify-center">
-              <h1 className="md:text-xl font-outfit font-extralight md:text-start text-center !text-white">
+              <p className="md:text-xl font-outfit font-extralight md:text-start text-center !text-white">
                 Let’s stay in touch, it’d be nice speaking to you
-              </h1>
+              </p>
               {/* <div className="hidden md:block">
 						<hr className="w-32 h-1 my-2 text-white bg-white border rounded-2xl" />
 					</div> */}

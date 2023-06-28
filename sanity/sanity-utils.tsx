@@ -20,6 +20,7 @@ export async function getProjects(): Promise<ProjectType[]> {
       "thumbnail": thumbnail.asset->url,
       url,
       content,
+      duration,
       role,
       shortdescription
     }`
@@ -46,6 +47,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
       "thumbnail": image.asset->url,
       url,
       content,
+      duration,
       role,
       shortdescription
     }`,

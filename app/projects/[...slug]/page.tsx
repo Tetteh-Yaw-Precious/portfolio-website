@@ -23,7 +23,7 @@ export default async function Page({ params }: props, name: any) {
       <div className='flex justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
         <div className="flex-1 h-[4rem] px-8 border-r flex items-center justify-end w-full border-black role">
           <div>
-            <h5 className='text-xl font-semibold text-blue-950 font-sora'>Role</h5>
+            <p className='text-lg font-semibold text-blue-950 font-sora'>Role</p>
             <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
               <p >{project.role}</p>
             </div>
@@ -31,14 +31,14 @@ export default async function Page({ params }: props, name: any) {
         </div>
         <div className="flex-1 h-[6rem] px-8 flex items-center justify-end  role">
           <div>
-            <h5 className='text-xl font-semibold text-blue-950 font-sora'>Project Duration</h5>
+            <p className='text-lg font-semibold text-blue-950 font-sora'>Project Duration</p>
             <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
-              <p >{project.role}</p>
+              <p >{project.duration}</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="border border-black case-study-content">
+      <div className="case-study-content px-[10%]">
         <PortableText value={project.content} />
       </div>
     </section>

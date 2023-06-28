@@ -10,5 +10,6 @@ export type ProjectType = {
   url: string
   shortdescription: string
   role: string
-  content: PortableTextBlock[]
+  duration: string
+  content: PortableTextBlock[],
 }
