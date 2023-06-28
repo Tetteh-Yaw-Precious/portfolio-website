@@ -5,6 +5,7 @@ import { groq } from 'next-sanity';
 import { getProject } from '@/sanity/sanity-utils';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
+import { myPortableTextComponents } from '@/components/projects/richtextcomponents';
 type props = {
   params: { slug: string }
 }
@@ -38,8 +39,8 @@ export default async function Page({ params }: props, name: any) {
           </div>
         </div>
       </div>
-      <div className="case-study-content px-[10%]">
-        <PortableText value={project.content} />
+      <div className="case-study-content py-[2rem] px-[10%]">
+        <PortableText value={project.content} components={myPortableTextComponents} />
       </div>
     </section>
   )

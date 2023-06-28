@@ -26,7 +26,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, role, l
             <h6 className='font-medium !text-gray-500 text-normal font-outfit'>Role: {role}</h6>
           </div>
           <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
-            <PortableText value={shortdescription} />
+            <p>{shortdescription}</p>
           </div>
         </div>
 
