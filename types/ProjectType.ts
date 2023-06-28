@@ -9,5 +9,6 @@ export type ProjectType = {
   image: string
   url: string
   shortdescription: string
+  role: string
   content: PortableTextBlock[]
 }
