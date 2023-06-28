@@ -10,7 +10,6 @@ type projectTypes = {
   title?: 'string' | any,
   shortdescription?: 'string' | any
   link: 'string' | any
-
 }
 
 const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, ...props }) => {
@@ -23,7 +22,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, .
         <div className="flex flex-col gap-2 content">
           <h5 className='text-2xl font-semibold font-sora'>{title}</h5>
           <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
-            <PortableText value={shortdescription} />
+            <p >{shortdescription}</p>
           </div>
         </div>
 
