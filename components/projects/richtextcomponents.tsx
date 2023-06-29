@@ -8,13 +8,13 @@ export const myPortableTextComponents = {
   },
   block: {
     h1: (({ children }: any) => (
-      <h1 className='py-10 text-2xl font-medium font-outfit'>{children}</h1>
+      <h1 className='!pt-10 pb-2 text-2xl font-medium font-outfit'>{children}</h1>
     )),
     h2: (({ children }: any) => (
-      <h2 className='py-10 text-xl'>{children}</h2>
+      <h2 className='!pt-8 pb-2 text-xl'>{children}</h2>
     )),
     h3: (({ children }: any) => (
-      <h1 className='py-10 text-lg'>{children}</h1>
+      <h3 className='!py-2 text-lg'>{children}</h3>
     ))
   },
   marks: {
