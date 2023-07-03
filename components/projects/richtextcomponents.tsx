@@ -21,7 +21,7 @@ export const myPortableTextComponents = {
     link: ({ children, value }: any) => {
       const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
       return (
-        <a href={value.href} rel={rel} className='text-blue-700 underline hover:font-medium hover:text-blue-800'>
+        <a href={value.href} rel={rel} className='underline text-brandblack hover:font-medium hover:text-blue-800'>
           {children}
         </a>
       )
