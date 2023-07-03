@@ -37,7 +37,7 @@ export default async function Page({ params }: props, name: any) {
           </div>
         </div>
       </div>
-      <div className="case-study-content py-[2rem] px-[10%]">
+      <div className="case-study-content py-[2rem] md:px-[10%] px-[5%]">
         <PortableText value={project.content} components={myPortableTextComponents} />
       </div>
     </section>
