@@ -12,9 +12,7 @@ type props = {
 
 export default async function Page({ params }: props, name: any) {
   const slug = params.slug
-  console.log(slug[0])
   const project = await getProject(slug[0])
-  console.log(project)
 
   return (
     <section className='case-study-detail px-[5%] flex flex-col gap-8'>
