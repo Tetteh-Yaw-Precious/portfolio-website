@@ -19,8 +19,8 @@ export default async function Page({ params }: props, name: any) {
       <div className="image-ct">
         <Image src={project.image} width={1280} height={600} alt='project image' />
       </div>
-      <div className='flex justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
-        <div className="flex-1 h-[4rem] px-8 border-r flex items-center justify-end w-full border-black role">
+      <div className='flex md:flex-row flex-col justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
+        <div className="flex-1 h-[4rem] md:px-8 px-0 md:border-r md:border-b-0 border-b md:py-0 py-4 flex items-center md:justify-end justify-start w-full border-black role">
           <div>
             <p className='text-lg font-semibold text-blue-950 font-sora'>Role</p>
             <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
@@ -28,7 +28,7 @@ export default async function Page({ params }: props, name: any) {
             </div>
           </div>
         </div>
-        <div className="flex-1 h-[6rem] px-8 flex items-center justify-end  role">
+        <div className="flex-1 h-[6rem] md:px-8 px-0 md:py-0 py-4 flex md:items-center  justify-start w-full  role">
           <div>
             <p className='text-lg font-semibold text-blue-950 font-sora'>Project Duration</p>
             <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
