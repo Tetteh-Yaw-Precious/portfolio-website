@@ -4,8 +4,7 @@ import './globals.css'
 import Footer from '@/components/footer'
 import Head from 'next/head'
 import { Providers } from './providers'
-import { useEffect, useState } from 'react'
-import { useShowStore } from '@/context/context'
+
 
 // export const metadata = {
 //   title: 'Yaw Precious | Product Designer',
@@ -21,13 +20,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="description" content="Hello I'm Yaw Precious, a Product Designer.
         I love to untangle difficult problems by tagging along from conceptualisation to 
         the actualisation of a product. Skills: Brand Strategy & Design | User Research | UI Design | ReactJs | NextJs <typescript>" />
         <meta charSet="UTF-8" />
 
-      </Head>
+      </head>
 
       <body className='flex justify-center'>
         <Providers>
