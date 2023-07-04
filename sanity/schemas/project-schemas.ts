@@ -71,6 +71,10 @@ export const project = {
       name: "role",
       title: "Role",
       type: "string",
+    }, {
+      name: "status",
+      title: "Project Status",
+      type: "string",
     },
     {
       name: "shortdescription",
