@@ -7,12 +7,13 @@ import { useEffect } from 'react'
 
 export default function AdminPage() {
 
-  const { showNav, setShowNav } = useShowStore()
+  const { showNav, setShowNav, setShowFooter, showFooter } = useShowStore()
 
   useEffect(() => {
     setShowNav(false)
+    setShowFooter(false)
     console.log(showNav)
-  }, [setShowNav, showNav])
+  }, [setShowNav, showNav, setShowFooter])
 
   return <NextStudio config={config} />
 }
