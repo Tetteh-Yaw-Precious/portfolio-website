@@ -17,8 +17,8 @@ export default function Home() {
       <PageLoader />
       <Herosection />
       <ProjectSection />
-      <NewsSection />
-      <ResourcesSection />
+      {/* <NewsSection />
+      <ResourcesSection /> */}
     </main>
   )
 }

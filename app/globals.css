@@ -69,16 +69,9 @@ text-fill-color: transparent;
 
 /* Header start */
 
-header{
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
 .header-row{
-    padding:40px 5%;
+    padding:20px 5%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +194,7 @@ nav li:hover{
 
 
 /* Loading Page */
-.container {
+.loadingContainer {
   background-color: black;
   color: #fff;
   height: 100%;
@@ -232,7 +225,7 @@ nav li:hover{
   width: 300px;
   stroke: white;
   fill-opacity: 0;
-  stroke-width: 1px;
+  strokeWidth: 1px;
   stroke-dasharray: 4500;
   animation: draw 40s ease;
 }
@@ -267,8 +260,6 @@ nav li:hover{
         background: var(--white);
         height: 75px;
         border-radius: 10px 50px 50px;
-        /* border: solid 2px red;
-        box-shadow: 0px 8px 0px 0px black; */
         display: inline-flex;
         -webkit-box-align: center;
         align-items: center;
@@ -277,9 +268,7 @@ nav li:hover{
         font-size: 20px;
         line-height: 26px;
         font-weight: 700;
-        position: relative;
         cursor: pointer;
-        z-index: 12;
         transition: all 0.2s ease 0s;
         transition-duration: 0.2s;
         transition-timing-function: ease;
@@ -291,6 +280,32 @@ nav li:hover{
     box-shadow: 2px 2px 0px 0px rgba(16,3,0,1);
     transform: translateY(5px);
 }
+
+.white-button-hover{
+    background: var(--white);
+    border-radius: 20rem;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+
+
+.white-button-hover:hover {
+    box-shadow: 2px 2px 0px 0px rgb(255, 255, 255);
+    transform: translateY(5px);
+}
+
 
 @tailwind base;
 @tailwind components;
