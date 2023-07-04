@@ -12,4 +12,5 @@ export type ProjectType = {
   role: string
   duration: string
   content: PortableTextBlock[],
+  status: string
 }

@@ -11,9 +11,13 @@ type projectTypes = {
   shortdescription?: 'string' | any
   link: 'string' | any
   role: string
+  status: string
 }
 
-const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, role, ...props }) => {
+
+
+const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, role, status, ...props }) => {
+  console.log(status)
   return (
     <div className='flex flex-col items-center w-full gap-12 md:odd:flex-row md:even:flex-row-reverse'>
       <div className="image-ct">
@@ -31,10 +35,11 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <Link href={link} className='text-base font-light underline font-outfit'>
-            Read Case Study
+          <Link href={status === "Complete" ? link : '#'} className='text-base font-light underline font-outfit'>
+            {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
           </Link>
-          <ArrowLongRightIcon className='w-6 h-6' />
+          {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6' />) : ''}
+
         </div>
       </div>
 

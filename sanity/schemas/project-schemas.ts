@@ -44,6 +44,7 @@ export const project = {
         }
       ]
     },
+
     {
       name: "thumbnail",
       title: "Thumnail Image",
@@ -74,6 +75,11 @@ export const project = {
     }, {
       name: "status",
       title: "Project Status",
+      type: "string",
+    },
+    {
+      name: "showcase",
+      title: "showcase",
       type: "string",
     },
     {

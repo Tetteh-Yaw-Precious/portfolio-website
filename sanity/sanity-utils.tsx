@@ -11,7 +11,7 @@ export async function getProjects(): Promise<ProjectType[]> {
   })
 
   const result = client.fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project" && showcase == 'forshowcase']{
       _id,
       _createdAt,
       name,
@@ -22,7 +22,8 @@ export async function getProjects(): Promise<ProjectType[]> {
       content,
       duration,
       role,
-      shortdescription
+      shortdescription,status,
+      showcase
     }`
   )
 
