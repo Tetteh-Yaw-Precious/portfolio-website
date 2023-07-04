@@ -5,10 +5,13 @@ import myLogo from '../public/images/logo.png'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { gsap } from 'gsap';
 import Link from 'next/link'
+import { useShowStore } from '@/context/context'
 
-function Topnavbar() {
+function Topnavbar(
+) {
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const { showNav } = useShowStore()
 
   let menuBar = gsap.timeline();
   let tl = gsap.timeline({ paused: false });
@@ -92,14 +95,17 @@ function Topnavbar() {
 
   return (
     <div>
-      <div className="header-row">
-        <Image src={myLogo} width={'143'} alt="Yaw Precious Logo" />
-        <a className='z-50 p-2 !border shadow-neubrutalism-button hover:shadow-none border-black rounded-full menu-toggle' id="menuToggle" onClick={() => {
-          handlemenu()
-        }}>
-          <Bars3Icon className='w-6 h-6 md:w-12 md:h-12' />
-        </a>
-      </div>
+      {showNav && (
+        <div className="header-row">
+          <Image src={myLogo} width={'143'} alt="Yaw Precious Logo" />
+          <a className='z-50 p-2 !border shadow-neubrutalism-button hover:shadow-none border-black rounded-full menu-toggle' id="menuToggle" onClick={() => {
+            handlemenu()
+          }}>
+            <Bars3Icon className='w-6 h-6 md:w-12 md:h-12' />
+          </a>
+        </div>
+      )}
+
       {/* <section className="fullpage-menu">
         <div className="fullpage-menu-inner">
           <div className="menu-bg">

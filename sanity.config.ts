@@ -3,6 +3,7 @@ import { deskTool } from "sanity/desk"
 import { project } from './sanity/schemas/project-schemas'
 import schemas from './sanity/schemas'
 import { visionTool } from '@sanity/vision'
+import { myTheme } from './theme'
 export const config = defineConfig({
   projectId: '3lm8l8o5', // you can find this in sanity.json
   dataset: 'production',
@@ -15,4 +16,5 @@ export const config = defineConfig({
     defaultDataset: 'production',
   }),],
   schema: { types: schemas },
+  theme: myTheme
 })
