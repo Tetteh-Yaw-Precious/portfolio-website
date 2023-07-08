@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NewsCard = () => {
   return (
-    <Link href={''} className='hover:cursor-pointer'>
+    <a href={''} className='hover:cursor-pointer'>
       <div className=' w-[260px] rounded-[8px] flex flex-col gap-4'>
         <div className="image-ct h-[200px] rounded-[8px] relative">
           <Image src={newsImage} alt='' />
@@ -18,7 +18,7 @@ const NewsCard = () => {
           </p>
         </div>
       </div>
-    </Link>
+    </a>
   )
 }
 
