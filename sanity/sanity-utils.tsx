@@ -13,14 +13,9 @@ export async function getProjects(): Promise<ProjectType[]> {
   const result = client.fetch(
     groq`*[_type == "project" && showcase == 'forshowcase']{
       _id,
-      _createdAt,
       name,
       "slug": slug.current,
-      "image": image.asset->url,
       "thumbnail": thumbnail.asset->url,
-      url,
-      content,
-      duration,
       role,
       shortdescription,status,
       showcase
