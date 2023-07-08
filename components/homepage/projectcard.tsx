@@ -35,9 +35,9 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <Link href={status === "Complete" ? link : '#'} className={`text-base ${status == "Complete" ? 'font-light underline text-orange-600' : 'font-normal text-orange-600'}  font-outfit`}>
+          <a href={status === "Complete" ? link : ''} className={`text-base ${status == "Complete" ? 'font-light underline text-orange-600' : 'font-normal text-orange-600'}  font-outfit`}>
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
-          </Link>
+          </a>
           {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-orange-600' />) : ''}
 
         </div>

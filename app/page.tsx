@@ -8,10 +8,6 @@ import { useShowStore } from "@/context/context";
 import { useEffect } from "react";
 
 export default function Home() {
-  const { showNav, setShowNav } = useShowStore()
-
-
-
   return (
     <main className="flex flex-col font-bold">
       <PageLoader />

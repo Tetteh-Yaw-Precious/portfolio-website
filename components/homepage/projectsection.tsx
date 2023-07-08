@@ -1,3 +1,4 @@
+'use client'
 import { getProjects } from "@/sanity/sanity-utils"
 import ProjectCard from "./projectcard"
 
@@ -9,7 +10,7 @@ const ProjectSection = async () => {
       <p className="text-3xl font-bold md:text-6xl heading-text font-sora"><span className="black-radial-gradient">Selected</span> Works</p>
       <div className="flex flex-col gap-20 md:gap-32 project-list">
         {!projects ? (
-          <option value=''>No property found</option>
+          <p >No projects found</p>
         ) : projects?.map((project) => {
           return (
             <ProjectCard status={project.status} title={project.name} shortdescription={project.shortdescription} image={project.thumbnail} key={project._id} role={project.role} link={`/projects/${project.slug}`} />
