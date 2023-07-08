@@ -31,9 +31,9 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, role, l
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <Link href={link} className='text-base font-light underline font-outfit'>
+          <a href={link} className='text-base font-light underline font-outfit'>
             Read Case Study
-          </Link>
+          </a>
           <ArrowLongRightIcon className='w-6 h-6' />
         </div>
       </div>

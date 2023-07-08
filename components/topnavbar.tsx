@@ -20,8 +20,8 @@ const Topnavbar = (
   let tl = gsap.timeline({ paused: false });
 
   const menuLinks = [
-    { label: 'Home', href: '' },
-    { label: 'My Work', href: '' },
+    { label: 'Home', href: '/' },
+    { label: 'My Work', href: '/' },
     // { label: 'Blog', href: '#' },
     // { label: 'Resources', href: '#' },
     // { label: 'Contact Me', href: '#' },
@@ -93,7 +93,7 @@ const Topnavbar = (
                 >
 
                   {menuLinks.map((link, index) => (
-                    <Link href={link.href} key={index}>
+                    <a href={link.href} key={index}>
                       <motion.a
                         initial={{ x: 80, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
@@ -110,7 +110,7 @@ const Topnavbar = (
                       >
                         {link.label}
                       </motion.a>
-                    </Link>
+                    </a>
                   ))}
                 </motion.div>
               )
