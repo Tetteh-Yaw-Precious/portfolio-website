@@ -20,8 +20,8 @@ const Topnavbar = (
   let tl = gsap.timeline({ paused: false });
 
   const menuLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'My Work', href: '#' },
+    { label: 'Home', href: '' },
+    { label: 'My Work', href: '' },
     // { label: 'Blog', href: '#' },
     // { label: 'Resources', href: '#' },
     // { label: 'Contact Me', href: '#' },

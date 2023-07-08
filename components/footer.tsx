@@ -25,14 +25,14 @@ const Footer = () => {
         </div> */}
                 </div>
                 <div className="flex items-center justify-center gap-3 mb-6 border-b-4 w-fit">
-                  <Link href={"#"} className="flex items-center gap-2">
+                  <a href={""} className="flex items-center gap-2">
                     <div className="hidden md:flex">
                       <i className="text-white ri-mail-line ri-4x"></i>
                     </div>
                     <span className="text-white md:text-[4rem] font-bold text-2xl ">
                       Send an Email
                     </span>
-                  </Link>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
                   <a
