@@ -3,9 +3,9 @@ import React from 'react'
 function Herosection() {
   return (
     <section className='xl:h-[42.875rem] hero-background'>
-      <div className="flex flex-col items-center h-full content-container py-[6.25rem] px-8 gap-12">
-        <h1 className='md:text-7xl text-4xl font-sora !leading-[100%] text-center'><span className='radial-gradient font-sora'>Good</span> Design <br />
-          tell no tales
+      <div className="flex flex-col items-center h-full content-container py-[6.25rem]  gap-12">
+        <h1 className='md:text-8xl text-4xl font-outfit !px-12 !leading-[100%] text-center font-bold'>Shaping <span className='!underline radial-gradient font-outfit'>Behaviour</span> <br /> through
+          Design
         </h1>
         <p className='md:text-xl text-lg text-center !font-light font-outfit'>Hello, I’m Yaw Precious a Product Designer from Accra, Ghana 🇬🇭</p>
         <div className='flex flex-col items-center justify-center text-orange-600'>
