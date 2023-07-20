@@ -40,7 +40,7 @@ module.exports = {
      '5xl': '3.8125rem',
      '6xl': '4.75rem',
      '7xl': '5.9375rem' },
-  fontFamily: { outfit: 'Outfit', 'mona-sans': 'Mona-Sans', sora: 'Sora' },
+  fontFamily: { outfit: 'Outfit', monasans: 'Mona-Sans', sora: 'Sora', playfair: 'Playfair Display',dgrotesk: 'Darker Grotesque' },
   boxShadow: {
      'neubrutalism-button': '4px 4px 0px 0px rgba(16,3,0,1)',
      "neubrutalism-white": "4px 4px 0px 0px rgba(255,255,255,1)"
