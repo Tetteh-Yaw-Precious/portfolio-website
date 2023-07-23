@@ -17,7 +17,6 @@ type projectTypes = {
 
 
 const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, role, status, ...props }) => {
-  console.log(status)
   return (
     <div className='flex flex-col items-center w-full gap-12 md:odd:flex-row md:even:flex-row-reverse'>
       <div className="image-ct">

@@ -1,9 +1,26 @@
 'use client'
 import { getProjects } from "@/sanity/sanity-utils"
 import ProjectCard from "./projectcard"
+import { useEffect, useState } from "react"
 
-const ProjectSection = async () => {
-  const projects = await getProjects()
+const ProjectSection = () => {
+  const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
+
+  const gettingProjects = async () => {
+    try {
+      const projectsData = await getProjects(); // Assuming getProjects is a function that fetches the project data
+      console.log(projectsData);
+      return projectsData;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    gettingProjects().then((data: any) => {
+      setProjects(data); // Update the projects state with the fetched data
+    });
+  }, []);
 
   return (
     <div className="flex flex-col items-center gap-4 px-8 py-12">

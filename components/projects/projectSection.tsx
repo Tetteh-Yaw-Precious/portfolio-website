@@ -1,10 +1,27 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import ProjectCard from './projectcard';
 import { getProjects } from '@/sanity/sanity-utils';
 
-const projectSection = async () => {
-  const projects = await getProjects()
+const ProjectSection = async () => {
+  const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
+
+  const gettingProjects = async () => {
+    try {
+      const projectsData = await getProjects(); // Assuming getProjects is a function that fetches the project data
+      return projectsData;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    gettingProjects().then((data: any) => {
+      setProjects(data); // Update the projects state with the fetched data
+    });
+  }, []);
+
   return (
     <div className='flex flex-col items-center w-full'>
       <Tabs variant='unstyled' className='flex flex-col items-center w-full gap-8'>
@@ -24,7 +41,7 @@ const projectSection = async () => {
             <div className='!w-full md:grid md:grid-cols-2 flex flex-col  gap-8 items-center px-[3%]' >
               {!projects ? (
                 <p>No projects found</p>
-              ) : projects?.map((project) => {
+              ) : projects?.map((project: any) => {
                 return (
                   <ProjectCard title={project.name} shortdescription={project.shortdescription} role={project.role} image={project.thumbnail} key={project._id} link={`/projects/${project.slug}`} />
                 )
@@ -43,4 +60,4 @@ const projectSection = async () => {
   )
 }
 
-export default projectSection
+export default ProjectSection
