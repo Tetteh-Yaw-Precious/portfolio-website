@@ -9,7 +9,6 @@ const ProjectSection = () => {
   const gettingProjects = async () => {
     try {
       const projectsData = await getProjects(); // Assuming getProjects is a function that fetches the project data
-      console.log(projectsData);
       return projectsData;
     } catch (error) {
       console.log(error);
