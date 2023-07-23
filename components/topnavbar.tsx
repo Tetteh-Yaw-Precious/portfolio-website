@@ -49,7 +49,6 @@ const Topnavbar = (
   useEffect(() => {
     if (isSmall === true) {
       isSmall
-      console.log(isSmall)
     }
   }, [isSmall])
 
