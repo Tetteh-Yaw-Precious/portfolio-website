@@ -31,7 +31,7 @@ export default function RootLayout({
 
       <body className='flex justify-center'>
         <Providers>
-          <main className='xl:w-[90rem] w-full'>
+          <main className='w-full xl:w-full'>
             <Topnavbar />
             {children}
             <Footer />

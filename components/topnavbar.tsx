@@ -69,15 +69,15 @@ const Topnavbar = (
   const animation = {}
 
   return (
-    <div className='sticky top-0 !bg-white z-30'>
+    <div className='sticky top-0 !bg-white z-10 h-[12vh]'>
       {showNav && (
-        <div className='sticky w-full top-10 '>
-          <div className=" !w-full  ">
-            <div className=" header-row">
-              <Image src={myLogo} width={'143'} alt="Yaw Precious Logo" />
+        <div className='sticky w-full top-10'>
+          <div className=" !w-full">
+            <div className="header-row h-[12vh] px-[5%]">
+              <Image src={myLogo} width={'120'} alt="Yaw Precious Logo" />
               <a className={`z-50 p-2 !border shadow-neubrutalism-button white-button-hover border-black rounded-full menu-toggle ${open ? 'border-white' : ''}`} id="menuToggle" onClick={isOpen}
               >
-                <Bars3Icon className={`w-6 h-6 md:w-12 md:h-12 ${open ? 'text-white border-white' : ''}`} />
+                <Bars3Icon className={`w-4 h-4 md:w-8 md:h-8 ${open ? 'text-white border-white' : ''}`} />
               </a>
             </div>
           </div>

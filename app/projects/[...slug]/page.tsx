@@ -22,16 +22,16 @@ export default async function Page({ params }: props, name: any) {
       <div className='flex md:flex-row flex-col justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
         <div className="flex-1 h-[4rem] md:px-8 px-0 md:border-r md:border-b-0 border-b md:py-0 py-4 flex items-center md:justify-end justify-start w-full border-black role">
           <div>
-            <p className='text-lg font-semibold text-blue-950 font-sora'>Role</p>
-            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
+            <p className='text-lg font-semibold text-blue-950 font-dgrotesk'>Role</p>
+            <div className='text-base font-dgrotesk font-light md:w-[31rem] leading-[150%]'>
               <p >{project.role}</p>
             </div>
           </div>
         </div>
         <div className="flex-1 h-[6rem] md:px-8 px-0 md:py-0 py-4 flex md:items-center  justify-start w-full  role">
           <div>
-            <p className='text-lg font-semibold text-blue-950 font-sora'>Project Duration</p>
-            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
+            <p className='text-lg font-semibold text-blue-950 font-dgrotesk'>Project Duration</p>
+            <div className='text-base font-dgrotesk font-light md:w-[31rem] leading-[150%]'>
               <p >{project.duration}</p>
             </div>
           </div>
