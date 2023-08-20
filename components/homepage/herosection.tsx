@@ -5,10 +5,10 @@ function Herosection() {
     <section className='xl:h-[88vh] min-h-[60vh] hero-background flex items-center justify-center'>
       <div>
         <div className="flex flex-col items-center justify-center h-full gap-12 content-container">
-          <h1 className='md:text-8xl text-4xl text-gray-800 font-dgrotesk !leading-[75%] text-center font-semibold'>Shaping <span className='!underline radial-gradient font-dgrotesk'>Behaviour</span> <br /> through
-            Design
+          <h1 className='md:text-7xl text-4xl text-gray-800 font-outfit !leading-[100%] text-center font-medium'>Plan. <span className='!underline radial-gradient font-outfit'>Design.</span> <br /> Measure. Repeat
+
           </h1>
-          <p className='md:text-2xl text-lg text-center !font-normal font-dgrotesk !text-gray-600'>Hello, I’m Yaw Precious a Product Designer from Accra, Ghana 🇬🇭</p>
+          <p className='md:text-lg text-md text-center !font-light font-outfit !text-gray-700 md:mx-[20%] mx-[6%]'>{`Hello, I'm Yaw Precious, well versed across a set of skills, I aid business delight their users through meaningful product`} </p>
           <div className='flex flex-col items-center justify-center gap-2 text-orange-600 md:gap-0'>
             <p className='text-lg font-normal text-orange-600 md:text-xl md:h-14 font-dgrotesk'>
               Scroll to explore my work
