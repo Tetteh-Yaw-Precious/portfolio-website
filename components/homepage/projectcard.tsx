@@ -24,17 +24,17 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
       </div>
       <div className="flex flex-col gap-8 content-ct">
         <div className="flex flex-col gap-4 content">
-          <div>
-            <p className='text-xl font-semibold font-dgrotesk'>{title}</p>
-            <h6 className='font-medium !text-gray-500 text-normal font-dgrotesk'>Role: {role}</h6>
+          <div className='flex flex-col gap-2 '>
+            <p className='text-2xl font-semibold font-outfit'>{title}</p>
+            <h6 className='font-normal !text-gray-800 text-md font-outfit'> {role}</h6>
           </div>
-          <div className='text-base font-dgrotesk font-light md:w-[31rem] leading-[150%]'>
+          <div className='text-md font-outfit font-light md:w-[31rem] leading-[150%]'>
             <p >{shortdescription}</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <a href={status === "Complete" ? link : ''} className={`text-base ${status == "Complete" ? 'font-light underline text-orange-600' : 'font-normal text-orange-600'}  font-dgrotesk`}>
+          <a href={status === "Complete" ? link : ''} className={`text-base ${status == "Complete" ? 'font-light underline text-orange-600' : 'font-normal text-orange-600'}  font-outfit`}>
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
           </a>
           {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-orange-600' />) : ''}
