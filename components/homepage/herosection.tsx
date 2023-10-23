@@ -10,7 +10,7 @@ function Herosection() {
           </h1>
           <p className='md:text-lg text-md text-center !font-light font-outfit !text-gray-700 md:mx-[20%] mx-[6%]'>{`Hello, I'm Yaw Precious, well versed across a set of skills, I aid business delight their users through meaningful product`} </p>
           <div className='flex flex-col items-center justify-center gap-2 text-orange-600 md:gap-0'>
-            <p className='text-lg font-normal text-orange-600 md:text-xl md:h-14 font-dgrotesk'>
+            <p className='text-lg font-normal text-orange-600 md:text-xl md:h-14 font-outfit'>
               Scroll to explore my work
             </p>
             <svg className='w-6 h-6 stroke-1 md:w-8 md:h-8 animate-bounce' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">

@@ -22,16 +22,16 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, role, l
       <div className="flex flex-col gap-3 content-ct">
         <div className="flex flex-col gap-4 content">
           <div className='w-full'>
-            <p className='text-xl font-semibold font-dgrotesk'>{title}</p>
-            <h6 className='font-medium !text-gray-500 text-normal font-dgrotesk'>Role: {role}</h6>
+            <p className='text-xl font-semibold font-outfit'>{title}</p>
+            <h6 className='font-medium !text-gray-500 text-normal font-outfit'>Role: {role}</h6>
           </div>
-          <div className='text-base font-dgrotesk font-light lg:w-[31rem] md:w-[100%] leading-[150%]'>
+          <div className='text-base font-outfit font-light lg:w-[31rem] md:w-[100%] leading-[150%]'>
             <p>{shortdescription}</p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <a href={link} className='text-base font-light underline font-dgrotesk'>
+          <a href={link} className='text-base font-light underline font-outfit'>
             Read Case Study
           </a>
           <ArrowLongRightIcon className='w-6 h-6' />
