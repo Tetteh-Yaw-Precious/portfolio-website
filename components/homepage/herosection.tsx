@@ -5,7 +5,7 @@ function Herosection() {
     <section className='xl:h-[88vh] min-h-[60vh] hero-background flex items-center justify-center'>
       <div>
         <div className="flex flex-col items-center justify-center h-full gap-12 content-container">
-          <h1 className='md:text-7xl text-4xl text-gray-800 font-outfit !leading-[100%] text-center font-medium'>Plan. <span className='!underline radial-gradient font-outfit'>Design.</span> <br /> Measure. Repeat
+          <h1 className='md:text-7xl text-4xl text-gray-800 font-sora !leading-[100%] text-center font-semibold tracking-tighter'>Plan. <span className='!underline radial-gradient font-sora'>Design.</span> <br /> Measure. Repeat
 
           </h1>
           <p className='md:text-lg text-md text-center !font-light font-outfit !text-gray-700 md:mx-[20%] mx-[6%]'>{`Hello, I'm Yaw Precious, well versed across a set of skills, I aid business delight their users through meaningful product`} </p>

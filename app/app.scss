@@ -24,7 +24,6 @@
   @extend .dflex; 
   width:100%;
   height:calc(100vh - 60px );  
-  border: 2px solid red;
 }
 header{
   @extend .dflex;
@@ -46,7 +45,7 @@ header{
   right: 0;
   // width:40%;
   height:100vh;
-  background-color: #1d1d1d;
+  background-color: #070100;
   color:#fff;
   @extend .dflex;
   flex-direction: column;  
@@ -60,7 +59,6 @@ header{
     @media(max-width:768px){
       font-size:22px;
     }
-    text-transform: uppercase;
     +a{
       margin-top:1vw;
     }

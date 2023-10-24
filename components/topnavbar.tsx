@@ -21,7 +21,7 @@ const Topnavbar = (
 
   const menuLinks = [
     { label: 'Home', href: '/' },
-    { label: 'My Work', href: '/' },
+    { label: 'Projects', href: '/' },
     // { label: 'Blog', href: '#' },
     // { label: 'Resources', href: '#' },
     // { label: 'Contact Me', href: '#' },
@@ -44,13 +44,27 @@ const Topnavbar = (
     setOpen(false);
   }
 
-  const isSmall = useIsMedium()
+  const [isMedium, setIsMedium] = useState(false);
 
   useEffect(() => {
-    if (isSmall === true) {
-      isSmall
-    }
-  }, [isSmall])
+    const handleResize = () => {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        // Set isMedium to true when the screen width is at least 768px (adjust this value as needed)
+        setIsMedium(true);
+      } else {
+        setIsMedium(false);
+      }
+    };
+
+    // Call handleResize initially and add a listener for window resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
   //lets start animation
@@ -64,8 +78,6 @@ const Topnavbar = (
       }
     }
   }
-
-  const animation = {}
 
   return (
     <div className='sticky top-0 !bg-white z-10 h-[12vh]'>
@@ -85,8 +97,8 @@ const Topnavbar = (
               open && (
                 <motion.div className="menu_container"
                   variants={item}
-                  initial={{ width: 0, opacity: 0 }}
-                  animate={isSmall ? { width: "30%", opacity: 1 } : { width: "100%", opacity: 1 }}
+                  // initial={{ width: 0, opacity: 0 }}
+                  animate={isMedium ? { width: "30%", opacity: 1 } : { width: "100%", opacity: 1 }}
                   transition={{ duration: .5 }}
                   exit="exit"
                 >
