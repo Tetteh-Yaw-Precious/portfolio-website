@@ -45,17 +45,21 @@ header{
   right: 0;
   // width:40%;
   height:100vh;
-  background-color: #070100;
+  background-color: #101828;
   color:#fff;
-  @extend .dflex;
+  display: flex; 
+  align-items: center;
   flex-direction: column;  
+  padding-top: 15rem;
   a{
     display:inline-flex;
     color:#fff;
     text-decoration: none;
-    height:80px;
+    height:70px;
     overflow: hidden;
-    font-size:2vw;
+    font-size:1.8vw;
+    font-family: 'ClashDisplay-Variable' !important;
+
     @media(max-width:768px){
       font-size:22px;
     }
