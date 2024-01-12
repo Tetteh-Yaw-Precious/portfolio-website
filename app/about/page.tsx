@@ -1,5 +1,10 @@
+'use client'
+import Inner from "@/components/Layout/inner";
+
 export default function About() {
   return (
-    <>about page</>
+    <Inner>
+      <>about page</>
+    </Inner>
   )
 }

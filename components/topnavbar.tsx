@@ -21,7 +21,7 @@ const Topnavbar = (
 
   const menuLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/' },
+    { label: 'Projects', href: '/projects' },
     // { label: 'Blog', href: '#' },
     // { label: 'Resources', href: '#' },
     // { label: 'Contact Me', href: '#' },
@@ -85,7 +85,7 @@ const Topnavbar = (
         <div className='fixed w-full top-10'>
           <div className=" !w-full">
             <div className="header-row h-[12vh] px-[5%] flex justify-end">
-              <a className={`z-50 p-2 rounded-full ${open ? 'border-white bg-white' : 'bg-gray-900 text-white'}`} id="menuToggle" onClick={isOpen}
+              <a className={`z-50 p-2 rounded-full ${open ? 'border-white bg-white' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
               >
                 <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-gray-900' : ''}`} />
               </a>

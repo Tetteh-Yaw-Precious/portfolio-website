@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dflex, .menu_container .btn_close, header .menu, header, .content_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_wrapper {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+header {
+  justify-content: flex-end;
+  width: 100%;
+  height: 58px;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 0 50px;
+}
+header .menu {
+  width: 58px;
+  height: 58px;
+  cursor: pointer;
+}
+
+.menu_container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15rem;
+}
+.menu_container a {
+  display: inline-flex;
+  color: #fff;
+  text-decoration: none;
+  height: 70px;
+  overflow: hidden;
+  font-size: 1.8vw;
+  font-family: "ClashDisplay-Variable" !important;
+}
+@media (max-width: 768px) {
+  .menu_container a {
+    font-size: 22px;
+  }
+}
+.menu_container a + a {
+  margin-top: 1vw;
+}
+.menu_container .btn_close {
+  width: 58px;
+  height: 58px;
+  background-color: #fff;
+  color: #101828;
+  border-radius: 58px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.curve .backgroundsvg, .curve .background {
+  position: fixed;
+  height: calc(100vh + 600px);
+  width: 100vw;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.curve .background {
+  background-color: black;
+  transition: opacity 0s linear 0.1s;
+  z-index: 40;
+}
+.curve .route {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  color: white;
+  font-size: 46px;
+  font-weight: 500;
+  z-index: 15;
+  transform: translateX(-50%);
+  text-align: center;
+}/*# sourceMappingURL=app.css.map */

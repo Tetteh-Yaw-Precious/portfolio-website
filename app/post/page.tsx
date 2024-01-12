@@ -2,6 +2,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { getProjects } from '@/sanity/sanity-utils';
+import Inner from '@/components/Layout/inner';
 
 const Post = async () => {
   try {
@@ -12,8 +13,9 @@ const Post = async () => {
   }
 
   return (
-    <div className='flex gap-6 border-4 border-black'>
-      {/* {!projects ? (
+    <Inner>
+      <div className='flex gap-6 border-4 border-black'>
+        {/* {!projects ? (
         <option value=''>No property found</option>
       ) : projects?.map((project) => {
         return (
@@ -22,7 +24,9 @@ const Post = async () => {
           </p>
         )
       })} */}
-    </div>
+      </div>
+    </Inner>
+
   )
 }
 

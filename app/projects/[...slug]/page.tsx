@@ -15,29 +15,28 @@ export default async function Page({ params }: props, name: any) {
   const project = await getProject(slug[0])
 
   return (
-    <section className='case-study-detail px-[5%] flex flex-col gap-8'>
-      <div className="image-ct">
-        <Image src={project.image} width={1280} height={600} alt='project image' />
+    <section className='case-study-detail px-[22%] flex flex-col'>
+      <div className="image-ct flex items-center justify-center mb-5">
+        <Image src={project.image} width={1440} height={700} alt='project image' />
       </div>
-      <div className='flex md:flex-row flex-col justify-between w-full border-y min-h-[8.375rem] items-center border-black'>
-        <div className="flex-1 h-[4rem] md:px-8 px-0 md:border-r md:border-b-0 border-b md:py-0 py-4 flex items-center md:justify-end justify-start w-full border-black role">
-          <div>
-            <p className='text-lg font-semibold text-blue-950 font-outfit'>Role</p>
-            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
-              <p >{project.role}</p>
-            </div>
-          </div>
+      <h1 className='font-clash font-semibold text-4xl mb-6'>Fordavery Mobile App</h1>
+      <h1 className='font-clash font-semibold text-xl leading-none mb-3'>About Fordavery</h1>
+      <p className='mb-12 text-lg'>Welcomeinapp is a company dedicated to empowering property owners to manage their real estate investment on their terms self-sufficiently.</p>
+
+      <div className='flex gap-12  w-full'>
+        <div className='w-[50%]'>
+          <h1 className='font-clash font-semibold text-xl leading-none mb-2'>My Role(s)</h1>
+          <p className='mb-8 text-lg'>UI/UX Designer, Brand Strategist & designer, Frontend Developer
+          </p>
         </div>
-        <div className="flex-1 h-[6rem] md:px-8 px-0 md:py-0 py-4 flex md:items-center  justify-start w-full  role">
-          <div>
-            <p className='text-lg font-semibold text-blue-950 font-outfit'>Project Duration</p>
-            <div className='text-base font-outfit font-light md:w-[31rem] leading-[150%]'>
-              <p >{project.duration}</p>
-            </div>
-          </div>
+        <div>
+          <h1 className='font-clash font-semibold text-xl leading-none mb-2'>Project Length</h1>
+          <p className='mb-8 text-lg'>December,2022 - November, 2023
+          </p>
         </div>
+
       </div>
-      <div className="case-study-content py-[2rem] md:px-[10%] px-[5%]">
+      <div className="case-study-content py-[2rem]">
         <PortableText value={project.content} components={myPortableTextComponents} />
       </div>
     </section>

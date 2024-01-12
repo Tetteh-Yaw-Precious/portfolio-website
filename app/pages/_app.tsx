@@ -2,11 +2,16 @@ import dynamic from 'next/dynamic'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/library/theme-config'
+import { AnimatePresence } from 'framer-motion'
+import Topnavbar from '@/components/topnavbar'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
+
     <ChakraProvider theme={theme} >
-      <Component {...pageProps} />
+      <AnimatePresence mode='wait'>
+        <Component key={router.route} {...pageProps} />
+      </AnimatePresence>
     </ChakraProvider>
   )
 }
