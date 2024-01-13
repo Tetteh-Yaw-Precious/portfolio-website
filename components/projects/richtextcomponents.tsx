@@ -8,14 +8,20 @@ export const myPortableTextComponents = {
   },
   block: {
     h1: (({ children }: any) => (
-      <h1 className='!pt-10 pb-2 md:text-3xl text-2xl font-semibold font-outfit uppercase'>{children}</h1>
+      <h1 className='!pt-10 pb-2 md:text-4xl text-2xl font-semibold font-clash'>{children}</h1>
     )),
     h2: (({ children }: any) => (
-      <h2 className='!pt-8 pb-2 md:text-2xl text-xl font-medium font-outfit'>{children}</h2>
+      <h2 className='!pt-8 pb-2 md:text-2xl text-lg font-semibold font-clash'>{children}</h2>
     )),
     h3: (({ children }: any) => (
-      <h3 className='!py-2 md:text-xl text-lg font-outfit'>{children}</h3>
-    ))
+      <h3 className='!py-2 md:text-xl text-lg font-clash font-medium'>{children}</h3>
+    )),
+    blockquote: (({ children }: any) => (
+      <blockquote className='!py-2 !md:text-xl !text-xl b-l-black b-l-4 font-outfit'>{children}</blockquote>
+    )),
+    p: (({ children }: any) => (
+      <p className='!py-2 !md:text-xl !text-xl font-outfit'>{children}</p>
+    )),
   },
   marks: {
     link: ({ children, value }: any) => {

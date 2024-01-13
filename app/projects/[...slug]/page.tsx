@@ -1,11 +1,12 @@
 
-// 'use client'
+'use client'
 import { useEffect } from 'react';
 import { groq } from 'next-sanity';
 import { getProject } from '@/sanity/sanity-utils';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { myPortableTextComponents } from '@/components/projects/richtextcomponents';
+import { motion } from 'framer-motion'
 type props = {
   params: { slug: string }
 }
@@ -14,31 +15,72 @@ export default async function Page({ params }: props, name: any) {
   const slug = params.slug
   const project = await getProject(slug[0])
 
+  const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] }
+
+  const projectTitle = {
+    initial: {
+      y: 0,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        delayChildren: 1,
+        staggerchildren: .04,
+        staggerDirection: 1,
+      }
+    }
+  }
+
+  const letter = {
+    initial: {
+      y: 100,
+
+    },
+    animate: {
+      y: 0,
+      transition: { ...transition, duration: .25 }
+    }
+  }
+
   return (
-    <section className='case-study-detail px-[22%] flex flex-col'>
-      <div className="image-ct flex items-center justify-center mb-5">
-        <Image src={project.image} width={1440} height={700} alt='project image' />
-      </div>
-      <h1 className='font-clash font-semibold text-4xl mb-6'>Fordavery Mobile App</h1>
-      <h1 className='font-clash font-semibold text-xl leading-none mb-3'>About Fordavery</h1>
-      <p className='mb-12 text-lg'>Welcomeinapp is a company dedicated to empowering property owners to manage their real estate investment on their terms self-sufficiently.</p>
+    <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col px-[15%]'>
+      <motion.div className=' w-full z-20'>
+        <motion.div initial={{ width: '47%', height: '50%', x: '40%' }} animate={{ width: '100%', height: '100%', x: '0%', transition: { delay: .1, ...transition } }} className="image-ct flex mb-7">
+          <Image src={project.image} width={3842} height={1858} alt='project image' />
+        </motion.div>
+      </motion.div>
+      <motion.div initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}>
 
-      <div className='flex gap-12  w-full'>
-        <div className='w-[50%]'>
-          <h1 className='font-clash font-semibold text-xl leading-none mb-2'>My Role(s)</h1>
-          <p className='mb-8 text-lg'>UI/UX Designer, Brand Strategist & designer, Frontend Developer
-          </p>
-        </div>
-        <div>
-          <h1 className='font-clash font-semibold text-xl leading-none mb-2'>Project Length</h1>
-          <p className='mb-8 text-lg'>December,2022 - November, 2023
-          </p>
-        </div>
+        <motion.div>
 
-      </div>
-      <div className="case-study-content py-[2rem]">
-        <PortableText value={project.content} components={myPortableTextComponents} />
-      </div>
-    </section>
+          <motion.h1 className='font-clash font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>Fordavery Mobile App</motion.h1>
+          <motion.h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-3'>About Fordavery</motion.h1>
+          <motion.p className='mb-12 md:text-xl text-lg font-light'>Welcomeinapp is a company dedicated to empowering property owners to manage their real estate investment on their terms self-sufficiently.</motion.p>
+        </motion.div>
+
+
+        <motion.div className='flex md:flex-row flex-col gap-12 w-full' variants={letter}>
+          <div className='md:w-[50%] w-full'>
+            <h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
+            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>UI/UX Designer, Brand Strategist & designer, Frontend Developer
+            </p>
+          </div>
+          <div className='md:w-[50%] w-full'>
+            <h1 className='font-clash font-semibold md:text-2xl text-x. leading-none mb-2'>Project Length</h1>
+            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>December,2022 - November, 2023
+            </p>
+          </div>
+
+        </motion.div>
+
+        <motion.div className="case-study-content py-[2rem]" variants={letter}>
+          <PortableText value={project.content} components={myPortableTextComponents} />
+        </motion.div>
+      </motion.div>
+
+
+    </motion.section>
   )
 }

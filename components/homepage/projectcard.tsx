@@ -28,8 +28,8 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
             <p className='text-2xl font-semibold font-outfit'>{title}</p>
             <h6 className='font-semibold !text-gray-900 text-md font-outfit'> {role}</h6>
           </div>
-          <div className='text-md font-outfit font-normal text-gray-700 md:w-[31rem] leading-[150%]'>
-            <p >{shortdescription}</p>
+          <div className='text-md font-outfit !font-normal text-gray-700 md:w-[31rem] !leading-[175%]'>
+            <p className='leading-[155%] font-normal'>{shortdescription}</p>
           </div>
         </div>
 
