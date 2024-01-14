@@ -32,6 +32,16 @@ export const project = {
       type: "string",
     },
     {
+      name: "company",
+      title: "Company Name",
+      type: "string",
+    },
+    {
+      name: "aboutInformation",
+      title: 'About Project',
+      type: 'string'
+    },
+    {
       name: "image",
       title: "Project Banner",
       type: "image",

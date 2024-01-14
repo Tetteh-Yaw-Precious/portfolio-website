@@ -29,6 +29,8 @@ export async function getProject(slug: string): Promise<ProjectType> {
       "image": image.asset->url,
       "thumbnail": image.asset->url,
       url,
+      company,
+      aboutInformation,
       content,
       duration,
       role,

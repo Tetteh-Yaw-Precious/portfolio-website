@@ -8,9 +8,11 @@ export type ProjectType = {
   thumbnail: string
   image: string
   url: string
+  company: string
+  aboutInformation: string
   shortdescription: string
   role: string
   duration: string
-  content: PortableTextBlock[],
+  content: PortableTextBlock[]
   status: string
 }

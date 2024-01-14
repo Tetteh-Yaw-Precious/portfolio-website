@@ -55,21 +55,22 @@ export default async function Page({ params }: props, name: any) {
 
         <motion.div>
 
-          <motion.h1 className='font-clash font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>Fordavery Mobile App</motion.h1>
-          <motion.h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-3'>About Fordavery</motion.h1>
-          <motion.p className='mb-12 md:text-xl text-lg font-light'>Welcomeinapp is a company dedicated to empowering property owners to manage their real estate investment on their terms self-sufficiently.</motion.p>
+          <motion.h1 className='font-clash font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
+          <motion.h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
+          <motion.p className='mb-12 md:text-xl text-lg font-light'>{project.shortdescription}</motion.p>
         </motion.div>
 
 
         <motion.div className='flex md:flex-row flex-col gap-12 w-full' variants={letter}>
           <div className='md:w-[50%] w-full'>
             <h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
-            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>UI/UX Designer, Brand Strategist & designer, Frontend Developer
+            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>
+              {project.role}
             </p>
           </div>
           <div className='md:w-[50%] w-full'>
             <h1 className='font-clash font-semibold md:text-2xl text-x. leading-none mb-2'>Project Length</h1>
-            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>December,2022 - November, 2023
+            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>{project.duration}
             </p>
           </div>
 

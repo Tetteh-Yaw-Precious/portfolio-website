@@ -25,8 +25,8 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
       <div className="flex flex-col gap-8 content-ct">
         <div className="flex flex-col gap-4 content">
           <div className='flex flex-col gap-2 '>
-            <p className='text-2xl font-semibold font-outfit'>{title}</p>
-            <h6 className='font-semibold !text-gray-900 text-md font-outfit'> {role}</h6>
+            <p className='text-2xl font-semibold font-clash font-outfit'>{title}</p>
+            <h6 className='font-semibold font-clash !text-gray-900 text-md font-outfit'> {role}</h6>
           </div>
           <div className='text-md font-outfit !font-normal text-gray-700 md:w-[31rem] !leading-[175%]'>
             <p className='leading-[155%] font-normal'>{shortdescription}</p>
@@ -34,10 +34,10 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <a href={status === "Complete" ? link : ''} className={`text-base ${status == "Complete" ? 'font-normal underline text-orange-600' : 'font-normal text-orange-600'}  font-outfit`}>
+          <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
           </a>
-          {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-orange-600' />) : ''}
+          {/* {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-black stroke' />) : ''} */}
 
         </div>
       </div>
