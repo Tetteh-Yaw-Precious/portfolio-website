@@ -4,12 +4,9 @@ import Image from 'next/image'
 import myLogo from '../public/images/logo.png'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { gsap } from 'gsap';
-import Link from 'next/link'
 import { useShowStore } from '@/context/context'
 import '../app/app.scss'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useIsMedium, useIsSmall } from '@/hooks/mediaQuery'
-
 const Topnavbar = (
 ) => {
 
@@ -22,6 +19,7 @@ const Topnavbar = (
   const menuLinks = [
     { label: 'Home', href: '/' },
     { label: 'Projects', href: '/projects' },
+    { label: 'About Me', href: '/about' }
     // { label: 'Blog', href: '#' },
     // { label: 'Resources', href: '#' },
     // { label: 'Contact Me', href: '#' },

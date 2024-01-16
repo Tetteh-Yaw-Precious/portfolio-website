@@ -12,6 +12,7 @@ interface InnerProps {
 type RoutesEnum = {
     "/": "Home";
     "/projects": "Projects";
+    "/about": "About Me";
     [key: string]: string; // Index signature for dynamic keys
 };
 
@@ -19,6 +20,7 @@ type RoutesEnum = {
 const routes: RoutesEnum = {
     "/": "Home",
     "/projects": "Projects",
+    "/about": "About Me",
 };
 
 const anim = (variants: any) => {
