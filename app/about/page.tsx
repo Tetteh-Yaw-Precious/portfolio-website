@@ -49,7 +49,7 @@ export default function About() {
       <div className="flex flex-col py-[8rem] gap-[10rem]">
         <section className="flex flex-row px-[15%] items-center gap-12">
           <div>
-            <h1 className="font-clash text-6xl font-semibold tracking-tighter leading-none">{`I'm Yaw Precious`}</h1>
+            <h1 className="font-clash text-6xl font-semibold tracking-tighter leading-none mb-4">{`I'm Yaw Precious`}</h1>
             <p className="text-lg leading-[175%] font-normal">
               Hello, I’m Tetteh Yaw Precious for the past two years I’ve found myself working as a Product Designer while picking up various skills like Brand Design & Frontend Development.
               These skills go a long way to impact how I collaborate with businesses and optimize my output. I love to put myself in uncomfortable situations so I can grow and learn. As a great talker, I find myself dragging people into conversations that excite them be it design or how we can make our environment a better place with the creations we make by putting humanity first.
