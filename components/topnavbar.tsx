@@ -78,7 +78,7 @@ const Topnavbar = (
   }
 
   return (
-    <div className='sticky top-0 z-10 h-[12vh]'>
+    <div className='sticky top-0 z-40 h-[12vh]'>
       {showNav && (
         <div className='fixed w-full top-10'>
           <div className=" !w-full">

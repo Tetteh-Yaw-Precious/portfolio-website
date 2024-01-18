@@ -91,7 +91,7 @@ header{
       pointer-events: none;
       left: 0;
       top: 0;
-      z-index: 10;
+      z-index: 60;
   }
   .background{
       background-color: black;
@@ -105,7 +105,7 @@ header{
       color: white;
       font-size: 46px;
       font-weight: 500;
-      z-index: 15;
+      z-index: 61;
       transform: translateX(-50%);
       text-align: center;
   }
