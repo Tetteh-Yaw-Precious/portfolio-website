@@ -38,7 +38,7 @@ const ProjectSection = async () => {
         </TabList>
         <TabPanels>
           <TabPanel >
-            <div className='!w-full md:grid md:grid-cols-2 flex flex-col  gap-8 items-center px-[3%]' >
+            <div className='!w-full md:grid md:grid-cols-2 flex flex-col gap-10 items-center px-[3%]' >
               {!projects ? (
                 <p>No projects found</p>
               ) : projects?.map((project: any) => {

@@ -44,6 +44,7 @@ export default async function Page({ params }: props, name: any) {
 
   return (
     <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col px-[15%]'>
+
       <motion.div className=' w-full z-20'>
         <motion.div initial={{ width: '47%', height: '50%', x: '40%' }} animate={{ width: '100%', height: '100%', x: '0%', transition: { delay: .1, ...transition } }} className="image-ct flex mb-7">
           <Image src={project.image} width={3842} height={1858} alt='project image' />
@@ -52,31 +53,29 @@ export default async function Page({ params }: props, name: any) {
       <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}>
+        <div className='px-[20%]'>
+          <motion.div>
+            <motion.h1 className='font-clash font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
+            <motion.h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
+            <motion.p className='mb-12 md:text-xl text-lg font-light'>{project.shortdescription}</motion.p>
+          </motion.div>
+          <motion.div className='flex md:flex-row flex-col gap-12 w-full' variants={letter}>
+            <div className='md:w-[50%] w-full'>
+              <h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
+              <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>
+                {project.role}
+              </p>
+            </div>
+            <div className='md:w-[50%] w-full'>
+              <h1 className='font-clash font-semibold md:text-2xl text-x. leading-none mb-2'>Project Length</h1>
+              <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>{project.duration}
+              </p>
+            </div>
 
-        <motion.div>
+          </motion.div>
+        </div>
 
-          <motion.h1 className='font-clash font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
-          <motion.h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
-          <motion.p className='mb-12 md:text-xl text-lg font-light'>{project.shortdescription}</motion.p>
-        </motion.div>
-
-
-        <motion.div className='flex md:flex-row flex-col gap-12 w-full' variants={letter}>
-          <div className='md:w-[50%] w-full'>
-            <h1 className='font-clash font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
-            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>
-              {project.role}
-            </p>
-          </div>
-          <div className='md:w-[50%] w-full'>
-            <h1 className='font-clash font-semibold md:text-2xl text-x. leading-none mb-2'>Project Length</h1>
-            <p className='mb-8 md:text-xl text-lg text-gray-700 font-light'>{project.duration}
-            </p>
-          </div>
-
-        </motion.div>
-
-        <motion.div className="case-study-content py-[2rem]" variants={letter}>
+        <motion.div className="case-study-content py-[2rem] px-[20%]" variants={letter}>
           <PortableText value={project.content} components={myPortableTextComponents} />
         </motion.div>
       </motion.div>
