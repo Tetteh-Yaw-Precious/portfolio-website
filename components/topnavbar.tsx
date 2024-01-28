@@ -16,11 +16,8 @@ const Topnavbar = (
 
   const menuLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/projects' },
+    // { label: 'Projects', href: '/projects' },
     { label: 'About Me', href: '/about' }
-    // { label: 'Blog', href: '#' },
-    // { label: 'Resources', href: '#' },
-    // { label: 'Contact Me', href: '#' },
   ]
 
 
