@@ -23,7 +23,7 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 px-8 py-12">
-      <p className="text-3xl font-semibold md:text-6xl heading-text font-clash"><span className="black-radial-gradient font-clash">Selected</span> Works</p>
+      <h1 className="text-3xl font-semibold md:text-6xl heading-text font-clash"><span className="font-clash">Selected</span> Works</h1>
       <div className="flex flex-col gap-20 md:gap-60 project-list">
         {!projects ? (
           <p >No projects found</p>

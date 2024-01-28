@@ -55,26 +55,29 @@ function Herosection() {
         variants={textContainerVariants}
         initial='initial'
         animate='animate'
-        className="flex flex-col items-center justify-center h-full gap-12 content-container"
+        className="flex flex-col items-center justify-center h-full gap-8 content-container"
       >
         <motion.h1
           variants={textVariants}
           initial='initial'
           animate='animate'
-          className='md:text-9xl text-4xl text-black !leading-[100%] text-center font-semibold font-clash tracking-loose w-[70%]'
+          className='md:text-9xl text-4xl text-black !leading-[100%] text-center font-semibold font-clash tracking-loose w-[80%]'
         >
-          Hi, I am a Product Designer
+          {`I'm Yaw Precious, a Product Designer`}
         </motion.h1>
-        <motion.div
+        <p className='text-3xl'>
+        </p>
+        <motion.a
           variants={svgVariants}
           initial='initial'
           animate='animate'
-          className='flex flex-col items-center justify-center gap-2 text-gray-900 md:gap-0 border-4 p-4 rounded-full border-gray-950'
+          className='flex flex-row-reverse items-center justify-center gap-2 text-gray-900 md:gap-0 px-8 py-4 border-4 rounded-full border-gray-950'
         >
-          <svg className='w-6 h-6 stroke-[2px] md:w-8 md:h-8 animate-bounce' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+          <svg className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
           </svg>
-        </motion.div>
+          <p className='font-semibold text-lg text-gray-950'>Scroll for more</p>
+        </motion.a>
       </motion.div>
     </motion.section>
   );
