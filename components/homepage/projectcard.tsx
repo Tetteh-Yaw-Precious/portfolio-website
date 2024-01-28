@@ -34,8 +34,12 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         </div>
 
         <div className="flex items-center gap-2 link-ct">
-          <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
+          <a className={`text-gray-950 md:gap-0 px-8 py-3 border-4 rounded-full border-gray-950 font-semibold  font-outfit ${status == 'Complete' ? 'hover:bg-gray-950 hover:text-white' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
+          >
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
+          </a>
+          <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
+
           </a>
           {/* {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-black stroke' />) : ''} */}
 
