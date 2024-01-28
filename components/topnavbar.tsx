@@ -1,7 +1,5 @@
 'use client'
 import React, { forwardRef, useEffect, useState } from 'react'
-import Image from 'next/image'
-import myLogo from '../public/images/logo.png'
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { gsap } from 'gsap';
 import { useShowStore } from '@/context/context'
@@ -78,7 +76,7 @@ const Topnavbar = (
   }
 
   return (
-    <div className='sticky top-0 z-40 h-[12vh]'>
+    <div className='sticky top-0 z-40'>
       {showNav && (
         <div className='fixed w-full top-10'>
           <div className=" !w-full">
