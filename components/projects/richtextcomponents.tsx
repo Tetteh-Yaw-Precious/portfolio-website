@@ -6,6 +6,18 @@ export const myPortableTextComponents = {
   types: {
     image: ({ value }: any) => <Image src={urlFor(value).url()} className='object-contain py-10' width={1280} height={600} alt='image' />
   },
+  // list: {
+  //   bullet: ({ children }: any) => {
+  //     <ul className='ml-10 py-5 list-disc space-y-5'>
+  //       {children}
+  //     </ul>
+  //   },
+  //   number: ({ children }: any) => {
+  //     <ul className='ml-10 py-5 list-disc space-y-5'>
+  //       {children}
+  //     </ul>
+  //   },
+  // },
   block: {
     h1: (({ children }: any) => (
       <h1 className='!pt-10 pb-2 md:text-4xl text-2xl font-semibold font-clash'>{children}</h1>

@@ -1,7 +1,5 @@
 
 'use client'
-import { useEffect } from 'react';
-import { groq } from 'next-sanity';
 import { getProject } from '@/sanity/sanity-utils';
 import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
@@ -43,7 +41,7 @@ export default async function Page({ params }: props, name: any) {
   }
 
   return (
-    <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col md:px-[15%] px-[5%]'>
+    <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col md:px-[10%] px-[5%]'>
 
       <motion.div className=' w-full z-20'>
         <motion.div initial={{ width: '47%', height: '50%', x: '40%' }} animate={{ width: '100%', height: '100%', x: '0%', transition: { delay: .1, ...transition } }} className="image-ct flex mb-7">

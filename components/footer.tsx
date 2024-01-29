@@ -9,11 +9,10 @@ const Footer = () => {
   return (
     <>
       {showFooter && (
-        <footer className="flex justify-center md:py-16 ">
+        <footer className="flex">
 
-          <div className=" flex justify-center py-32 h-[31.25rem] rounded-[16px] w-[77.5rem] items-center bg-brandblack"
+          <div className=" flex justify-center py-32 w-full items-center bg-gray-950"
             id="contact">
-
             <div className="flex items-center justify-center w-full">
               <div className=" w-[100%] flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-col items-center w-full md:flex md:flex-col md:items-center md:justify-center">
@@ -29,7 +28,7 @@ const Footer = () => {
                     <div className="hidden md:flex">
                       <i className="text-white ri-mail-line ri-4x"></i>
                     </div>
-                    <span className="text-white md:text-[4rem] font-bold text-2xl ">
+                    <span className="text-white md:text-[4rem] font-bold text-2xl font-clash">
                       Send an Email
                     </span>
                   </a>
