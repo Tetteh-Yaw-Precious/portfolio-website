@@ -313,6 +313,40 @@ nav li:hover{
     transform: translateY(5px);
 }
 
+.moving-text{
+    animation: move-rtl 6000ms linear infinite;
+}
+
+@keyframes move-rtl {
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-100%)
+    }
+}
+
+.infinite-text-scroll {
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text wrapping */
+    animation: marquee 15s linear infinite; /* Add animation for smooth scrolling */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Adjust for desired scrolling distance */
+    }
+  }
+
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text wrapping */
+    display: flex; /* Allow multiple lines if needed */
+
+  }
 
 @tailwind base;
 @tailwind components;

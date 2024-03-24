@@ -1,6 +1,5 @@
 'use client'
 import Curve from "@/components/Layout/curve";
-import Inner from "@/components/Layout/inner";
 import Image from "next/image";
 
 export default function About() {
