@@ -31,7 +31,9 @@ const Navbar: React.FC = () => {
         <nav
             className='h-[6vh] xl:flex justify-between items-center hidden nav-background py-[5vh] px-[4%] rounded-20xl'
         >
-            <Image src={logo} width={56} height={48} alt='logo' />
+            <Link href={'/'}>
+                <Image src={logo} width={56} height={48} alt='logo' />
+            </Link>
             <ul className='flex gap-12 items-center text-lg'>
                 {navbarLinks.map((item, index) => {
                     return (
