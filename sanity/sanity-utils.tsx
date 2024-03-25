@@ -12,7 +12,8 @@ export async function getProjects(): Promise<ProjectType[]> {
       "thumbnail": thumbnail.asset->url,
       role,
       shortdescription,status,
-      showcase
+      showcase,
+      url
     }`
   )
 }

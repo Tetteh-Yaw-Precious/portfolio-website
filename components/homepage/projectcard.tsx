@@ -10,30 +10,50 @@ type projectTypes = {
   title?: 'string' | any,
   shortdescription?: 'string' | any
   link: 'string' | any
-  role: string
+  url: 'string' | any
+  role?: string | any
   status: string
 }
 
 
 
-const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, role, status, ...props }) => {
+const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, role, status, url, ...props }) => {
   return (
-    <div className='flex flex-col items-center w-full gap-12 md:odd:flex-row md:even:flex-row-reverse'>
+    <div className='flex flex-col items-center w-full gap-4 md:odd:flex-col'>
       <div className="image-ct">
-        <Image src={image} width={610} height={560} alt='project image' />
+        <Image src={image} width={1000} height={560} alt='project image' />
       </div>
-      <div className="flex flex-col gap-8 content-ct">
-        <div className="flex flex-col gap-4 content">
-          <div className='flex flex-col gap-2 '>
-            <p className='text-2xl font-semibold font-clash font-outfit'>{title}</p>
-            <h6 className='font-semibold font-clash !text-gray-900 text-md font-outfit'> {role}</h6>
+      <div className="flex md:flex-row flex-col items-start justify-between md:gap-8 gap-2 content-ct w-full">
+        <div className="flex flex-col md:gap-4 gap-1 content">
+          <div className='flex flex-col gap-1 md:gap-2 '>
+            <p className='md:text-3xl text-xl font-semibold font-outfit w-[100%] leading-none'>{title}</p>
           </div>
-          <div className='text-md font-outfit !font-normal text-gray-700 md:w-[31rem] !leading-[175%]'>
-            <p className='leading-[155%] font-normal'>{shortdescription}</p>
+        </div>
+        <div className='flex flex-col md:gap-2 gap-1'>
+          <p className='!font-clash text-lg  italic'>Role: {role}</p>
+          <div className='flex gap-2'>
+            <div className="flex items-center gap-2 link-ct">
+              <a className={`text-gray-950 md:gap-0 border-gray-950 italic font-medium  font-outfit ${status == 'Complete' ? 'underline  text-[#418607]' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
+              >
+                {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
+              </a>
+              <a href={status === "Complete" ? link : ''} className={`text-lg italic font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
+
+              </a>
+            </div>
+            <div className="flex items-center gap-2 link-ct">
+              <a target="_blank" className={`text-gray-950 md:gap-0 border-gray-950 font-medium italic  font-outfit ${status == 'Complete' ? 'underline  text-[#418607]' : 'cursor-default'} `} href={status === "Complete" ? url : ''}
+              >
+                {status == "Complete" ? 'Live Website' : 'Under Development'}
+              </a>
+              <a href={status === "Complete" ? link : ''} target="_blank" className={`text-lg italic font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'} `}>
+
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 link-ct">
+        {/* <div className="flex items-center gap-2 link-ct">
           <a className={`text-gray-950 md:gap-0 px-8 py-3 border-4 rounded-full border-gray-950 font-semibold  font-outfit ${status == 'Complete' ? 'hover:bg-gray-950 hover:text-white' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
           >
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
@@ -41,9 +61,8 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
           <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
 
           </a>
-          {/* {status === "Complete" ? (<ArrowLongRightIcon className='w-6 h-6 text-black stroke' />) : ''} */}
 
-        </div>
+        </div> */}
       </div>
 
     </div>

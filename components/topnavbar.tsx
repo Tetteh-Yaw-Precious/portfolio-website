@@ -5,8 +5,46 @@ import { gsap } from 'gsap';
 import { useShowStore } from '@/context/context'
 import '../app/app.scss'
 import { AnimatePresence, motion } from 'framer-motion'
+import Navbar from './homepage/largenavbar';
+
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+const navbarLinks: NavLink[] = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Blog', href: '/blog' },
+];
+
+
 const Topnavbar = (
 ) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+
+
+
+
 
   const [menuOpen, setMenuOpen] = useState(false)
   const { showNav } = useShowStore()
@@ -74,54 +112,59 @@ const Topnavbar = (
 
   return (
     <div className='sticky top-0 z-40'>
-      {showNav && (
-        <div className='fixed w-full top-10'>
-          <div className=" !w-full">
-            <div className="header-row h-[12vh] px-[5%] flex justify-end">
-              <a className={`z-50 p-2 rounded-full ${open ? 'border-white bg-white' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
-              >
-                <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-gray-900' : ''}`} />
-              </a>
-            </div>
-          </div>
-          <AnimatePresence>
-            {
-              open && (
-                <motion.div className="menu_container"
-                  variants={item}
-                  // initial={{ width: 0, opacity: 0 }}
-                  animate={isMedium ? { width: "22%", opacity: 1 } : { width: "100%", opacity: 1 }}
-                  transition={{ duration: .3 }}
-                  exit="exit"
+      <div className='px-[20%] py-[2vh]'>
+        <Navbar />
+      </div>
+      <div className='border 2xl:hidden'>
+        {showNav && (
+          <div className='fixed w-full top-10'>
+            <div className=" !w-full">
+              <div className="header-row h-[12vh] px-[5%] flex justify-end">
+                <a className={`z-50 p-2 rounded-full ${open ? 'border-white bg-white' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
                 >
+                  <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-gray-900' : ''}`} />
+                </a>
+              </div>
+            </div>
+            <AnimatePresence>
+              {
+                open && (
+                  <motion.div className="menu_container"
+                    variants={item}
+                    // initial={{ width: 0, opacity: 0 }}
+                    animate={isMedium ? { width: "22%", opacity: 1 } : { width: "100%", opacity: 1 }}
+                    transition={{ duration: .3 }}
+                    exit="exit"
+                  >
 
-                  {menuLinks.map((link, index) => (
-                    <a href={link.href} key={index}>
-                      <motion.a
-                        initial={{ x: 80, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: index * 0.2 + 0.5 }}
-                        exit={{
-                          opacity: 0,
-                          x: 40,
-                          transition: {
-                            ease: 'easeInOut',
-                            delay: 0.1,
-                          },
-                        }}
-                        className='font-medium'
-                        onClick={closeMenu}
-                      >
-                        {link.label}
-                      </motion.a>
-                    </a>
-                  ))}
-                </motion.div>
-              )
-            }
-          </AnimatePresence>
-        </div>
-      )}
+                    {menuLinks.map((link, index) => (
+                      <a href={link.href} key={index}>
+                        <motion.a
+                          initial={{ x: 80, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: index * 0.2 + 0.5 }}
+                          exit={{
+                            opacity: 0,
+                            x: 40,
+                            transition: {
+                              ease: 'easeInOut',
+                              delay: 0.1,
+                            },
+                          }}
+                          className='font-medium'
+                          onClick={closeMenu}
+                        >
+                          {link.label}
+                        </motion.a>
+                      </a>
+                    ))}
+                  </motion.div>
+                )
+              }
+            </AnimatePresence>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

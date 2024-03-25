@@ -22,14 +22,14 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-4 px-8 py-12">
-      <h1 className="text-3xl font-semibold md:text-6xl heading-text font-clash"><span className="font-clash">Selected</span> Works</h1>
+    <div className="flex flex-col items-center gap-4 px-8 py-24">
+      <h1 className="text-3xl font-semibold md:text-5xl heading-text font-outfit"><span className="font-outfit">Featured</span> Works</h1>
       <div className="flex flex-col gap-20 md:gap-60 project-list">
         {!projects ? (
           <p >No projects found</p>
         ) : projects?.map((project) => {
           return (
-            <ProjectCard status={project.status} title={project.name} shortdescription={project.shortdescription} image={project.thumbnail} key={project._id} role={project.role} link={`/projects/${project.slug}`} />
+            <ProjectCard status={project.status} title={project.name} shortdescription={project.shortdescription} image={project.thumbnail} key={project._id} role={project.role} link={`/projects/${project.slug}`} url={project.url} />
           )
         })}
       </div>

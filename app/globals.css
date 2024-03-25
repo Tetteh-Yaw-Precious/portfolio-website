@@ -23,7 +23,7 @@ p{
     font-family: 'outfit', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
-    line-height: 175%;
+    line-height: 190%;
 
 }
 
@@ -313,19 +313,6 @@ nav li:hover{
     transform: translateY(5px);
 }
 
-.moving-text{
-    animation: move-rtl 6000ms linear infinite;
-}
-
-@keyframes move-rtl {
-    0%{
-        transform: translateX(0)
-    }
-    100%{
-        transform: translateX(-100%)
-    }
-}
-
 .infinite-text-scroll {
     overflow: hidden;
     white-space: nowrap; /* Prevent text wrapping */
@@ -347,6 +334,12 @@ nav li:hover{
     display: flex; /* Allow multiple lines if needed */
 
   }
+
+.nav-background {
+  border-radius: 12px;
+background: rgba(255, 255, 255, 0.90);
+backdrop-filter: blur(25.600000381469727px);
+}
 
 @tailwind base;
 @tailwind components;

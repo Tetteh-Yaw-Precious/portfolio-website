@@ -28,7 +28,7 @@ const Footer = () => {
                     <div className="hidden md:flex">
                       <i className="text-white ri-mail-line ri-4x"></i>
                     </div>
-                    <span className="text-white md:text-[4rem] font-bold text-2xl font-clash">
+                    <span className="text-white md:text-[4rem] font-bold text-2xl font-outfit">
                       Send an Email
                     </span>
                   </a>
