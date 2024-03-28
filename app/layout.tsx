@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className='flex justify-center'>
         <Script
           strategy="afterInteractive" // Ensures script loads after initial render
-          src="https://www.googletagmanager.com/gtag/js?id=G-4QBTZ1FKVB"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
         />
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -41,7 +41,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-4QBTZ1FKVB');
+          gtag('config', '${process.env.NEXT_PUBLIC_GTM_ID}');
         ` }}
         />
         <Providers>
