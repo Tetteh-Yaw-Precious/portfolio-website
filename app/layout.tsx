@@ -4,6 +4,7 @@ import './globals.css'
 import Footer from '@/components/footer'
 import Head from 'next/head'
 import { Providers } from './providers'
+import Script from 'next/script'
 
 
 // export const metadata = {
@@ -30,6 +31,19 @@ export default function RootLayout({
       </head>
 
       <body className='flex justify-center'>
+        <Script
+          strategy="afterInteractive" // Ensures script loads after initial render
+          src="https://www.googletagmanager.com/gtag/js?id=G-4QBTZ1FKVB"
+        />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-4QBTZ1FKVB');
+        ` }}
+        />
         <Providers>
           <main className='w-full xl:w-full'>
             <Topnavbar />
