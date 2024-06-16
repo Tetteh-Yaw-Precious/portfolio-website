@@ -109,12 +109,12 @@ function Herosection() {
 
       <div className='flex items-center justify-center flex-col'>
         <div className=' !leading-[120%] h-full flex justify-center items-center px-[22%] py-[8%]'>
-          <p className='!text-3xl !leading-[150%]  tracking-[-0.5px] font-outfit text-gray-900 !font-light'>{
+          <p className='!text-2xl !leading-[150%]  tracking-[-0.5px] text-center font-outfit text-gray-900 !font-light'>{
             `
               I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
             `}</p>
         </div>
-        <hr className='w-[60%] h-0.5 my-0 text-red-500 bg-gray-700 rounded-full' />
+        <hr className='w-[40%] h-0.5 my-0 text-red-500 bg-gray-500 rounded-full' />
       </div>
     </main>
 
