@@ -23,7 +23,7 @@ const ProjectSection = () => {
 
   return (
     <div className="flex flex-col items-center gap-4 px-8 py-24">
-      <h1 className="text-3xl font-semibold md:text-5xl heading-text font-outfit"><span className="font-outfit">Featured</span> Works</h1>
+      <h1 className="text-3xl font-semibold md:text-5xl heading-text font-sora"><span className="font-sora">Featured</span> Works</h1>
       <div className="flex flex-col gap-20 md:gap-60 project-list">
         {!projects ? (
           <p >No projects found</p>

@@ -53,7 +53,7 @@ const svgVariants = {
 function Herosection() {
   return (
     <>
-      <motion.section className='xl:h-[88vh] min-h-[90vh] flex flex-col items-center justify-center'>
+      <motion.section className='xl:h-[88vh] min-h-[90vh] flex flex-col items-center justify-center border-2 border-red-500'>
         <motion.div
           variants={textContainerVariants}
           initial='initial'
@@ -64,7 +64,7 @@ function Herosection() {
             variants={textVariants}
             initial='initial'
             animate='animate'
-            className='md:text-8xl text-4xl text-black !leading-[100%] text-center font-semibold font-outfit tracking-loose w-[70%]'
+            className='md:text-8xl text-4xl text-black !leading-[100%] text-center font-semibold font-sora tracking-loose w-[70%]'
           >
             Designing Products, Brands & Businesses</motion.h1>
           <p className='italic xl:text-xl px-[10%] xl:px-0 text-center text-lg '> passionately from Accra Ghana 🇬🇭, I’m Yaw Precious</p>
@@ -83,9 +83,9 @@ function Herosection() {
       </motion.section>
       <div className='uppercase h-[200px] flex items-center bg-[#F5FFEC]  text-[#191819]'>
         <Marquee speed={200} pauseOnHover={true}>
-          <h1 className='text-3xl px-6 font-outfit'>1. People First </h1>
-          <h1 className='text-3xl px-6 font-outfit'> 2. Data Driven Design</h1>
-          <h1 className='text-3xl px-6 font-outfit'>3. Strategic Execution </h1>
+          <h1 className='text-3xl px-6 font-sora'>1. People First </h1>
+          <h1 className='text-3xl px-6 font-sora'> 2. Data Driven Design</h1>
+          <h1 className='text-3xl px-6 font-sora'>3. Strategic Execution </h1>
         </Marquee>
       </div>
     </>

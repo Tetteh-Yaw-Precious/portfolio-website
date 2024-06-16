@@ -53,19 +53,19 @@ export default async function Page({ params }: props, name: any) {
         transition={{ duration: 1.5 }}>
         <div className='md:px-[20%] px-[10%]'>
           <motion.div>
-            <motion.h1 className='font-outfit font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
-            <motion.h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
+            <motion.h1 className='font-sora font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
+            <motion.h1 className='font-sora font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
             <motion.p className='mb-12 md:text-xl !text-lg font-normal'>{project.shortdescription}</motion.p>
           </motion.div>
           <motion.div className='flex md:flex-row flex-col gap-8 w-full' variants={letter}>
             <div className='md:w-[50%] w-full'>
-              <h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
+              <h1 className='font-sora font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
               <p className='md:text-xl !text-lg text-gray-700 font-normal'>
                 {project.role}
               </p>
             </div>
             <div className='md:w-[50%] w-full'>
-              <h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-2'>Project Length</h1>
+              <h1 className='font-sora font-semibold md:text-2xl text-xl leading-none mb-2'>Project Length</h1>
               <p className='mb-8 md:text-xl !text-lg text-gray-700 font-normal'>{project.duration}
               </p>
             </div>

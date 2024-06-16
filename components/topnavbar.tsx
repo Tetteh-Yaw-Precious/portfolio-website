@@ -1,7 +1,7 @@
 'use client'
 import React, { forwardRef, useEffect, useState } from 'react'
+import gsap from 'gsap'
 import { Bars3Icon } from '@heroicons/react/24/outline'
-import { gsap } from 'gsap';
 import { useShowStore } from '@/context/context'
 import '../app/app.scss'
 import { AnimatePresence, motion } from 'framer-motion'
