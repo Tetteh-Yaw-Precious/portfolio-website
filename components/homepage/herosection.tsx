@@ -114,7 +114,7 @@ function Herosection() {
               I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
             `}</p>
         </div>
-        <hr className='w-[40%] h-0.5 my-0 text-red-500 bg-gray-500 rounded-full' />
+        <hr className='w-[40%] h-0.5 bg-gray-700 rounded-full' />
       </div>
     </main>
 
