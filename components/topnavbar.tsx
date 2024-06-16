@@ -112,10 +112,10 @@ const Topnavbar = (
 
   return (
     <div className='sticky top-0 z-40'>
-      <div className='px-[20%] py-[2vh]'>
+      {/* <div className='px-[20%] py-[2vh]'>
         <Navbar />
-      </div>
-      <div className='border 2xl:hidden'>
+      </div> */}
+      <div className=' 2xl:hidden'>
         {showNav && (
           <div className='fixed w-full top-10'>
             <div className=" !w-full">
