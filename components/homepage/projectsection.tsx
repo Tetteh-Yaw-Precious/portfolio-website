@@ -22,18 +22,23 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-4 px-8 py-24">
-      <h1 className="text-3xl font-semibold md:text-5xl heading-text font-sora"><span className="font-sora">Featured</span> Works</h1>
-      <div className="flex flex-col gap-20 md:gap-60 project-list">
-        {!projects ? (
-          <p >No projects found</p>
-        ) : projects?.map((project) => {
-          return (
-            <ProjectCard status={project.status} title={project.name} shortdescription={project.shortdescription} image={project.thumbnail} key={project._id} role={project.role} link={`/projects/${project.slug}`} url={project.url} />
-          )
-        })}
+    <>
+      <div className="w-full md:my-16 my-8 px-[10%]">
+        <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora italic">My work</h1>
+        <p className="md:text-xl text-base text-[#010200] font-light">You might want to brace yourself for this</p>
       </div>
-    </div>
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col gap-20 py-[8%] md:gap-48 md:px-0 px-[10%] project-list items-center bg-[#FAFEF7] w-full">
+          {!projects ? (
+            <p >No projects found</p>
+          ) : projects?.map((project) => {
+            return (
+              <ProjectCard status={project.status} title={project.name} shortdescription={project.shortdescription} image={project.thumbnail} key={project._id} role={project.role} link={`/projects/${project.slug}`} url={project.url} />
+            )
+          })}
+        </div>
+      </div>
+    </>
   )
 }
 
