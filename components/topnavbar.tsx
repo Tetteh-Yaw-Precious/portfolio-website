@@ -112,58 +112,52 @@ const Topnavbar = (
 
   return (
     <div className='sticky top-0 z-40'>
-      {/* <div className='px-[20%] py-[2vh]'>
-        <Navbar />
-      </div> */}
-      <div className=' 2xl:hidden'>
-        {showNav && (
-          <div className='fixed w-full top-10'>
-            <div className=" !w-full">
-              <div className="header-row h-[12vh] px-[5%] flex justify-end">
-                <a className={`z-50 p-2 rounded-full ${open ? 'border-white bg-white' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
-                >
-                  <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-gray-900' : ''}`} />
-                </a>
-              </div>
+      <div className=' '>
+        <div className='fixed w-full top-10'>
+          <div className=" !w-full">
+            <div className="header-row h-[15vh] px-[10%] flex justify-end">
+              <a className={`z-50 md:p-6 p-4 rounded-full ${open ? ' text-white bg-black' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
+              >
+                <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-white' : ''}`} />
+              </a>
             </div>
-            <AnimatePresence>
-              {
-                open && (
-                  <motion.div className="menu_container"
-                    variants={item}
-                    // initial={{ width: 0, opacity: 0 }}
-                    animate={isMedium ? { width: "22%", opacity: 1 } : { width: "100%", opacity: 1 }}
-                    transition={{ duration: .3 }}
-                    exit="exit"
-                  >
-
-                    {menuLinks.map((link, index) => (
-                      <a href={link.href} key={index}>
-                        <motion.a
-                          initial={{ x: 80, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.2 + 0.5 }}
-                          exit={{
-                            opacity: 0,
-                            x: 40,
-                            transition: {
-                              ease: 'easeInOut',
-                              delay: 0.1,
-                            },
-                          }}
-                          className='font-medium'
-                          onClick={closeMenu}
-                        >
-                          {link.label}
-                        </motion.a>
-                      </a>
-                    ))}
-                  </motion.div>
-                )
-              }
-            </AnimatePresence>
           </div>
-        )}
+          <AnimatePresence>
+            {
+              open && (
+                <motion.div className="menu_container"
+                  variants={item}
+                  animate={isMedium ? { width: "30%", opacity: 1 } : { width: "100%", opacity: 1 }}
+                  transition={{ duration: .3 }}
+                  exit="exit"
+                >
+
+                  {menuLinks.map((link, index) => (
+                    <a href={link.href} key={index}>
+                      <motion.a
+                        initial={{ x: 80, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: index * 0.2 + 0.5 }}
+                        exit={{
+                          opacity: 0,
+                          x: 40,
+                          transition: {
+                            ease: 'easeInOut',
+                            delay: 0.1,
+                          },
+                        }}
+                        className='font-medium'
+                        onClick={closeMenu}
+                      >
+                        {link.label}
+                      </motion.a>
+                    </a>
+                  ))}
+                </motion.div>
+              )
+            }
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   )

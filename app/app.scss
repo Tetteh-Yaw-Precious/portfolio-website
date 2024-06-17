@@ -44,7 +44,7 @@ header{
   right: 0;
   // width:40%;
   height:100vh;
-  background-color: black;
+  background-color: #EAFADB;
   color:#fff;
   display: flex; 
   align-items: center;
@@ -52,12 +52,14 @@ header{
   padding-top: 15rem;
   a{
     display:inline-flex;
-    color:#fff;
+    color:#011019;
     text-decoration: none;
     height:100px;
     overflow: hidden;
     font-size:1.8vw;
-    font-family: 'ClashDisplay-Variable' !important;
+    font-family: 'sora' !important;
+    font-weight: 400 !important;
+    letter-spacing: -1.5px;
 
     @media(max-width:768px){
       font-size:22px;

@@ -33,7 +33,7 @@ header .menu {
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: black;
+  background-color: #EAFADB;
   color: #fff;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@ header .menu {
   z-index: 10;
 }
 .curve .background {
-  background-color: black;
+  background-color: #EAFADB;
   transition: opacity 0s linear 0.1s;
   z-index: 40;
 }

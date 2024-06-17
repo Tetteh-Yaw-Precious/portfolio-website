@@ -67,7 +67,7 @@ function Herosection() {
             variants={textContainerVariants}
             initial='initial'
             animate='animate'
-            className="flex flex-col items-center justify-center h-full gap-8 content-container"
+            className="flex flex-col items-center justify-center h-full gap-12 content-container pt-[8%]"
           >
             <motion.h1
               variants={textVariants}
@@ -77,7 +77,7 @@ function Herosection() {
             >
               <span className='font-medium'> A Product designer </span>
               bridging the gap between <span className='font-medium'>UX,  Brand design </span> & <span className='font-medium'>Engineering</span></motion.h1>
-            <Button className='font-sora italic font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+            <Button className='font-sora font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
               background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
 
             }}>{`Let's talk 👋`}</Button>
@@ -108,7 +108,7 @@ function Herosection() {
       </div> */}
 
       <div className='flex items-center justify-center flex-col'>
-        <div className=' !leading-[120%] h-full flex justify-center items-center !md:px-[22%] !px-[15%] md:py-[8%] py-[10%]'>
+        <div className=' !leading-[120%] h-full flex justify-center items-center md:px-[28%] px-[15%] md:py-[8%] py-[10%]'>
           <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-center font-outfit text-gray-900 !font-light'>{
             `
               I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
