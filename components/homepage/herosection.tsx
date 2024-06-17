@@ -67,7 +67,7 @@ function Herosection() {
             variants={textContainerVariants}
             initial='initial'
             animate='animate'
-            className="flex flex-col items-center justify-center h-full gap-12 content-container pt-[8%]"
+            className="flex flex-col items-center justify-center h-full md:gap-12 gap-8 content-container pt-[8%]"
           >
             <motion.h1
               variants={textVariants}
