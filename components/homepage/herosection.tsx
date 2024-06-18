@@ -53,7 +53,7 @@ const svgVariants = {
 function Herosection() {
   return (
     <>
-      <motion.section className='xl:h-[88vh] min-h-[90vh] flex flex-col items-center justify-center border-2 border-red-500'>
+      <motion.section className='xl:h-[88vh] min-h-[90vh] flex flex-col items-center justify-center'>
         <motion.div
           variants={textContainerVariants}
           initial='initial'
