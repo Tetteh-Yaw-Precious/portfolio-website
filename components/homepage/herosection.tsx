@@ -103,12 +103,11 @@ function Herosection() {
           </motion.div>
         </motion.section>
       </div>
-      <div className='min-h-[100vh] space-y-20 flex flex-col justify-center'>
-
+      <div className='min-h-[100vh] space-y-20 flex flex-col justify-center md:py-0 py-[10%]'>
         <div className='flex items-center justify-center md:px-[10%] px-[15%] '>
           <div className='flex md:flex-row flex-col md:gap-32 gap-6'>
             <div className='md:w-[30%] w-full '>
-              <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
+              <h4 className='font-sora md:text-xl text-base font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
               <ul className='!font-outfit md:text-base text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
                 <li className='list-item'>Visual Design of Apps & Websites</li>
                 <li>UX research, analysis of data and generation of insights</li>
@@ -135,7 +134,7 @@ function Herosection() {
             <h4 className='font-sora md:text-lg text-base font-semibold leading-[120%]'>Where I’ve made an impact</h4>
           </div>
           <div className='Capitalize md:h-[140px] h-[90px] md:w-[80%] w-full flex items-center' >
-            <Marquee speed={200} pauseOnHover={false}>
+            <Marquee speed={100} pauseOnHover={false}>
               {impactedClients.map((item, index) => {
                 return (
                   <div key={index} className='px-6'>
