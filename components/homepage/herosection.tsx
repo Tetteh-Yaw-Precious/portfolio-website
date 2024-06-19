@@ -107,14 +107,15 @@ function Herosection() {
       <div className='flex items-center justify-center md:px-[10%] px-[15%] md:py-[8%] py-[10%]'>
         <div className='flex md:flex-row flex-col md:gap-24 gap-6'>
           <div className='md:w-[24%] w-full '>
-            <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do</h4>
+            <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
             <ul className='!font-outfit md:text-normal text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
-              <li className='list-item'>Data driven Design of Apps & Websites</li>
-              <li>User & business centered design</li>
+              <li className='list-item'>Visual Design of Apps & Websites</li>
+              <li>UX research, analysis of data and generation of insights</li>
+              <li>Business design & marketing strategies</li>
               <li>Brand & Product Strategies</li>
               <li>Improving customer experiences</li>
-              <li>Helping developers with my engineering expertise</li>
-              <li>Thinking of how to make business</li>
+              <li>Aiding developers with my engineering expertise using ReactJS, NextJS, typescript, tailwindcss & sanity CMS</li>
+              <li>Watch Anime (currently watching: One Piece & Jujutsu Kaisen)</li>
             </ul>
           </div>
           <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
