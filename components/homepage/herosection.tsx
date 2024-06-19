@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import InfiniteTextScroll from './infiitescroll';
-import Marquee from './infiitescroll';
-import Link from 'next/link';
 import { Button } from '@chakra-ui/react';
+import Marquee from 'react-fast-marquee';
+import Image from 'next/image';
 // import HeroBackground from '../backgrounds/HeroBackground';
 
 const textContainerVariants = {
@@ -53,6 +52,11 @@ const svgVariants = {
   },
 };
 
+
+const impactedClients = [
+  'impact-clients-01.png', 'impact-clients-02.png', 'impact-clients-03.png', 'impact-clients-04.png', 'impact-clients-05.png', 'impact-clients-06.png', 'impact-clients-07.png'
+]
+
 function Herosection() {
   return (
     <main>
@@ -99,23 +103,47 @@ function Herosection() {
           </motion.div>
         </motion.section>
       </div>
-      {/* <div className='Capitalize h-[200px] flex items-center bg-[#F5FFEC] text-[#191819]'>
-        <Marquee speed={200} pauseOnHover={true}>
-          <h1 className='text-3xl px-6 font-sora'>1. People First </h1>
-          <h1 className='text-3xl px-6 font-sora'> 2. Data Driven Design</h1>
-          <h1 className='text-3xl px-6 font-sora'>3. Strategic Execution </h1>
-        </Marquee>
-      </div> */}
 
-      <div className='flex items-center justify-center flex-col'>
-        <div className=' !leading-[120%] h-full flex justify-center items-center md:px-[28%] px-[15%] md:py-[8%] py-[10%]'>
-          <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-center font-sora text-gray-900 !font-light'>{
-            `
+      <div className='flex items-center justify-center md:px-[10%] px-[15%] md:py-[8%] py-[10%]'>
+        <div className='flex md:flex-row flex-col md:gap-24 gap-6'>
+          <div className='md:w-[24%] w-full '>
+            <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do</h4>
+            <ul className='!font-outfit md:text-normal text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
+              <li className='list-item'>Data driven Design of Apps & Websites</li>
+              <li>User & business centered design</li>
+              <li>Brand & Product Strategies</li>
+              <li>Improving customer experiences</li>
+              <li>Helping developers with my engineering expertise</li>
+              <li>Thinking of how to make business</li>
+            </ul>
+          </div>
+          <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
+            <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
+              `
               I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
             `}</p>
+          </div>
         </div>
-        <hr className='w-[80%] h-0.5 bg-gray-600 rounded-full' />
+        {/* <hr className='w-[80%] h-0.5 bg-gray-600 rounded-full' /> */}
       </div>
+      <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
+        background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
+      }}>
+        <div className='md:w-[12%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none bg-white !md:mb-0 !mb-4'>
+          <h4 className='font-sora text-lg font-semibold leading-[120%]'>Where I’ve made an impact</h4>
+        </div>
+        <div className='Capitalize h-[140px] md:w-[80%] w-full flex items-center' >
+          <Marquee speed={200} pauseOnHover={false}>
+            {impactedClients.map((item, index) => {
+              return (
+                <div key={index} className='px-6'>
+                  <Image src={`/images/${item}`} alt={'client'} width={135} height={100} />
+                </div>
+              )
+            })}
+          </Marquee>
+        </div>
+      </section>
     </main>
 
   );
