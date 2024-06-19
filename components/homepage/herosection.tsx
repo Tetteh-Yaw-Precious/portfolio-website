@@ -130,15 +130,15 @@ function Herosection() {
         <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
           background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
         }}>
-          <div className='md:w-[12%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
+          <div className='md:w-[15%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
             <h4 className='font-sora md:text-lg text-base font-semibold leading-[120%]'>Where I’ve made an impact</h4>
           </div>
           <div className='Capitalize md:h-[140px] h-[90px] md:w-[80%] w-full flex items-center' >
-            <Marquee speed={100} pauseOnHover={false}>
+            <Marquee speed={100} pauseOnHover={true}>
               {impactedClients.map((item, index) => {
                 return (
                   <div key={index} className='px-6'>
-                    <Image src={`/images/${item}`} alt={'client'} width={135} height={100} />
+                    <Image src={`/images/${item}`} alt={'client'} width={135} height={90} />
                   </div>
                 )
               })}
