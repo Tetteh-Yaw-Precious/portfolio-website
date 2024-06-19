@@ -103,48 +103,50 @@ function Herosection() {
           </motion.div>
         </motion.section>
       </div>
+      <div className='min-h-[100vh] space-y-20 flex flex-col justify-center'>
 
-      <div className='flex items-center justify-center md:px-[10%] px-[15%] md:py-[8%] py-[10%]'>
-        <div className='flex md:flex-row flex-col md:gap-24 gap-6'>
-          <div className='md:w-[24%] w-full '>
-            <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
-            <ul className='!font-outfit md:text-normal text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
-              <li className='list-item'>Visual Design of Apps & Websites</li>
-              <li>UX research, analysis of data and generation of insights</li>
-              <li>Business design & marketing strategies</li>
-              <li>Brand & Product Strategies</li>
-              <li>Improving customer experiences</li>
-              <li>Aiding developers with my engineering expertise using ReactJS, NextJS, typescript, tailwindcss & sanity CMS</li>
-              <li>Watch Anime (currently watching: One Piece & Jujutsu Kaisen)</li>
-            </ul>
-          </div>
-          <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
-            <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
-              `
+        <div className='flex items-center justify-center md:px-[10%] px-[15%] '>
+          <div className='flex md:flex-row flex-col md:gap-32 gap-6'>
+            <div className='md:w-[30%] w-full '>
+              <h4 className='font-sora md:text-xl text-lg font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
+              <ul className='!font-outfit md:text-base text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
+                <li className='list-item'>Visual Design of Apps & Websites</li>
+                <li>UX research, analysis of data and generation of insights</li>
+                <li>Business design & marketing strategies</li>
+                <li>Brand & Product Strategies</li>
+                <li>Improving customer experiences</li>
+                <li>Aiding developers with my engineering expertise using ReactJS, NextJS, typescript, tailwindcss & sanity CMS</li>
+                <li>Watch Anime (currently watching: One Piece & Jujutsu Kaisen)</li>
+                <li>I love to teach and share my knowledge</li>
+              </ul>
+            </div>
+            <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
+              <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
+                `
               I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
             `}</p>
+            </div>
           </div>
         </div>
-        {/* <hr className='w-[80%] h-0.5 bg-gray-600 rounded-full' /> */}
+        <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
+          background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
+        }}>
+          <div className='md:w-[12%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
+            <h4 className='font-sora md:text-lg text-base font-semibold leading-[120%]'>Where I’ve made an impact</h4>
+          </div>
+          <div className='Capitalize md:h-[140px] h-[90px] md:w-[80%] w-full flex items-center' >
+            <Marquee speed={200} pauseOnHover={false}>
+              {impactedClients.map((item, index) => {
+                return (
+                  <div key={index} className='px-6'>
+                    <Image src={`/images/${item}`} alt={'client'} width={135} height={100} />
+                  </div>
+                )
+              })}
+            </Marquee>
+          </div>
+        </section>
       </div>
-      <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
-        background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
-      }}>
-        <div className='md:w-[12%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none bg-white !md:mb-0 !mb-4'>
-          <h4 className='font-sora text-lg font-semibold leading-[120%]'>Where I’ve made an impact</h4>
-        </div>
-        <div className='Capitalize h-[140px] md:w-[80%] w-full flex items-center' >
-          <Marquee speed={200} pauseOnHover={false}>
-            {impactedClients.map((item, index) => {
-              return (
-                <div key={index} className='px-6'>
-                  <Image src={`/images/${item}`} alt={'client'} width={135} height={100} />
-                </div>
-              )
-            })}
-          </Marquee>
-        </div>
-      </section>
     </main>
 
   );
