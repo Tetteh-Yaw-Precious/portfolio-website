@@ -91,9 +91,77 @@ const ProjectSection = () => {
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <section className="h-[90vh] py-[5%] bg-[#F7F7F7]">
+        <div className="w-full md:my-4 my-8 px-[10%] gap-8 flex flex-col justify-center">
+          <div className="px-[3%]">
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] tracking-[-2.5px]">A few of my articles</h1>
+            <p className="md:text-xl text-base text-[#464646]">Aside keeping a journal, I enjoy to writing these articles</p>
+          </div>
+          <div className="grid grid-cols-3 gap-0">
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-1.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">{`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning UI/UX Design as a Complete Newbie: Part 1</h6>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-2.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">
+                  {`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Designing Icons for Website Design Project</h6>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-3.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">{`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning the importance of Overhead cost as a Product Designer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-
-
+      <section className="h-[100vh] py-[5%] bg-[#F7F7F7]">
+        <div className="w-full md:my-4 my-8 px-[10%] gap-16 flex flex-col items-center justify-center">
+          <div className="px-[25%] flex flex-col items-center justify-center gap-4">
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] tracking-[-2.5px]">Sharing Knowledge</h1>
+            <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
+          </div>
+          <div className="grid grid-cols-3 gap-0">
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-1.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">{`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning UI/UX Design as a Complete Newbie: Part 1</h6>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-2.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">
+                  {`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Designing Icons for Website Design Project</h6>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Image src={'/images/article-3.png'} width={384} height={288} alt='lenis' />
+              <div className="px-[5%]">
+                <p className="text-[#464646] text-base">{`Jun 21, 2023  |  10 min read`}
+                </p>
+                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning the importance of Overhead cost as a Product Designer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
