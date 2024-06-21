@@ -11,14 +11,16 @@ import { useEffect } from "react";
 
 export default function Home() {
   return (
-    <Curve>
-      <main className="flex flex-col font-bold">
-        {/* <PageLoader /> */}
+
+    <main className="flex flex-col font-bold">
+      {/* <PageLoader /> */}
+      <Curve>
+
         <Herosection />
         <ProjectSection />
         {/* <NewsSection />
       <ResourcesSection /> */}
-      </main>
-    </Curve>
+      </Curve>
+    </main>
   )
 }

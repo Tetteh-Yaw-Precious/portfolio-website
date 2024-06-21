@@ -1,56 +1,86 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { animate, delay, motion } from 'framer-motion';
 import { Button } from '@chakra-ui/react';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 // import HeroBackground from '../backgrounds/HeroBackground';
 
-const textContainerVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.7,
-      duration: 1,
-      ease: 'easeInOut',
-      staggerChildren: 1.2,
-    },
-  },
-};
+// const textContainerVariants = {
+//   initial: {
+//     opacity: 0,
+//     y: 60,
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: .8,
+//       duration: 1,
+//       ease: 'easeOut',
+//       staggerChildren: 1.5,
+//       delayChildren: 1.5,
+//     },
+//   },
+// };
+// const textVariants = {
+//   initial: {
+//     y: 75,
+//     opacity: 0,
+//   },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: .5,
+//       delay: 0.8,          // Adjusted for better stagger effect
+//       duration: 1.5,
+//       ease: 'easeIn',
+//     },
+//   },
+// };
 
-const textVariants = {
-  initial: {
-    y: 50,
-    opacity: 0,
-  },
+const container = {
+  initial: { opacity: 0, y: 30 },
   animate: {
-    y: 0,
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
-      ease: 'easeIn',
-    },
-  },
-};
+      delay: .5,
+      staggerChildren: .5,
+    }
+  }
+}
 
-const svgVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
+const item = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { delay: 1.3, duration: .2 } }
+}
+
+const gridContainerVariants = {
+  hidden: { opacity: 0 },
+  show: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 1,
-      ease: 'easeIn',
+      staggerChildren: 1,
     },
   },
-};
+}
+
+
+// const svgVariants = {
+//   initial: {
+//     opacity: 0,
+//     y: 20,
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 1,
+//       ease: 'easeIn',
+//     },
+//   },
+// };
 
 
 const impactedClients = [
@@ -68,38 +98,31 @@ function Herosection() {
       >
         <motion.section className='xl:h-[88vh] min-h-[100vh] flex flex-col items-center justify-center bg-none'>
           <motion.div
-            variants={textContainerVariants}
-            initial='initial'
-            animate='animate'
+            variants={gridContainerVariants}
+            initial='hidden'
+            animate='show'
             className="flex flex-col items-center justify-center h-full md:gap-12 gap-8 content-container pt-[8%]"
           >
             <motion.h1
-              variants={textVariants}
+              variants={item}
               initial='initial'
               animate='animate'
               className='md:text-[72px] text-2xl !text-[#011019] md:leading-[120%] leading-[130%] text-center font-light font-sora md:!tracking-[-4px] tracking-[-2px] md:w-[60%] w-[70%]'
             >
               <span className='font-medium'> A Product designer </span>
-              bridging the gap between <span className='font-medium'>UX,  Brand design </span> & <span className='font-medium'>Engineering</span></motion.h1>
-            <Button className='font-sora font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
-              background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
+              bridging the gap between <span className='font-medium'>UX,  Brand design </span> & <span className='font-medium'>Engineering</span>
+            </motion.h1>
+            <motion.div variants={item}>
+              <Button className='font-sora font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+                background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
+              }}>{`Let's talk 👋`}
+              </Button>
+            </motion.div>
+            <motion.p variants={item} className='xl:text-xl px-[10%] xl:px-0 font-normal text-center !text-base text-gray-900'> Scroll to learn more</motion.p>
+            <motion.svg variants={item} className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
+            </motion.svg>
 
-            }}>{`Let's talk 👋`}</Button>
-            <p className='xl:text-xl px-[10%] xl:px-0 font-normal text-center !text-base text-gray-900'> Scroll to learn more</p>
-            <svg className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
-            </svg>
-            {/* <motion.a
-            variants={svgVariants}
-            initial='initial'
-            animate='animate'
-            className='flex flex-row-reverse items-center justify-center gap-2 text-gray-900 md:gap-0 px-8 py-4 border-4 rounded-full border-gray-950'
-          >
-            <svg className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
-            </svg>
-            <p className='font-semibold text-lg text-gray-950'>Scroll for more</p>
-          </motion.a> */}
           </motion.div>
         </motion.section>
       </div>
