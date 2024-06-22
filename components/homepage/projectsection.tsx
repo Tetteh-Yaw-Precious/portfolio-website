@@ -1,12 +1,32 @@
 'use client'
 import { getProjects } from "@/sanity/sanity-utils"
 import ProjectCard from "./projectcard"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
+
+  const targetRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  })
+
+  const opacity: any = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], [1, 1, 1, 1, 1, 1, 1, 0])
+  const scale: any = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+
+  const position = useTransform(scrollYProgress, (pos) => {
+    return pos > 0 && pos < 1 ? 'sticky' : 'block'
+  })
+  const top = useTransform(scrollYProgress, (pos) => {
+    return pos > 0 && pos < 1 ? '0' : 'auto'
+  })
+
+  console.log(position)
+
 
   const gettingProjects = async () => {
     try {
@@ -30,23 +50,26 @@ const ProjectSection = () => {
         <p className="md:text-xl text-base text-[#464646]">You might want to brace yourself for this</p>
       </div>
 
-      <Tabs variant='unstyled' className='flex flex-col items-center w-full'>
-        <TabList className='flex gap-4 w-full items-center justify-center min-h-[10vh] bg-white'>
-          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
-            All
-          </Tab>
-          <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
-            Design
-          </Tab>
-          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
-            Frontend Development
-          </Tab>
-        </TabList>
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full border-2 border-red-500' ref={targetRef}>
+        {/*tab container */}
+        <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity }}>
+          <TabList className='flex gap-4 w-full items-center justify-center min-h-[10vh] bg-white'>
+            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+              All
+            </Tab>
+            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+              Design
+            </Tab>
+            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+              Frontend Development
+            </Tab>
+          </TabList>
+        </motion.div>
         <TabPanels>
           <TabPanel className="!p-0">
             <div className="flex flex-col items-center">
               {/** Project Card Component */}
-              <div className="flex odd:flex-row-reverse min-h-[100vh] w-full bg-[#E1E4E0]">
+              <div className="flex odd:flex-row-reverse min-h-[100vh] w-full bg-[#E1E4E0">
                 <div className="w-[50%] flex items-center justify-center">
                   <div className="flex flex-col text-[#193129] w-[60%]">
                     <h1 className="font-sora text-4xl">Skinplus Medspa</h1>

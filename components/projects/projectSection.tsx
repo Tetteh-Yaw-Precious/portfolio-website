@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import Lenis from 'lenis'
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import ProjectCard from './projectcard';
 import { getProjects } from '@/sanity/sanity-utils';
