@@ -15,8 +15,10 @@ const ProjectSection = () => {
     offset: ["start start", "end start"],
   })
 
-  const opacity: any = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], [1, 1, 1, 1, 1, 1, 1, 0])
+  const opacity: any = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9], [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
   const scale: any = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+  const boxShadow = useTransform(scrollYProgress, pos => pos > 0 && pos < 1 ? '11px -2px 94.4px 0px rgba(173, 173, 173, 0.25)' : 'none')
+  const backdropFilter = useTransform(scrollYProgress, pos => pos > 0 && pos < 1 ? 'blur(10.45px)' : 'none')
 
   const position = useTransform(scrollYProgress, (pos) => {
     return pos > 0 && pos < 1 ? 'sticky' : 'block'
@@ -24,8 +26,6 @@ const ProjectSection = () => {
   const top = useTransform(scrollYProgress, (pos) => {
     return pos > 0 && pos < 1 ? '0' : 'auto'
   })
-
-  console.log(position)
 
 
   const gettingProjects = async () => {
@@ -50,9 +50,9 @@ const ProjectSection = () => {
         <p className="md:text-xl text-base text-[#464646]">You might want to brace yourself for this</p>
       </div>
 
-      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full border-2 border-red-500' ref={targetRef}>
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full' ref={targetRef}>
         {/*tab container */}
-        <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity }}>
+        <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
           <TabList className='flex gap-4 w-full items-center justify-center min-h-[10vh] bg-white'>
             <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               All
