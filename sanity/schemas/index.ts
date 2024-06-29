@@ -1,5 +1,5 @@
-import { project } from "./project-schemas";
+import { project, Post } from "./project-schemas";
 
-const schemas = [project]
+const schemas = [project, Post]
 
 export default schemas

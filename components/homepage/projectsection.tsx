@@ -1,14 +1,17 @@
 'use client'
-import { getProjects } from "@/sanity/sanity-utils"
+import { getPosts, getProjects } from "@/sanity/sanity-utils"
 import ProjectCard from "./projectcard"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Tab, TabList, TabPanel, TabPanels, Tabs, background } from "@chakra-ui/react"
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Newprojectcard from "./newprojectcard"
+import { PostType, ProjectType } from "@/types/ProjectType"
+import Link from "next/link"
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
+  const [posts, setPosts] = useState<PostType[]>([]); // Initialize posts as an empty array
 
   const targetRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -33,6 +36,22 @@ const ProjectSection = () => {
     caseStudyLink: ""
   }
   ]
+
+  const gettingPosts = async () => {
+    try {
+      const posts: any = await getPosts(); // Assuming getProjects is a function that fetches the project data
+      return posts;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    gettingPosts().then((data: PostType[]) => {
+      setPosts(data); // Update the projects state with the fetched data
+    });
+  }, []);
+
 
   const opacity: any = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9], [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
   const scale: any = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
@@ -104,33 +123,23 @@ const ProjectSection = () => {
       <section className="md:min-h-[100vh] py-[5%] bg-[#F7F7F7]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
           <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] tracking-[-2.5px]"> My Articles</h1>
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]"> My Articles</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">Aside keeping a journal, I enjoy writing these articles.</p>
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-12">
-            <div className="flex flex-col gap-4">
-              <Image src={'/images/article-1.png'} width={384} height={288} alt='lenis' />
-              <div className="px-[5%]">
-                <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}                </p>
-                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning UI/UX Design as a Complete Newbie: Part 1</h6>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Image src={'/images/article-2.png'} width={384} height={288} alt='lenis' />
-              <div className="px-[5%]">
-                <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}                  {`Jun 21, 2023  |  10 min read`}
-                </p>
-                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Designing Icons for Website Design Project</h6>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Image src={'/images/article-3.png'} width={384} height={288} alt='lenis' />
-              <div className="px-[5%]">
-                <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}
-                </p>
-                <h6 className="font-sora text-xl leading-[120%] font-semibold tracking-[-1.5px]">Learning the importance of Overhead cost as a Product Designer</h6>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 !gap-20">
+            {posts?.map((post: any, index) => {
+              return (
+                <>
+                  <Link href={post.url} target="_blank" className="flex flex-col md:gap-6 gap-4" key={index}>
+                    <Image src={post.cover} width={450} height={288} alt='lenis' />
+                    <div>
+                      {/* <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}                </p> */}
+                      <h6 className="font-sora md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
+                    </div>
+                  </Link>
+                </>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -138,7 +147,7 @@ const ProjectSection = () => {
       <section className="md:min-h-[100vh] py-[5%]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
           <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] tracking-[-2.5px]">Sharing Knowledge</h1>
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-12">

@@ -12,7 +12,6 @@ export default function AdminPage() {
   useEffect(() => {
     setShowNav(false)
     setShowFooter(false)
-    console.log(showNav)
   }, [setShowNav, showNav, setShowFooter])
 
   return <NextStudio config={config} />
