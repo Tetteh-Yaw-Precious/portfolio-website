@@ -10,6 +10,23 @@
   align-items: center;
 }
 
+
+.video-responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.video-responsive iframe {
+  width: 70vw; /* 70% of the viewport width */
+  height: 39.375vw; /* 70% of viewport width * 9/16 to maintain 16:9 aspect ratio */
+  max-width: 1120px; /* Maximum width, you can adjust this as needed */
+  max-height: 630px; /* Maximum height, you can adjust this as needed */
+}
+
+
 // .container{
 //   position:relative;
 //   display: flex;  

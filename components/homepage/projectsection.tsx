@@ -8,10 +8,32 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import Newprojectcard from "./newprojectcard"
 import { PostType, ProjectType } from "@/types/ProjectType"
 import Link from "next/link"
+import YouTube, { YouTubeProps } from 'react-youtube';
+// import Video from 'next-video'
+// import awesomeVideo from 'https://youtu.be/95iB0X-R3wI';
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
   const [posts, setPosts] = useState<PostType[]>([]); // Initialize posts as an empty array
+
+
+  const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+    // access to player in all event handlers via event.target
+    event.target.playVideo();
+  }
+
+  const opts: YouTubeProps['opts'] = {
+    height: '600',
+    width: '800',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+
+
+
+
 
   const targetRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -150,9 +172,13 @@ const ProjectSection = () => {
             <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-12">
 
-          </div>
+          {/* <div className="flex md:flex grid-cols-1 md:gap-0 gap-12 justify-center">
+            <YouTube videoId="95iB0X-R3wI" opts={opts} onReady={onPlayerReady} />;
+          </div> */}
+        </div>
+        <div className="video-responsive">
+          <YouTube videoId='95iB0X-R3wI' opts={opts} onReady={onPlayerReady} />
         </div>
       </section>
     </>
