@@ -11,6 +11,8 @@ export async function getProjects(): Promise<ProjectType[]> {
       "slug": slug.current,
       "thumbnail": thumbnail.asset->url,
       role,
+      textcolor,
+      bgcolor,
       shortdescription,status,
       showcase,
       url

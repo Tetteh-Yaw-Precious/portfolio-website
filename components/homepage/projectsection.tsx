@@ -110,10 +110,10 @@ const ProjectSection = () => {
         <p className="md:text-xl text-base text-[#464646]">You might want to brace yourself for this</p>
       </div>
 
-      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full' ref={targetRef}>
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full' ref={targetRef} id="works">
         {/*tab container */}
         <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
-          <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
+          {/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
             <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               All
             </Tab>
@@ -123,14 +123,13 @@ const ProjectSection = () => {
             <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               Frontend Development
             </Tab>
-          </TabList>
+          </TabList> */}
         </motion.div>
         <TabPanels>
           <TabPanel className="!p-0">
             <div className="flex flex-col items-center">
-              {allProjects?.map((project, index) => {
-                return <Newprojectcard key={index} image={project.image} title={project.title} description={project.description} background={project.background} textColor={project.textColor} />
-
+              {projects?.map((project, index) => {
+                return <Newprojectcard key={index} image={project.thumbnail} title={project.name} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
               })}
             </div>
           </TabPanel>
@@ -151,7 +150,7 @@ const ProjectSection = () => {
           <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 !gap-20">
             {posts?.map((post: any, index) => {
               return (
-                <>
+                <div key={index}>
                   <Link href={post.url} target="_blank" className="flex flex-col md:gap-6 gap-4" key={index}>
                     <Image src={post.cover} width={450} height={288} alt='lenis' />
                     <div>
@@ -159,28 +158,26 @@ const ProjectSection = () => {
                       <h6 className="font-sora md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
                     </div>
                   </Link>
-                </>
+                </div>
               )
             })}
           </div>
         </div>
       </section>
 
-      <section className="md:min-h-[100vh] py-[5%]">
+      {/* <section className="md:min-h-[100vh] py-[5%]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
           <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
             <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
           </div>
 
-          {/* <div className="flex md:flex grid-cols-1 md:gap-0 gap-12 justify-center">
-            <YouTube videoId="95iB0X-R3wI" opts={opts} onReady={onPlayerReady} />;
-          </div> */}
+    
         </div>
         <div className="video-responsive">
           <YouTube videoId='95iB0X-R3wI' opts={opts} onReady={onPlayerReady} />
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

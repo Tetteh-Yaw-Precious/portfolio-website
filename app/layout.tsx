@@ -30,7 +30,7 @@ export default function RootLayout({
 
       </head>
 
-      <body className='flex justify-center'>
+      <body className='flex justify-center '>
         <Script
           strategy="afterInteractive" // Ensures script loads after initial render
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
@@ -45,7 +45,7 @@ export default function RootLayout({
         ` }}
         />
         <Providers>
-          <main className='w-full xl:w-full'>
+          <main className='w-full xl:w-full scroll-smooth'>
             <Topnavbar />
             {children}
             <Footer />

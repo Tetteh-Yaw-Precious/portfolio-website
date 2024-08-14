@@ -112,6 +112,16 @@ export const project = {
       type: "string",
     },
     {
+      name: "bgcolor",
+      title: "Background Color",
+      type: "string",
+    },
+    {
+      name: 'textcolor',
+      title: 'Text Color',
+      type: 'string',
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",

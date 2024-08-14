@@ -6,6 +6,8 @@ import { useShowStore } from '@/context/context'
 import '../app/app.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './homepage/largenavbar';
+//@ts-ignore
+import Link from 'react-scroll/modules'
 
 interface NavLink {
   label: string;
@@ -55,7 +57,8 @@ const Topnavbar = (
   const menuLinks = [
     { label: 'Home', href: '/' },
     // { label: 'Projects', href: '/projects' },
-    { label: 'About Me', href: '/about' }
+    { label: 'About me', href: '/#about' },
+    { label: "My works", href: '/#works' }
   ]
 
 
@@ -136,7 +139,7 @@ const Topnavbar = (
                     >
 
                       {menuLinks.map((link, index) => (
-                        <a href={link.href} key={index}>
+                        <a href={link.href} key={index} className="!scroll-smooth">
                           <motion.a
                             initial={{ x: 80, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
@@ -149,7 +152,7 @@ const Topnavbar = (
                                 delay: 0.1,
                               },
                             }}
-                            className='font-medium'
+                            className='font-medium scroll-smooth'
                             onClick={closeMenu}
                           >
                             {link.label}

@@ -7,7 +7,7 @@ const aboutme = () => {
         'impact-clients-01.png', 'impact-clients-02.png', 'impact-clients-03.png', 'impact-clients-04.png', 'impact-clients-05.png', 'impact-clients-06.png', 'impact-clients-07.png'
     ]
     return (
-        <div className='min-h-[100vh] space-y-20 flex flex-col justify-center md:py-0 py-[10%]'>
+        <div className='min-h-[100vh] space-y-20 flex flex-col justify-center md:py-0 py-[10%] scroll-smooth' id='about'>
             <div className='flex items-center justify-center md:px-[10%] px-[15%] '>
                 <div className='flex md:flex-row flex-col-reverse md:gap-32 gap-6'>
                     <div className='md:w-[30%] w-full '>
