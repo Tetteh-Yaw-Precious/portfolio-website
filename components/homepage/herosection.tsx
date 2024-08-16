@@ -125,8 +125,8 @@ function Herosection() {
                 scale: scale,
               }}
             >
-              <span className='font-semibold'> A Product designer </span>
-              bridging the gap between <span className='font-semibold'>UX,  Brand design </span> & <span className='font-semibold'>Engineering</span>
+              <span className='font-bold'> A Product designer </span>
+              bridging the gap between <span className='font-bold'>UX,  Brand design </span> & <span className='font-bold'>Engineering</span>
             </motion.h1>
             <motion.div variants={item}>
               <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
