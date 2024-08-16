@@ -21,6 +21,15 @@ const projectType = [
   }
 ]
 
+const ArticleLink = [
+  {
+    title: 'external link', value: 'link',
+  },
+  {
+    title: 'portfolio Article', value: 'portfolio_article'
+  }
+]
+
 export const project = {
   name: "project",
   title: "Projects",
@@ -103,6 +112,16 @@ export const project = {
       type: "string",
     },
     {
+      name: "bgcolor",
+      title: "Background Color",
+      type: "string",
+    },
+    {
+      name: 'textcolor',
+      title: 'Text Color',
+      type: 'string',
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -134,4 +153,69 @@ export const project = {
       }]
     }
   ]
+}
+
+export const Post = {
+  name: "post",
+  title: "Posts",
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Post Title",
+      type: "string",
+    },
+    {
+      name: "cover",
+      title: "Post Cover",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string"
+        }
+      ]
+    },
+    {
+      name: 'postLinkSource',
+      title: 'Post Link Source',
+      type: 'string',
+      description: 'Select if the url to the post is external',
+      options: {
+        list: ArticleLink.map(({ title, value }) => ({ title, value })),
+        layout: 'radio',
+      },
+    },
+    {
+      name: "postDescription",
+      title: "Post Description",
+      type: "string",
+    },
+    {
+      name: "url",
+      title: "Post Url",
+      type: "string",
+    },
+    {
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{
+        type: "block", styles: [
+          { title: 'Normal', value: 'normal' },
+          { title: 'H1', value: 'h1' },
+          { title: 'H2', value: 'h2' },
+          { title: 'H3', value: 'h3' },
+          { title: 'H4', value: 'h4' },
+          { title: 'H5', value: 'h5' },
+          { title: 'H6', value: 'h6' },
+          { title: 'Quote', value: 'blockquote' }
+        ]
+      }, {
+        type: 'image'
+      }]
+    }]
+
 }

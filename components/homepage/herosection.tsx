@@ -1,94 +1,149 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import InfiniteTextScroll from './infiitescroll';
-import Marquee from './infiitescroll';
+import React, { useRef } from 'react';
+import { animate, delay, motion, useScroll, useTransform } from 'framer-motion';
+import { Button } from '@chakra-ui/react';
+import Marquee from 'react-fast-marquee';
+import Image from 'next/image';
+// import HeroBackground from '../backgrounds/HeroBackground';
 
-const textContainerVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
+// const textContainerVariants = {
+//   initial: {
+//     opacity: 0,
+//     y: 60,
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: .8,
+//       duration: 1,
+//       ease: 'easeOut',
+//       staggerChildren: 1.5,
+//       delayChildren: 1.5,
+//     },
+//   },
+// };
+// const textVariants = {
+//   initial: {
+//     y: 75,
+//     opacity: 0,
+//   },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: .5,
+//       delay: 0.8,          // Adjusted for better stagger effect
+//       duration: 1.5,
+//       ease: 'easeIn',
+//     },
+//   },
+// };
+
+
+const container = {
+  initial: { opacity: 0, y: 30 },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.7,
-      duration: 1,
-      ease: 'easeInOut',
-      staggerChildren: 1.2,
-    },
-  },
-};
+      delay: .5,
+      staggerChildren: .5,
+    }
+  }
+}
 
-const textVariants = {
-  initial: {
-    y: 50,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
+const item = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { delay: 1.3, duration: .2 } }
+}
+
+const gridContainerVariants = {
+  hidden: { opacity: 0 },
+  show: {
     opacity: 1,
     transition: {
-      duration: 1,
-      ease: 'easeIn',
+      staggerChildren: 1,
     },
   },
-};
+}
 
-const svgVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: 'easeIn',
-    },
-  },
-};
+
+// const svgVariants = {
+//   initial: {
+//     opacity: 0,
+//     y: 20,
+//   },
+//   animate: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 1,
+//       ease: 'easeIn',
+//     },
+//   },
+// };
+
+
+const impactedClients = [
+  'impact-clients-01.png', 'impact-clients-02.png', 'impact-clients-03.png', 'impact-clients-04.png', 'impact-clients-05.png', 'impact-clients-06.png', 'impact-clients-07.png'
+]
 
 function Herosection() {
+  const targetRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["end end", "end start"],
+  })
+
+  const opacity: any = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const scale: any = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
+
+
   return (
-    <>
-      <motion.section className='xl:h-[88vh] min-h-[90vh] flex flex-col items-center justify-center'>
-        <motion.div
-          variants={textContainerVariants}
-          initial='initial'
-          animate='animate'
-          className="flex flex-col items-center justify-center h-full gap-8 content-container"
-        >
-          <motion.h1
-            variants={textVariants}
-            initial='initial'
-            animate='animate'
-            className='md:text-8xl text-4xl text-black !leading-[100%] text-center font-semibold font-sora tracking-loose w-[70%]'
+    <main>
+      <motion.div style={{
+        backgroundImage: 'url(/images/background.png)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity
+      }}
+        ref={targetRef}
+      >
+        <motion.section className='xl:h-[88vh] min-h-[100vh] flex flex-col items-center justify-center bg-none'>
+          <motion.div
+            variants={gridContainerVariants}
+            initial='hidden'
+            animate='show'
+            className="flex flex-col items-center justify-center h-full md:gap-12 gap-8 content-container pt-[8%]"
           >
-            Designing Products, Brands & Businesses</motion.h1>
-          <p className='italic xl:text-xl px-[10%] xl:px-0 text-center text-lg '> passionately from Accra Ghana 🇬🇭, I’m Yaw Precious</p>
-          {/* <motion.a
-            variants={svgVariants}
-            initial='initial'
-            animate='animate'
-            className='flex flex-row-reverse items-center justify-center gap-2 text-gray-900 md:gap-0 px-8 py-4 border-4 rounded-full border-gray-950'
-          >
-            <svg className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+            <motion.h1
+              variants={item}
+              initial='initial'
+              animate='animate'
+              className='md:text-6xl text-2xl !text-[#011019] md:leading-[120%] leading-[130%] text-center font-light font-outfit md:!tracking-[-2.5px] tracking-[-2px] md:w-[60%] w-[70%]'
+              style={{
+                scale: scale,
+              }}
+            >
+              <span className='font-semibold'> A Product designer </span>
+              bridging the gap between <span className='font-semibold'>UX,  Brand design </span> & <span className='font-semibold'>Engineering</span>
+            </motion.h1>
+            <motion.div variants={item}>
+              <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+                background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
+              }}>{`Let's talk 👋`}
+              </Button>
+            </motion.div>
+            <motion.p variants={item} className='xl:text-xl px-[10%] xl:px-0 font-normal text-center !text-base text-gray-900'> Scroll to learn more</motion.p>
+            <motion.svg variants={item} className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3" />
-            </svg>
-            <p className='font-semibold text-lg text-gray-950'>Scroll for more</p>
-          </motion.a> */}
-        </motion.div>
-      </motion.section>
-      <div className='uppercase h-[200px] flex items-center bg-[#F5FFEC]  text-[#191819]'>
-        <Marquee speed={200} pauseOnHover={true}>
-          <h1 className='text-3xl px-6 font-sora'>1. People First </h1>
-          <h1 className='text-3xl px-6 font-sora'> 2. Data Driven Design</h1>
-          <h1 className='text-3xl px-6 font-sora'>3. Strategic Execution </h1>
-        </Marquee>
-      </div>
-    </>
+            </motion.svg>
+
+          </motion.div>
+        </motion.section>
+      </motion.div>
+
+    </main>
 
   );
 }

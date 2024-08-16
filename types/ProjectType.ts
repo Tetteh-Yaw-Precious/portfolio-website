@@ -16,3 +16,13 @@ export type ProjectType = {
   content: PortableTextBlock[]
   status: string
 }
+
+export type PostType = {
+  _id: string,
+  _createdAt: string,
+  Title: string,
+  image: string,
+  postLinkSource: string,
+  postUrl: String,
+  content: PortableTextBlock[]
+}
