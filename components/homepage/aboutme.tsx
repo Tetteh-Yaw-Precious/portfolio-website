@@ -11,7 +11,7 @@ const aboutme = () => {
             <div className='flex items-center justify-center md:px-[10%] px-[15%] '>
                 <div className='flex md:flex-row flex-col-reverse md:gap-32 gap-6'>
                     <div className='md:w-[30%] w-full '>
-                        <h4 className='font-sora md:text-xl text-base font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
+                        <h4 className='font-outfit md:text-xl text-base font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
                         <ul className='!font-outfit md:text-base text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
                             <li className='list-item'>Designing of Apps & Websites</li>
                             <li>Conducting interviews, analyzing data and generating insights</li>
@@ -35,7 +35,7 @@ const aboutme = () => {
                 background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
             }}>
                 <div className='md:w-[15%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
-                    <h4 className='font-sora md:text-lg text-base font-semibold leading-[120%]'>Where I’ve made an impact</h4>
+                    <h4 className='font-outfit md:text-lg text-base font-semibold leading-[120%]'>Where I’ve made an impact</h4>
                 </div>
                 <div className='Capitalize md:h-[140px] h-[90px] md:w-[80%] w-full flex items-center' >
                     <Marquee speed={100} pauseOnHover={true}>

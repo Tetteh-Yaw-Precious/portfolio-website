@@ -27,13 +27,13 @@ const ProjectSection = async () => {
     <div className='flex flex-col items-center w-full'>
       <Tabs variant='unstyled' className='flex flex-col items-center w-full gap-8'>
         <TabList className='flex gap-4'>
-          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-sora border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
+          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-outfit border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
             All
           </Tab>
-          <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 !px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-sora border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
+          <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 !px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-outfit border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
             Design
           </Tab>
-          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-sora border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
+          <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 button-hover md:text-lg text-sm text-gray-700 rounded-[0.5rem] font-outfit border-black md:h-14 h-12 shadow-neubrutalism-button font-light aria-selected:!bg-brandblack aria-selected:border-white aria-selected:text-white'>
             Frontend Development
           </Tab>
         </TabList>

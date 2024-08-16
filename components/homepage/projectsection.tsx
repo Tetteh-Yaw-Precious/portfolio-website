@@ -106,21 +106,21 @@ const ProjectSection = () => {
   return (
     <>
       <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%]">My work</h1>
-        <p className="md:text-xl text-base text-[#464646]">You might want to brace yourself for this</p>
+        <h1 className="text-3xl font-bold md:text-5xl heading-text font-outfit tracking-[-1px] text-[#191819] leading-[100%]">My Case Studies</h1>
+        {/* <p className="md:text-lg text-base text-[#464646]">You might want to brace yourself for this</p> */}
       </div>
 
       <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full' ref={targetRef} id="works">
         {/*tab container */}
         <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
           {/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
-            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               All
             </Tab>
-            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               Design
             </Tab>
-            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-sora  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               Frontend Development
             </Tab>
           </TabList> */}
@@ -143,9 +143,11 @@ const ProjectSection = () => {
       </Tabs>
       <section className="md:min-h-[100vh] py-[5%] bg-[#F7F7F7]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
-          <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]"> My Articles</h1>
+
+          <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
+            <h1 className="text-3xl font-bold md:text-5xl heading-text font-outfit tracking-[-1px] text-[#191819] leading-[100%]">My Articles</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">Aside keeping a journal, I enjoy writing these articles.</p>
+
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 md:gap-0 !gap-20">
             {posts?.map((post: any, index) => {
@@ -155,7 +157,7 @@ const ProjectSection = () => {
                     <Image src={post.cover} width={450} height={288} alt='lenis' />
                     <div>
                       {/* <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}                </p> */}
-                      <h6 className="font-sora md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
+                      <h6 className="font-outfit md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
                     </div>
                   </Link>
                 </div>
@@ -168,7 +170,7 @@ const ProjectSection = () => {
       {/* <section className="md:min-h-[100vh] py-[5%]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
           <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-sora text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-outfit text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
           </div>
 

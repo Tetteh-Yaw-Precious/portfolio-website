@@ -26,7 +26,7 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
       <div className="flex md:flex-row flex-col justify-center items-start md:gap-10 gap-2 content-ct w-full ">
         <div className="flex flex-col md:gap-4 gap-1 content">
           <div className='flex flex-col gap-1 md:gap-2 '>
-            <p className='md:text-3xl text-lg font-semibold font-sora w-[100%] leading-none'>{title}</p>
+            <p className='md:text-2xl text-lg font-semibold !font-outfit w-[100%] leading-none'>{title}</p>
           </div>
         </div>
         <div className='flex flex-col md:gap-2 gap-4  !max-w-[475px]'>
@@ -36,16 +36,16 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
           </p>
           <div className='flex md:gap-2'>
             <div className="flex items-center gap-2 link-ct">
-              <a className={`font-semibold text-[#003D66] md:gap-0 border-gray-950 italic  font-sora ${status == 'Complete' ? 'underline  text-gray-900' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
+              <a className={`font-semibold text-[#003D66] md:gap-0 border-gray-950 italic  font-outfit ${status == 'Complete' ? 'underline  text-gray-900' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
               >
                 {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
               </a>
-              <a href={status === "Complete" ? link : ''} className={`text-lg italic font-medium text-[#003D66] ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal'}  font-sora`}>
+              <a href={status === "Complete" ? link : ''} className={`text-lg italic font-medium text-[#003D66] ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal'}  font-outfit`}>
 
               </a>
             </div>
             <div className="flex items-center gap-2 link-ct">
-              <a target="_blank" className={` md:gap-0 font-medium text-[#003D66] border-gray-950  italic  font-sora ${status == 'Complete' ? 'underline  text-gray-900' : 'cursor-default'} `} href={status === "Complete" ? url : ''}
+              <a target="_blank" className={` md:gap-0 font-medium text-[#003D66] border-gray-950  italic  font-outfit ${status == 'Complete' ? 'underline  text-gray-900' : 'cursor-default'} `} href={status === "Complete" ? url : ''}
               >
                 {status == "Complete" ? 'View project' : 'Under Development'}
               </a>
@@ -57,11 +57,11 @@ const ProjectCard: FC<projectTypes> = ({ image, title, shortdescription, link, r
         </div>
 
         {/* <div className="flex items-center gap-2 link-ct">
-          <a className={`text-gray-950 md:gap-0 px-8 py-3 border-4 rounded-full border-gray-950 font-semibold  font-sora ${status == 'Complete' ? 'hover:bg-gray-950 hover:text-white' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
+          <a className={`text-gray-950 md:gap-0 px-8 py-3 border-4 rounded-full border-gray-950 font-semibold  font-outfit ${status == 'Complete' ? 'hover:bg-gray-950 hover:text-white' : 'cursor-default'} `} href={status === "Complete" ? link : ''}
           >
             {status == "Complete" ? 'Read Case Study' : 'Coming Soon'}
           </a>
-          <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-sora`}>
+          <a href={status === "Complete" ? link : ''} className={`text-lg font-medium ${status == "Complete" ? 'font-medium underline text-orange-600' : 'font-normal text-black'}  font-outfit`}>
 
           </a>
 

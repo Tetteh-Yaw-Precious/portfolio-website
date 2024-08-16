@@ -4,7 +4,7 @@ import urlFor from '@/library/urlFor'
 
 export const myPortableTextComponents = {
   types: {
-    image: ({ value }: any) => <Image src={urlFor(value).url()} className='object-contain py-10' width={1280} height={600} alt='image' />
+    image: ({ value }: any) => <Image src={urlFor(value)?.url() as string} className='object-contain py-10' width={1280} height={600} alt='image' />
   },
   // list: {
   //   bullet: ({ children }: any) => {
@@ -29,10 +29,10 @@ export const myPortableTextComponents = {
       <h3 className='!py-2 md:text-xl text-lg font-clash font-semibold'>{children}</h3>
     )),
     blockquote: (({ children }: any) => (
-      <blockquote className='!py-2 !md:text-xl !text-xl b-l-black b-l-4 font-sora'>{children}</blockquote>
+      <blockquote className='!py-2 !md:text-xl !text-xl b-l-black b-l-4 font-outfit'>{children}</blockquote>
     )),
     p: (({ children }: any) => (
-      <p className='!py-2 !md:text-xl !text-xl font-sora'>{children}</p>
+      <p className='!py-2 !md:text-xl !text-xl font-outfit'>{children}</p>
     )),
   },
   marks: {

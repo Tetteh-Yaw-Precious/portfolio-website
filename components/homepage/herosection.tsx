@@ -120,16 +120,16 @@ function Herosection() {
               variants={item}
               initial='initial'
               animate='animate'
-              className='md:text-[72px] text-2xl !text-[#011019] md:leading-[120%] leading-[130%] text-center font-light font-sora md:!tracking-[-4px] tracking-[-2px] md:w-[60%] w-[70%]'
+              className='md:text-6xl text-2xl !text-[#011019] md:leading-[120%] leading-[130%] text-center font-light font-outfit md:!tracking-[-2.5px] tracking-[-2px] md:w-[60%] w-[70%]'
               style={{
                 scale: scale,
               }}
             >
-              <span className='font-medium'> A Product designer </span>
-              bridging the gap between <span className='font-medium'>UX,  Brand design </span> & <span className='font-medium'>Engineering</span>
+              <span className='font-semibold'> A Product designer </span>
+              bridging the gap between <span className='font-semibold'>UX,  Brand design </span> & <span className='font-semibold'>Engineering</span>
             </motion.h1>
             <motion.div variants={item}>
-              <Button className='font-sora font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+              <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
                 background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
               }}>{`Let's talk 👋`}
               </Button>

@@ -57,7 +57,7 @@ const Curve: FC<InnerProps> = ({ children }) => {
     return (
         <div className='page curve' style={{ backgroundColor: '#yourBackgroundColor' }}>
             <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className='background' />
-            <motion.p className='route font-sora font-medium' {...anim(text)}>
+            <motion.p className='route font-outfit font-medium' {...anim(text)}>
                 {routes[pathname] = 'home' ? `Hello, I'm Yaw Precious` : `${routes[pathname]}`}
             </motion.p>
             {dimensions.width != null && <SVG {...dimensions} />}
