@@ -27,12 +27,12 @@ export default function Home() {
   // }, [])
   return (
 
-    <div className="flex flex-col font-bold scroll-smooth">
+    <div className="flex flex-col font-bold scroll-smooth border ">
       {/* <PageLoader /> */}
       <Curve>
         <div className="scroll-smooth">
           <Herosection />
-          <AboutMe />
+          {/* <AboutMe /> */}
           <ProjectSection />
           {/* <NewsSection />
       <ResourcesSection /> */}

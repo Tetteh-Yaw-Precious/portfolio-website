@@ -105,8 +105,10 @@ const ProjectSection = () => {
 
   return (
     <>
+      {/* <div className="px-[10%] mt-[0rem]">
+        <h1 className="text-3xl font-medium md:text-5xl heading-text text-center font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Some of my work</h1>
+      </div> */}
       <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
-        <h1 className="text-3xl font-bold md:text-5xl heading-text font-outfit tracking-[-1px] text-[#191819] leading-[100%]">My Case Studies</h1>
         {/* <p className="md:text-lg text-base text-[#464646]">You might want to brace yourself for this</p> */}
       </div>
 

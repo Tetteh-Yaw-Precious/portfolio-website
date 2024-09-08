@@ -24,14 +24,15 @@ const aboutme = () => {
                         </ul>
                     </div>
                     <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
-                        <p className='md:!text-2xl text-base !leading-[150%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
+                        <p className='md:!text-xl text-base !leading-[175%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
                             `
-          I have three years of experience as a Product Designer, specializing in research, strategy, UI, brand and business design. I leverage my frontend technology skills to contribute effectively to my teams. I enjoy sharing my knowledge and am currently passionate about data-driven design, building strong teams, and creating cohesive brand experiences.
+I’m Yaw Precious, a Product Designer with three years of experience in user research, strategy, UI design, and business design. I craft data-driven solutions to enhance user experiences and optimize business operations. Fascinated by frontend technologies, I’m currently falling in love with Next.js and TypeScript, and I enjoy integrating these skills into my work to deliver impactful results.
+
         `}</p>
                     </div>
                 </div>
             </div>
-            <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
+            {/* <section className="impact flex md:flex-row flex-col md:px-[10%] px-none px-none md:gap-15 gap-4" style={{
                 background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(25, 24, 25, 0.05) 67.69%, rgba(255, 255, 255, 0.05) 88.32%)'
             }}>
                 <div className='md:w-[15%] w-full md:pr-[4rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
@@ -48,7 +49,7 @@ const aboutme = () => {
                         })}
                     </Marquee>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

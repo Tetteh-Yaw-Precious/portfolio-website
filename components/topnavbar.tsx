@@ -58,7 +58,7 @@ const Topnavbar = (
     { label: 'Home', href: '/' },
     // { label: 'Projects', href: '/projects' },
     { label: 'About me', href: '/#about' },
-    { label: "My case studies", href: '/#works' }
+    { label: "Selected Works", href: '/#works' }
   ]
 
 

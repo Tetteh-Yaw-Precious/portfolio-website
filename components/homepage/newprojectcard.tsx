@@ -4,16 +4,16 @@ import Image from 'next/image'
 const newprojectcard = ({ image, title, description, background, textColor, slug }: any) => {
     return (
         <div className={`md:flex md:flex-row md:even:flex-row-reverse md:min-h-[60vh] w-full gap-[5%]`}
-        //  style={{
-        //     backgroundColor: background
-        // }}
+            style={{
+                backgroundColor: background
+            }}
         >
             <div className="md:w-[50%] w-full flex items-center">
                 <Image src={image} width={1440} height={600} alt='skinplus' />
             </div>
             <div className="md:w-[40%] w-full flex items-center px-12 pt-5 pb-12 ">
                 <div className={`flex flex-col md:w-[80%] w-full gap-4`} style={{ color: textColor }}>
-                    <h1 className="font-outfit md:text-[32px] text-xl leading-[120%] font-semibold tracking-[-1px]">{title}</h1>
+                    <h1 className="font-outfit md:text-[32px] text-xl leading-[120%] font-medium tracking-[-1px]">{title}</h1>
                     {/* <p className="leading-[150%] md:text-lg text-base">{description}</p> */}
                     <div>
                         <div className="flex gap-4 items-center font-outfit mt-4">
