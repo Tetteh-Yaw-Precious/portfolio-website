@@ -63,7 +63,8 @@ export async function getProject(slug: string): Promise<ProjectType> {
       content,
       duration,
       role,
-      shortdescription
+      shortdescription,
+      status
     }`,
     { slug }
   )

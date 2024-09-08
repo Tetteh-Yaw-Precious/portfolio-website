@@ -27,7 +27,7 @@ export default function Home() {
   // }, [])
   return (
 
-    <div className="flex flex-col font-bold scroll-smooth border ">
+    <div className="flex flex-col font-bold scroll-smooth border">
       {/* <PageLoader /> */}
       <Curve>
         <div className="scroll-smooth">

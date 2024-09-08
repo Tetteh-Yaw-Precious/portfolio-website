@@ -131,7 +131,7 @@ const ProjectSection = () => {
           <TabPanel className="!p-0">
             <div className="flex flex-col items-center">
               {projects?.map((project, index) => {
-                return <Newprojectcard key={index} image={project.thumbnail} title={project.name} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
+                return <Newprojectcard key={index} image={project.thumbnail} title={project.name} projectStatus={project.status} projectUrl={project.url} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
               })}
             </div>
           </TabPanel>
