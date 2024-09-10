@@ -125,7 +125,7 @@ function Herosection() {
                 scale: scale,
               }}
             >
-              Yaw Precious is a Product Designer with focus on
+              A Product Designer with focus on
               <span className='font-medium'> UX Research,</span><span className='font-medium'> </span> <span className='font-medium'> business strategy & Engineering </span>
             </motion.h1>
             <motion.div variants={item}>

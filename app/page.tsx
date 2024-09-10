@@ -32,7 +32,7 @@ export default function Home() {
       <Curve>
         <div className="scroll-smooth">
           <Herosection />
-          {/* <AboutMe /> */}
+          <AboutMe />
           <ProjectSection />
           {/* <NewsSection />
       <ResourcesSection /> */}

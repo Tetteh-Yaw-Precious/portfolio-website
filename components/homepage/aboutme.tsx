@@ -12,7 +12,7 @@ const aboutme = () => {
                 <div className='flex md:flex-row flex-col-reverse md:gap-32 gap-6'>
                     <div className='md:w-[30%] w-full '>
                         <h4 className='font-outfit md:text-xl text-base font-semibold md:mb-3 mb-1'>What I do on a day to day</h4>
-                        <ul className='!font-outfit md:text-base text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
+                        {/* <ul className='!font-outfit md:text-base text-sm font-normal space-y-1 ml-5' style={{ listStyleType: 'disc' }}>
                             <li className='list-item'>Designing of Apps & Websites</li>
                             <li>Conducting interviews, analyzing data and generating insights</li>
                             <li>Business design & marketing strategies</li>
@@ -21,12 +21,13 @@ const aboutme = () => {
                             <li>Aiding developers with my engineering expertise using ReactJS, NextJS, typescript, tailwindcss & sanity CMS</li>
                             <li>Watch Anime (currently watching: One Piece & Jujutsu Kaisen)</li>
                             <li>I love to teach and share my knowledge</li>
-                        </ul>
+                        </ul> */}
+                        <p>I design intuitive apps and websites, conduct user interviews to generate insights, and collaborate with developers using frontend technologies like ReactJS, Next.js, and TypeScript.</p>
                     </div>
                     <div className='!leading-[120%] h-full flex justify-center items-center md:w-[52%] w-full'>
                         <p className='md:!text-xl text-base !leading-[175%] md:tracking-[-0.5px] tracking-[-0.2] text-left font-outfit text-gray-900 !font-normal'>{
                             `
-I’m Yaw Precious, a Product Designer with three years of experience in user research, strategy, UI design, and business design. I craft data-driven solutions to enhance user experiences and optimize business operations. Fascinated by frontend technologies, I’m currently falling in love with Next.js and TypeScript, and I enjoy integrating these skills into my work to deliver impactful results.
+Hello there! I’m Yaw Precious, a Product Designer with three years of experience in user research, strategy, UI design, and business design. I craft data-driven solutions to enhance user experiences and optimize business operations. Fascinated by frontend technologies, I’m currently falling in love with Next.js and TypeScript, and I enjoy integrating these skills into my work to deliver impactful results.
 
         `}</p>
                     </div>
