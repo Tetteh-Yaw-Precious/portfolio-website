@@ -4,7 +4,6 @@ import Inner from "@/components/Layout/inner";
 import Herosection from "@/components/homepage/herosection";
 import AboutMe from "@/components/homepage/aboutme";
 import NewsSection from "@/components/homepage/newssection";
-import PageLoader from "@/components/homepage/pageLoader";
 import ProjectSection from "@/components/homepage/projectsection";
 import ResourcesSection from "@/components/homepage/resourcessection";
 import { useShowStore } from "@/context/context";
@@ -29,15 +28,13 @@ export default function Home() {
 
     <div className="flex flex-col font-bold scroll-smooth border">
       {/* <PageLoader /> */}
-      <Curve>
-        <div className="scroll-smooth">
-          <Herosection />
-          <AboutMe />
-          <ProjectSection />
-          {/* <NewsSection />
+      <div className="scroll-smooth">
+        <Herosection />
+        <AboutMe />
+        <ProjectSection />
+        {/* <NewsSection />
       <ResourcesSection /> */}
-        </div>
-      </Curve>
+      </div>
     </div>
   )
 }
