@@ -20,7 +20,7 @@ const newprojectcard = ({ image, title, description, background, textColor, slug
                         <div className="flex gap-4 items-center font-outfit mt-4">
                             {/* <span className='py-3 px-5 bg-gray-100 rounded-10xl font-normal text-base text-gray-500'> Coming Soon</span> */}
                             {projectStatus === 'complete' &&
-                                <a className="cursor-pointer font-normal px-5 py-2 rounded-2 border hover:bg-black hover:text-white border-black rounded-[.25rem]" target="_blank" href={projectUrl}>
+                                <a className="cursor-pointer font-normal px-5 py-2 rounded-2 border hover:bg-black hover:text-white border-black rounded-[.25rem]" target="_blank" href={`/projects/${slug}`}>
 
                                     Read Case study
 

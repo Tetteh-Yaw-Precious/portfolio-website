@@ -102,12 +102,13 @@ function Herosection() {
   return (
     <main>
       <motion.div style={{
-        // backgroundImage: 'url(/images/background.png)', // Replace with your image path
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
-        // opacity
+        backgroundImage: 'url(/images/background.png)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity
       }}
         ref={targetRef}
+        id='home'
       >
         <motion.section className='xl:h-[88vh] min-h-[100vh] flex flex-col items-center justify-center bg-none'>
           <motion.div

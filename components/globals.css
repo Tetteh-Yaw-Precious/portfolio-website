@@ -128,7 +128,7 @@ text-fill-color: transparent;
 }
 
 nav{
-    position: relative;
+    /* position: relative; */
     z-index: 10;
 }
 
