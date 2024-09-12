@@ -26,11 +26,11 @@ export default function Home() {
   // }, [])
   return (
 
-    <div className="flex flex-col font-bold scroll-smooth border">
+    <div className="flex flex-col font-bold scroll-smooth">
       {/* <PageLoader /> */}
-      <div className="scroll-smooth">
+      <div className="scroll-smooth space-y-[6.688rem]">
         <Herosection />
-        <AboutMe />
+        {/* <AboutMe /> */}
         <ProjectSection />
         {/* <NewsSection />
       <ResourcesSection /> */}

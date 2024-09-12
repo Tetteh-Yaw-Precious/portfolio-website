@@ -23,9 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Yaw Precious | Product Designer</title>
-        <meta name="description" content="Hello I'm Yaw Precious, a Product Designer.
-        I love to untangle difficult problems by tagging along from conceptualisation to 
-        the actualisation of a product. Skills: Brand Strategy & Design | User Research | UI Design | ReactJs | NextJs <typescript>" />
+        <meta name="description" content="Hello I'm Yaw Precious, a Product Designer with focus on UX Research, business strategy & Engineering" />
         <meta charSet="UTF-8" />
 
       </head>
@@ -45,10 +43,12 @@ export default function RootLayout({
         ` }}
         />
         <Providers>
-          <main className='w-full xl:w-full scroll-smooth'>
-            <Topnavbar />
-            {children}
-            <Footer />
+          <main className='w-full xl:w-full scroll-smooth flex flex-col items-center justify-center'>
+            <main className='max-w-[1440px]'>
+              {/* <Topnavbar /> */}
+              {children}
+              <Footer />
+            </main>
           </main>
         </Providers>
       </body>

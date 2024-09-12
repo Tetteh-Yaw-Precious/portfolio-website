@@ -41,23 +41,21 @@ export default async function Page({ params }: props, name: any) {
   }
 
   return (
-    <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col md:px-[10%] px-[5%]'>
+    <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%]'>
+      <div className='py-[8%]'>
+        <Image src={project.image} width={1000} height={1858} alt='project image' className='rounded-[2.5rem]' />
+      </div>
 
-      <motion.div className=' w-full z-20'>
-        <motion.div initial={{ width: '47%', height: '50%', x: '40%' }} animate={{ width: '100%', height: '100%', x: '0%', transition: { delay: .1, ...transition } }} className="image-ct flex mb-7">
-          <Image src={project.image} width={3842} height={1858} alt='project image' />
-        </motion.div>
-      </motion.div>
       <motion.div initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}>
         <div className='md:px-[20%] px-[10%]'>
           <motion.div>
-            <motion.h1 className='font-outfit font-semibold md:text-5xl text-3xl mb-6' variants={projectTitle}>{project.name}</motion.h1>
-            <motion.h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1>
-            <motion.p className='mb-12 md:text-xl !text-lg font-normal'>{project.shortdescription}</motion.p>
+            <motion.h1 className='font-outfit font-semibold md:text-2xl text-3xl mb-3 leading-[120%] tracking-[-2.5%]' variants={projectTitle}>{project.name}</motion.h1>
+            {/* <motion.h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1> */}
+            <motion.p className='mb-12 md:text-normal !text-lg font-normal'>{project.shortdescription}</motion.p>
           </motion.div>
-          <motion.div className='flex md:flex-row flex-col gap-8 w-full' variants={letter}>
+          {/* <motion.div className='flex md:flex-row flex-col gap-8 w-full' variants={letter}>
             <div className='md:w-[50%] w-full'>
               <h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-2'>My Role(s)</h1>
               <p className='md:text-xl !text-lg text-gray-700 font-normal'>
@@ -70,7 +68,7 @@ export default async function Page({ params }: props, name: any) {
               </p>
             </div>
 
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <motion.div className="case-study-content md:px-[20%] px-[10%] pb-[10%]" variants={letter}>

@@ -95,7 +95,7 @@ function Herosection() {
     offset: ["end end", "end start"],
   })
 
-  const opacity: any = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const opacity: any = useTransform(scrollYProgress, [0, 10], [1, 0])
   const scale: any = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
 
 
@@ -110,7 +110,7 @@ function Herosection() {
         ref={targetRef}
         id='home'
       >
-        <motion.section className='xl:h-[88vh] min-h-[100vh] flex flex-col items-center justify-center bg-none'>
+        <motion.section className='xl:h-[40.375rem] min-h-[40.375rem] flex flex-col items-center justify-center bg-none'>
           <motion.div
             variants={gridContainerVariants}
             initial='hidden'
@@ -130,10 +130,10 @@ function Herosection() {
               <span className='font-medium'> UX Research,</span><span className='font-medium'> </span> <span className='font-medium'> business strategy & Engineering </span>
             </motion.h1>
             <motion.div variants={item}>
-              <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+              {/* <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
                 background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
               }}>{`Let's talk 👋`}
-              </Button>
+              </Button> */}
             </motion.div>
             <motion.p variants={item} className='xl:text-xl px-[10%] xl:px-0 font-normal text-center !text-base text-gray-900'> Scroll to see selected works</motion.p>
             <motion.svg variants={item} className='w-6 h-6 stroke-[2px] md:w-8 md:h-6 animate-bounce text-gray-950' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">

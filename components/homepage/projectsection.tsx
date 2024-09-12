@@ -104,15 +104,15 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <>
-      {/* <div className="px-[10%] mt-[0rem]">
-        <h1 className="text-3xl font-medium md:text-5xl heading-text text-center font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Some of my work</h1>
-      </div> */}
+    <div className="flex flex-col items-center">
+      <div className=" w-[50rem]">
+        <h1 className="text-3xl font-medium md:text-2xl font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Selected Works</h1>
+      </div>
       <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
         {/* <p className="md:text-lg text-base text-[#464646]">You might want to brace yourself for this</p> */}
       </div>
 
-      <Tabs as='div' variant='unstyled' className='flex flex-col items-center w-full' ref={targetRef} id="works">
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center md:max-w-[50rem]' ref={targetRef} id="works">
         {/*tab container */}
         <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
           {/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
@@ -129,7 +129,7 @@ const ProjectSection = () => {
         </motion.div>
         <TabPanels>
           <TabPanel className="!p-0">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-[3rem]">
               {projects?.map((project, index) => {
                 return <Newprojectcard key={index} image={project.thumbnail} title={project.name} projectStatus={project.status} projectUrl={project.url} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
               })}
@@ -143,7 +143,7 @@ const ProjectSection = () => {
           </TabPanel>
         </TabPanels>
       </Tabs>
-      <section className="md:min-h-[100vh] py-[5%] bg-[#F7F7F7]">
+      {/* <section className="md:min-h-[100vh] py-[5%] bg-[#F7F7F7]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
 
           <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
@@ -158,7 +158,6 @@ const ProjectSection = () => {
                   <Link href={post.url} target="_blank" className="flex flex-col md:gap-6 gap-4" key={index}>
                     <Image src={post.cover} width={450} height={288} alt='lenis' />
                     <div>
-                      {/* <p className="text-[#464646] text-base">{`July 15, 2012  |  10 min read`}                </p> */}
                       <h6 className="font-outfit md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
                     </div>
                   </Link>
@@ -167,7 +166,7 @@ const ProjectSection = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="md:min-h-[100vh] py-[5%]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
@@ -182,7 +181,7 @@ const ProjectSection = () => {
           <YouTube videoId='95iB0X-R3wI' opts={opts} onReady={onPlayerReady} />
         </div>
       </section> */}
-    </>
+    </div>
   )
 }
 

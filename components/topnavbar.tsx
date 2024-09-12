@@ -116,9 +116,9 @@ const Topnavbar = (
     <>
       {showNav && !isMedium && (
 
-        <div className='sticky top-0 z-40'>
+        <div className='fixed top-0 z-40'>
           <div className=' '>
-            <div className='fixed w-full top-10'>
+            <div className='sticky w-full top-10'>
               <div className=" !w-full">
                 <div className="header-row h-[15vh] px-[10%] flex justify-end">
                   <a className={`z-50 md:p-6 p-4 rounded-full ${open ? ' text-white bg-black' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
@@ -179,7 +179,6 @@ const Topnavbar = (
             {menuLinks.map((link, index) => (
               <a href={link.href} key={index} className="!scroll-smooth">
                 <motion.a
-
                   className='font-medium scroll-smooth'
                   onClick={closeMenu}
                 >

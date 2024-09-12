@@ -20,19 +20,19 @@ export const myPortableTextComponents = {
   // },
   block: {
     h1: (({ children }: any) => (
-      <h1 className='!pt-10 pb-2 md:text-4xl text-2xl font-semibold font-clash'>{children}</h1>
+      <h1 className='!pt-10 pb-2 leading-[120%] tracking-[-.5px] md:text-xl text-xl font-semibold font-outfit'>{children}</h1>
     )),
     h2: (({ children }: any) => (
-      <h2 className='!pt-10 pb-4 md:text-3xl text-lg font-semibold font-clash'>{children}</h2>
+      <h2 className='!pt-10 pb-4 leading-[120%] tracking-[-.5px] md:text-2xl text-lg font-semibold font-outfit'>{children}</h2>
     )),
     h3: (({ children }: any) => (
-      <h3 className='!py-2 md:text-xl text-lg font-clash font-semibold'>{children}</h3>
+      <h3 className='!py-2 leading-[120%] tracking-[-.5px] md:text-xl text-lg font-outfit font-semibold'>{children}</h3>
     )),
     blockquote: (({ children }: any) => (
-      <blockquote className='!py-2 !md:text-xl !text-xl b-l-black b-l-4 font-outfit'>{children}</blockquote>
+      <blockquote className='!py-2 leading-[120%] tracking-[-.5px] !md:text-xl !text-xl b-l-black b-l-4 font-outfit'>{children}</blockquote>
     )),
     p: (({ children }: any) => (
-      <p className='!py-2 !md:text-xl !text-xl font-outfit'>{children}</p>
+      <p className='!py-2 leading-[120%] tracking-[-.5px] !md:text-xl !text-xl font-outfit'>{children}</p>
     )),
   },
   marks: {
