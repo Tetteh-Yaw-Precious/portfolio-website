@@ -104,15 +104,15 @@ const ProjectSection = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
-      <div className=" w-[50rem]">
+    <div className="flex flex-col items-center pt-[7.688rem]" id="works">
+      <div className="w-[50rem]">
         <h1 className="text-3xl font-medium md:text-2xl font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Selected Works</h1>
       </div>
       <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
         {/* <p className="md:text-lg text-base text-[#464646]">You might want to brace yourself for this</p> */}
       </div>
 
-      <Tabs as='div' variant='unstyled' className='flex flex-col items-center md:max-w-[50rem]' ref={targetRef} id="works">
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center md:max-w-[50rem]' ref={targetRef} >
         {/*tab container */}
         <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
           {/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>

@@ -45,7 +45,7 @@ export default function RootLayout({
         <Providers>
           <main className='w-full xl:w-full scroll-smooth flex flex-col items-center justify-center'>
             <main className='max-w-[1440px]'>
-              {/* <Topnavbar /> */}
+              <Topnavbar />
               {children}
               <Footer />
             </main>

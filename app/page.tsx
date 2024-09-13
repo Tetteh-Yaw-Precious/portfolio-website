@@ -28,9 +28,9 @@ export default function Home() {
 
     <div className="flex flex-col font-bold scroll-smooth">
       {/* <PageLoader /> */}
-      <div className="scroll-smooth space-y-[6.688rem]">
+      <div className="scroll-smooth">
         <Herosection />
-        {/* <AboutMe /> */}
+        <AboutMe />
         <ProjectSection />
         {/* <NewsSection />
       <ResourcesSection /> */}

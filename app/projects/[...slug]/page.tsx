@@ -42,7 +42,7 @@ export default async function Page({ params }: props, name: any) {
 
   return (
     <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%]'>
-      <div className='py-[8%]'>
+      <div className='pb-[5%]'>
         <Image src={project.image} width={1000} height={1858} alt='project image' className='rounded-[2.5rem]' />
       </div>
 
