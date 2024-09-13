@@ -12,10 +12,8 @@ import YouTube, { YouTubeProps } from 'react-youtube';
 // import Video from 'next-video'
 // import awesomeVideo from 'https://youtu.be/95iB0X-R3wI';
 
-const ProjectSection = () => {
-  const [projects, setProjects] = useState<any[]>([]); // Initialize projects as an empty array
-  const [posts, setPosts] = useState<PostType[]>([]); // Initialize posts as an empty array
-
+const ProjectSection = ({ projects }: any) => {
+  const showCaseProjects = projects
 
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
     // access to player in all event handlers via event.target
@@ -41,38 +39,14 @@ const ProjectSection = () => {
     offset: ["start start", "end start"],
   })
 
-  const allProjects = [{
-    title: "Skinplus Medspa",
-    image: "/images/skinplus-cover-image.png",
-    description: "Omni Strategies, a rapidly growing Ghanaian tech company, needed a website that reflected their innovative spirit and catered to their expanding reach. Their existing website lacked intuitiveness and didn't effectively showcase their impressive portfolio.",
-    background: '#E1E4E0',
-    textColor: '#193129',
-    caseStudyLink: ""
-  },
-  {
-    title: "Omni Strategies",
-    image: "/images/omni-cover-image.png",
-    description: "Omni Strategies, a rapidly growing Ghanaian tech company, needed a website that reflected their innovative spirit and catered to their expanding reach. Their existing website lacked intuitiveness and didn't effectively showcase their impressive portfolio.",
-    background: '#D1F1FF',
-    textColor: '#003D66',
-    caseStudyLink: ""
-  }
-  ]
-
-  const gettingPosts = async () => {
-    try {
-      const posts: any = await getPosts(); // Assuming getProjects is a function that fetches the project data
-      return posts;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    gettingPosts().then((data: PostType[]) => {
-      setPosts(data); // Update the projects state with the fetched data
-    });
-  }, []);
+  // const gettingPosts = async () => {
+  //   try {
+  //     const posts: any = await getPosts(); // Assuming getProjects is a function that fetches the project data
+  //     return posts;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
 
   const opacity: any = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9], [1, 1, 1, 1, 1, 1, 1, 1, 1, 0])
@@ -86,22 +60,6 @@ const ProjectSection = () => {
   const top = useTransform(scrollYProgress, (pos) => {
     return pos > 0 && pos < 1 ? '0' : 'auto'
   })
-
-
-  const gettingProjects = async () => {
-    try {
-      const projectsData = await getProjects(); // Assuming getProjects is a function that fetches the project data
-      return projectsData;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    gettingProjects().then((data: any) => {
-      setProjects(data); // Update the projects state with the fetched data
-    });
-  }, []);
 
   return (
     <div className="flex flex-col items-center pt-[7.688rem]" id="works">
@@ -130,7 +88,7 @@ const ProjectSection = () => {
         <TabPanels>
           <TabPanel className="!p-0">
             <div className="flex flex-col items-center gap-[3rem]">
-              {projects?.map((project, index) => {
+              {showCaseProjects?.map((project: any, index: any) => {
                 return <Newprojectcard key={index} image={project.thumbnail} title={project.name} projectStatus={project.status} projectUrl={project.url} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
               })}
             </div>

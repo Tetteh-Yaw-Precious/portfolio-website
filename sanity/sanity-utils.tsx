@@ -1,3 +1,5 @@
+//Sanity Utils
+
 import { ProjectType, PostType } from '@/types/ProjectType';
 import { createClient } from '@sanity/client'
 import { groq } from 'next-sanity'
@@ -69,4 +71,11 @@ export async function getProject(slug: string): Promise<ProjectType> {
     { slug }
   )
 
+}
+
+export async function getAllProjectSlugs() {
+  // Fetch all project slugs from Sanity
+  return createClient(clientConfig).fetch(groq`
+    *[_type == "project"]{ slug }
+  `);
 }
