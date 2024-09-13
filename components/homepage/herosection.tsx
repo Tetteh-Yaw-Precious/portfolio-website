@@ -111,12 +111,12 @@ function Herosection() {
         ref={targetRef}
         id='home'
       >
-        <motion.section className='xl:h-[40.375rem] min-h-[40.375rem] flex flex-col items-center justify-center bg-none'>
+        <motion.section className='xl:min-h-[40.375rem] min-h-[20.375rem] flex flex-col items-center justify-center bg-none pb-[5rem]'>
           <motion.div
             variants={gridContainerVariants}
             initial='hidden'
             animate='show'
-            className="flex flex-col items-center justify-center h-full md:gap-12 gap-8 content-container pt-[8%]"
+            className="flex flex-col items-center justify-center md:gap-6 gap-8 content-container"
           >
             <motion.h1
               variants={item}
