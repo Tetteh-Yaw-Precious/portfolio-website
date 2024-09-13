@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react';
 import { animate, delay, motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@chakra-ui/react';
