@@ -113,17 +113,18 @@ const Topnavbar = (
   }
 
   return (
-    <>
-      {showNav && !isMedium && (
+    <div className=''>
 
-        <div className='fixed top-0 z-40'>
-          <div className=' '>
+      {showNav && (
+
+        <div className='fixed w-full top-0 z-40 md:hidden block'>
+          <div className=''>
             <div className='sticky w-full top-10'>
               <div className=" !w-full">
-                <div className="header-row h-[15vh] px-[10%] flex justify-end">
+                <div className="header-row h-[10vh] px-[10%] flex justify-end">
                   <a className={`z-50 md:p-6 p-4 rounded-full ${open ? ' text-white bg-black' : 'bg-black text-white'}`} id="menuToggle" onClick={isOpen}
                   >
-                    <Bars3Icon className={`w-10 h-10 md:w-14 md:h-14 stroke-4 ${open ? 'text-white' : ''}`} />
+                    <Bars3Icon className={`w-6 h-6 stroke-4 ${open ? 'text-white' : ''}`} />
                   </a>
                 </div>
               </div>
@@ -168,14 +169,9 @@ const Topnavbar = (
       )}
 
 
-
-
-
-
-
       {isMedium && (
-        <div className='z-[100] sticky top-0 flex justify-center items-center'>
-          <nav className='h-[8vh] w-full border-gray-200 flex bg-white items-center justify-center text-base font-normal font-outfit'>
+        <div className='z-[100] sticky top-0 flex justify-center items-center h-[8vh]'>
+          <nav className='h-[8vh] fixed w-full border-gray-200 flex bg-white items-center justify-center text-base font-normal font-outfit'>
             {menuLinks.map((link, index) => (
               <a
                 href={link.href}
@@ -209,7 +205,7 @@ const Topnavbar = (
           </nav>
         </div >
       )}
-    </>
+    </div>
   )
 }
 

@@ -33,7 +33,7 @@ const Footer = () => {
               <h1 className="md:text-3xl text-2xl text-black font-normal leading-[120%] font-outfit tracking-[-1.5px]">Want to talk about your project?</h1>
               <div className="md:flex md:flex-row flex-col md:gap-8 gap-4">
                 <a href="mailto:yawprecious072@gmail.com" className='font-medium scroll-smooth'>
-                  <button className={`group relative inline-flex h-[10.5rem] items-center font-outfit justify-center rounded-full px-20 font-regular border-4 border-neutral-900 bg-none text-gray-900 !text-normal text-5xl hover:bg-gray-900 hover:text-white`}>
+                  <button className={`group relative inline-flex md:h-[10.5rem] h-[5rem] items-center font-outfit justify-center rounded-full px-20 font-regular border-4 border-neutral-900 bg-none text-gray-900 !text-normal md:text-5xl text-xl hover:bg-gray-900 hover:text-white`}>
                     <span>{`let's chat 👋`}</span>
                   </button>
                 </a>

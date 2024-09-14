@@ -14,8 +14,8 @@ const newprojectcard = ({ image, title, description, background, textColor, slug
                 <Image src={image} width={800} height={511} alt='skinplus' className='rounded-[2rem]' />
             </div>
             <div className="md:w-[100%] w-full flex items-center pt-5 pb-12">
-                <div className={`flex md:w-[100%] px-[2%] w-full gap-4 items-start justify-between !text-gray-900`} style={{ color: textColor }}>
-                    <h1 className="font-outfit md:text-xl text-xl leading-[120%] font-medium tracking-[-.5px] w-[70%]">{title}</h1>
+                <div className={`flex md:flex-row flex-col md:w-[100%] px-[2%] w-full gap-4 items-start justify-between !text-gray-900`} style={{ color: textColor }}>
+                    <h1 className="font-outfit md:text-xl text-base leading-[120%] font-medium tracking-[-.5px] md:w-[70%] w-full">{title}</h1>
                     {/* <p className="leading-[150%] md:text-lg text-base">{description}</p> */}
                     <div>
                         <div className="flex gap-4 items-center font-outfit">

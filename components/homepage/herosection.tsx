@@ -111,7 +111,7 @@ function Herosection() {
         ref={targetRef}
         id='home'
       >
-        <motion.section className='xl:min-h-[40.375rem] min-h-[20.375rem] flex flex-col items-center justify-center bg-none pb-[5rem]'>
+        <motion.section className='xl:min-h-[40.375rem] md:min-h-[20.375rem] min-h-[80vh] flex flex-col items-center justify-center bg-none pb-[5rem]'>
           <motion.div
             variants={gridContainerVariants}
             initial='hidden'
@@ -122,7 +122,7 @@ function Herosection() {
               variants={item}
               initial='initial'
               animate='animate'
-              className='px-[1rem] py-[.4rem] rounded-full border-2 border-black flex items-center'
+              className='px-[1rem] py-[.4rem] rounded-full border-2 border-black flex items-center gap-[.5rem]'
               style={{
                 borderRadius: '24px',
                 border: '1px solid var(--linear-green, #000000)',
@@ -159,7 +159,7 @@ function Herosection() {
                   duration: 0.6,
                   ease: "easeOut",
                 }}
-                className='md:text-base text-base italic !text-[#011019] md:leading-[110%] leading-[130%] text-center font-normal font-outfit md:!tracking-[-.1px] tracking-[-2px]'
+                className='md:text-base text-base italic !text-[#011019] md:leading-[110%] leading-[130%] text-center font-normal font-outfit md:!tracking-[-.1px] tracking-[-.2px]'
                 style={{
                   background: 'var(--gradient-stroke, linear-gradient(93deg, #000 4.71%, #727272 120.19%))',
                   backgroundClip: 'text',
@@ -175,7 +175,7 @@ function Herosection() {
               variants={item}
               initial='initial'
               animate='animate'
-              className='md:text-5xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center font-light font-outfit md:!tracking-[-1.5px] tracking-[-2px] md:w-[60%] w-[70%]'
+              className='md:text-5xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center font-light font-outfit md:!tracking-[-1.5px] tracking-[-.5px] md:w-[60%] w-[70%]'
               style={{
                 scale: scale,
               }}

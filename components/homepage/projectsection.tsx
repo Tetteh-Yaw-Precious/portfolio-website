@@ -62,15 +62,11 @@ const ProjectSection = ({ projects }: any) => {
   })
 
   return (
-    <div className="flex flex-col items-center pt-[7.688rem]" id="works">
-      <div className="w-[50rem]">
-        <h1 className="text-3xl font-medium md:text-2xl font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Selected Works</h1>
+    <div className="flex flex-col items-center md:pt-[7.688rem] pt-[4rem]  md:px-0 px-[10%]" id="works">
+      <div className="md:w-[50rem] w-full">
+        <h1 className="text-xl font-medium md:text-3xl mb-[2rem] font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0">~ Selected Works</h1>
       </div>
-      <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
-        {/* <p className="md:text-lg text-base text-[#464646]">You might want to brace yourself for this</p> */}
-      </div>
-
-      <Tabs as='div' variant='unstyled' className='flex flex-col items-center md:max-w-[50rem]' ref={targetRef} >
+      <Tabs as='div' variant='unstyled' className='flex flex-col items-center md:max-w-[50rem] w-full' ref={targetRef} >
         {/*tab container */}
         <motion.div style={{ position, top, width: '100%', zIndex: 4, opacity, boxShadow, backdropFilter }}>
           {/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
@@ -87,7 +83,7 @@ const ProjectSection = ({ projects }: any) => {
         </motion.div>
         <TabPanels>
           <TabPanel className="!p-0">
-            <div className="flex flex-col items-center gap-[3rem]">
+            <div className="flex flex-col items-center md:gap-[3rem] gap-[1rem]">
               {showCaseProjects?.map((project: any, index: any) => {
                 return <Newprojectcard key={index} image={project.thumbnail} title={project.name} projectStatus={project.status} projectUrl={project.url} description={project.shortdescription} background={project.bgcolor} textColor={project.textcolor} slug={project.slug} />
               })}
