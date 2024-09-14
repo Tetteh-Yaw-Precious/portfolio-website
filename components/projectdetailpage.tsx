@@ -37,7 +37,7 @@ const ProjectDetailPage = ({ viewProject }: any) => {
     }
 
     return (
-        <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%]'>
+        <motion.section initial='initial' animate='animate' exit='exit' className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%] border border-black'>
             <div className='pb-[5%]'>
                 <Image src={project.image} width={1000} height={1858} alt='project image' className='rounded-[2.5rem]' />
             </div>
@@ -47,9 +47,9 @@ const ProjectDetailPage = ({ viewProject }: any) => {
                 transition={{ duration: 1.5 }}>
                 <div className='md:px-[20%] px-[10%]'>
                     <motion.div>
-                        <motion.h1 className='font-outfit font-semibold md:text-2xl text-3xl mb-3 leading-[120%] tracking-[-2.5%]' variants={projectTitle}>{project.name}</motion.h1>
+                        <motion.h1 className='font-outfit font-semibold md:text-2xl text-lg mb-3 leading-[120%] tracking-[-2.5%]' variants={projectTitle}>{project.name}</motion.h1>
                         {/* <motion.h1 className='font-outfit font-semibold md:text-2xl text-xl leading-none mb-3'>About {project.company}</motion.h1> */}
-                        <motion.p className='mb-12 md:text-normal !text-lg font-normal'>{project.shortdescription}</motion.p>
+                        <motion.p className='md:mb-8 mb-2 md:text-normal !text-lg font-normal'>{project.shortdescription}</motion.p>
                     </motion.div>
                     {/* <motion.div className='flex md:flex-row flex-col gap-8 w-full' variants={letter}>
             <div className='md:w-[50%] w-full'>
