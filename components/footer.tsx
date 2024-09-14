@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <>
       {showFooter &&
-        <footer className="md:h-[65vh] h-[75vh] flex items-center justify-center mt-[6rem]" style={{
+        <footer className="md:h-[65vh] h-[50vh] flex items-center justify-center mt-[6rem]" style={{
           backgroundImage: 'url(/images/footerbackground.png)',
           color: '#191819',
           backgroundSize: 'cover',
@@ -30,10 +30,10 @@ const Footer = () => {
         }}>
           <section className="content-container flex md:flex-col px-[10%] md:gap-0 gap-8">
             <div className="flex flex-col md:gap-14 justify-center items-center gap-7">
-              <h1 className="md:text-3xl text-2xl text-black font-normal leading-[120%] font-outfit tracking-[-1.5px]">Want to talk about your project?</h1>
+              <h1 className="md:text-3xl text-xl text-black font-normal text-center leading-[120%] font-outfit tracking-[-1.5px]">Want to talk about your project?</h1>
               <div className="md:flex md:flex-row flex-col md:gap-8 gap-4">
                 <a href="mailto:yawprecious072@gmail.com" className='font-medium scroll-smooth'>
-                  <button className={`group relative inline-flex md:h-[10.5rem] h-[5rem] items-center font-outfit justify-center rounded-full px-20 font-regular border-4 border-neutral-900 bg-none text-gray-900 !text-normal md:text-5xl text-xl hover:bg-gray-900 hover:text-white`}>
+                  <button className={`group relative inline-flex md:h-[10.5rem] h-[4rem] items-center font-outfit justify-center rounded-full md:px-20 px-10 font-regular md:border-4 border-2 border-neutral-900 bg-none text-gray-900 !text-normal md:text-5xl text-lg hover:bg-gray-900 hover:text-white`}>
                     <span>{`let's chat 👋`}</span>
                   </button>
                 </a>
