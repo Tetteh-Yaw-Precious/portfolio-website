@@ -118,6 +118,38 @@ function Herosection() {
             animate='show'
             className="flex flex-col items-center justify-center md:gap-6 gap-8 content-container"
           >
+            <div className='px-[1rem] py-[.4rem] rounded-full border-2 border-black flex items-center'
+              style={{
+                borderRadius: '24px',
+                border: '2px solid var(--linear-green, #66DA00)',
+              }}
+            >
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.5" cy="7.5" r="6.5" fill="url(#paint0_linear_1544_9172)" stroke="#CAF5A5" />
+                <defs>
+                  <linearGradient id="paint0_linear_1544_9172" x1="0.5" y1="7.5" x2="14.5" y2="7.5" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.27" stop-color="#66DA00" />
+                    <stop offset="1" stop-color="#E1FBCB" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <motion.p
+                variants={item}
+                initial='initial'
+                animate='animate'
+                className='md:text-lg text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center font-normal font-outfit md:!tracking-[-.5px] tracking-[-2px]'
+                style={{
+                  scale: scale,
+                  background: 'var(--gradient-stroke, linear-gradient(93deg, #000 4.71%, #727272 120.19%))',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                {`Open to new opportunities`}
+              </motion.p>
+            </div>
             <motion.h1
               variants={item}
               initial='initial'
