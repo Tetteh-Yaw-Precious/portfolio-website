@@ -5,14 +5,18 @@ import urlFor from '@/library/urlFor'
 export const myPortableTextComponents = {
   types: {
     image: ({ value }: any) => (
-      <Image
-        src={urlFor(value)?.url() as string}
-        className="object-contain py-10 md:px-[10%] px-[5%]"
-        width={1280}
-        height={600}
-        loading='lazy'
-        alt="image"
-      />
+      <div className='md:w-[800px] min-h-[300px]  w-full relative'>
+
+        <Image
+          src={urlFor(value)?.url() as string}
+          className="object-contain py-10 md:px-[10%] px-[5%]"
+          // width={1280}
+          // height={600}
+          fill
+          loading='lazy'
+          alt="image"
+        />
+      </div>
     ),
   },
   list: {
