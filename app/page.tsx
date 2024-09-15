@@ -16,21 +16,6 @@ export default async function Home() {
   const projects = await getProjects()
   console.log(projects)
 
-  // const gettingProjects = async () => {
-  //   try {
-  //     const projectsData = await getProjects(); // Assuming getProjects is a function that fetches the project data
-  //     return projectsData;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   gettingProjects().then((data: any) => {
-  //     setProjects(data); // Update the projects state with the fetched data
-  //   });
-  // }, []);
-
   return (
 
     <div className="flex flex-col font-bold scroll-smooth">
