@@ -8,10 +8,10 @@ const aboutme = () => {
     ]
     return (
         <div className='md:min-h-[40vh] min-h-[100vh] flex flex-col justify-center md:py-0 scroll-smooth' id='about' >
-            <div className='flex items-center justify-center md:px-[20%] px-[10%] md:py-[7rem] py-[4rem]'>
+            <div className='flex items-center justify-center md:px-[20%] px-[10%] md:py-[8rem] py-[4rem]'>
                 <div className='flex md:flex-row flex-col-reverse md:gap-32 gap-6'>
                     <div className='!leading-[120%] h-full flex justify-center items-center w-full'>
-                        <p className='md:!text-lg text-base !leading-[190%] md:tracking-[-0.2px] tracking-[-0.2] md:text-left text-center font-outfit text-gray-900 !font-normal'>{
+                        <p className='md:!text-xl text-base !leading-[190%] md:tracking-[-0.2px] tracking-[-0.2] md:text-left text-center font-outfit text-gray-900 !font-normal'>{
                             `
 Hello! I’m Yaw Precious, a Product Designer crafting crafting intuitive apps and websites that enhance both user experiences and business operations. My work involves conducting user interviews to uncover key insights, translating them into sweet user experiences, and collaborating closely with developers with my coding expertise when needed.
 I specialize in user research, UI/UX design, and business strategy, delivering data-driven solutions that align with business goals. Recently, I've been diving deeper into frontend development, I'm fascinated by NextJS and AstroJS.
