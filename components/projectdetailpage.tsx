@@ -77,4 +77,6 @@ const ProjectDetailPage = ({ viewProject }: any) => {
     )
 }
 
+export const revalidate = 1;
+
 export default ProjectDetailPage

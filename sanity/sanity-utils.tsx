@@ -68,7 +68,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
       shortdescription,
       status
     }`,
-    { slug }
+    { slug }, { cache: 'no-store' }
   )
 
 }
