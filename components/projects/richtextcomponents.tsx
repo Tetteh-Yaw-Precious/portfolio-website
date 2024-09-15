@@ -11,7 +11,6 @@ export const myPortableTextComponents = {
         width={1280}
         height={600}
         loading='lazy'
-        fill
         alt="image"
       />
     ),
