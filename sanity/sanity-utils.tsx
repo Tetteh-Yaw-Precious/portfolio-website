@@ -1,13 +1,14 @@
 //Sanity Utils
 
 import { ProjectType, PostType } from '@/types/ProjectType';
-import { createClient } from '@sanity/client'
-import { groq } from 'next-sanity'
+import { createClient } from '@sanity/client';
+import { groq } from 'next-sanity';
 import clientConfig from './config/client-config';
+import { revalidate } from '@/app/page';
 
 export async function getProjects(): Promise<ProjectType[]> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "project" && showcase == 'forshowcase']{
+	return createClient(clientConfig).fetch(
+		groq`*[_type == "project" && showcase == 'forshowcase']{
       _id,
       name,
       "slug": slug.current,
@@ -19,12 +20,12 @@ export async function getProjects(): Promise<ProjectType[]> {
       showcase,
       url
     }`
-  )
+	);
 }
 
 export async function getPosts(): Promise<PostType[]> {
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "posts"] {
+	return createClient(clientConfig).fetch(
+		groq`*[_type == "posts"] {
   _id,
   title,
   "cover": cover.asset->url,
@@ -45,16 +46,15 @@ export async function getPosts(): Promise<PostType[]> {
     }
   }
 }`
-  )
+	);
 }
 
 export async function getProject(slug: string): Promise<ProjectType> {
-
-
-  return createClient(clientConfig).fetch(
-    groq`*[_type == "project" && slug.current == $slug][0]{
+	return createClient(clientConfig).fetch(
+		groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
+      teamMembers,
       name,
       "slug": slug.current,
       "image": image.asset->url,
@@ -66,16 +66,23 @@ export async function getProject(slug: string): Promise<ProjectType> {
       duration,
       role,
       shortdescription,
-      status
+      status,
+      teamMembers[]->{
+        _id,
+        name,
+        role,
+        "photo": photo.asset->url
+      }
     }`,
-    { slug }, { cache: 'no-store' }
-  )
-
+		{ slug },
+		// { next: { revalidate: 3 } }
+		{ cache: 'no-store' }
+	);
 }
 
 export async function getAllProjectSlugs() {
-  // Fetch all project slugs from Sanity
-  return createClient(clientConfig).fetch(groq`
+	// Fetch all project slugs from Sanity
+	return createClient(clientConfig).fetch(groq`
     *[_type == "project"]{ slug }
   `);
 }

@@ -47,8 +47,8 @@ export const project = {
     },
     {
       name: "aboutInformation",
-      title: 'About Project',
-      type: 'string'
+      title: "About Project",
+      type: "string",
     },
     {
       name: "image",
@@ -59,46 +59,46 @@ export const project = {
         {
           name: "alt",
           title: "Alt",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
-
     {
       name: "thumbnail",
-      title: "Thumnail Image",
+      title: "Thumbnail Image",
       type: "image",
       options: { hotspot: true },
       fields: [
         {
           name: "alt",
           title: "Alt",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
     {
-      name: 'projecttype',
-      title: 'Project Type',
-      type: 'string',
-      description: 'Select the type of project',
+      name: "projecttype",
+      title: "Project Type",
+      type: "string",
+      description: "Select the type of project",
       options: {
         list: projectType.map(({ title, value }) => ({ title, value })),
-        layout: 'radio',
+        layout: "radio",
       },
     },
     {
       name: "role",
       title: "Role",
       type: "string",
-    }, {
+    },
+    {
       name: "status",
       title: "Project Status",
       type: "string",
     },
     {
       name: "showcase",
-      title: "showcase",
+      title: "Showcase",
       type: "string",
     },
     {
@@ -117,43 +117,58 @@ export const project = {
       type: "string",
     },
     {
-      name: 'textcolor',
-      title: 'Text Color',
-      type: 'string',
+      name: "textcolor",
+      title: "Text Color",
+      type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name" }
+      options: { source: "name" },
     },
-
     {
       name: "url",
       title: "URL",
-      type: "url"
+      type: "url",
     },
     {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{
-        type: "block", styles: [
-          { title: 'Normal', value: 'normal' },
-          { title: 'H1', value: 'h1' },
-          { title: 'H2', value: 'h2' },
-          { title: 'H3', value: 'h3' },
-          { title: 'H4', value: 'h4' },
-          { title: 'H5', value: 'h5' },
-          { title: 'H6', value: 'h6' },
-          { title: 'Quote', value: 'blockquote' }
-        ]
-      }, {
-        type: 'image'
-      }]
-    }
-  ]
-}
+      of: [
+        {
+          type: "block",
+          styles: [
+            { title: "Normal", value: "normal" },
+            { title: "H1", value: "h1" },
+            { title: "H2", value: "h2" },
+            { title: "H3", value: "h3" },
+            { title: "H4", value: "h4" },
+            { title: "H5", value: "h5" },
+            { title: "H6", value: "h6" },
+            { title: "Quote", value: "blockquote" },
+          ],
+        },
+        {
+          type: "image",
+        },
+      ],
+    },
+    {
+      name: "teamMembers",
+      title: "Team Members",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "teamMember" }],
+        },
+      ],
+    },
+  ],
+};
+
 
 export const Post = {
   name: "post",
@@ -219,3 +234,36 @@ export const Post = {
     }]
 
 }
+
+
+export const teamMember = {
+  name: "teamMember",
+  title: "Team Member",
+  type: "document",
+  fields: [
+    {
+      name: "name",
+      title: "Name",
+      type: "string",
+    },
+    {
+      name: "role",
+      title: "Role",
+      type: "string",
+    },
+    {
+      name: "photo",
+      title: "Photo",
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt Text",
+          type: "string"
+        }
+      ]
+    }
+  ]
+};
+

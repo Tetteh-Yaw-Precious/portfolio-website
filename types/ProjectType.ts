@@ -14,8 +14,22 @@ export type ProjectType = {
   role: string
   duration: string
   content: PortableTextBlock[]
-  status: string
+  status: string,
+  teamMembers: TeamMember[]
 }
+
+export type TeamMember = {
+  _id: string;        // Automatically generated document ID
+  name: string;       // Name of the team member
+  role: string;       // Role of the team member
+  photo: {
+    asset: {
+      _ref: string;   // Reference to the image asset
+      _type: 'reference';
+    };
+    alt: string;      // Alt text for the photo
+  };
+};
 
 export type PostType = {
   _id: string,
