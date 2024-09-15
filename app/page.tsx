@@ -6,18 +6,24 @@ import AboutMe from "@/components/homepage/aboutme";
 import NewsSection from "@/components/homepage/newssection";
 import ProjectSection from "@/components/homepage/projectsection";
 import ResourcesSection from "@/components/homepage/resourcessection";
-import { useShowStore } from "@/context/context";
-import Lenis from "lenis";
-// import { useEffect, useState } from "react";
 import { getProjects } from "@/sanity/sanity-utils";
 import { ProjectType } from "@/types/ProjectType";
 
-export default async function Home() {
-  const projects = await getProjects()
-  console.log(projects)
+export async function getServerSideProps() {
+  // Fetch fresh data on each request
+  const projects: ProjectType[] = await getProjects();
+  console.log(projects); // Log to verify data fetching
 
+  return {
+    props: {
+      projects,
+    },
+  };
+}
+
+// Main component
+export default function Home({ projects }: { projects: ProjectType[] }) {
   return (
-
     <div className="flex flex-col font-bold scroll-smooth">
       {/* <PageLoader /> */}
       <div className="scroll-smooth">
@@ -25,8 +31,8 @@ export default async function Home() {
         <AboutMe />
         <ProjectSection projects={projects} />
         {/* <NewsSection />
-      <ResourcesSection /> */}
+        <ResourcesSection /> */}
       </div>
     </div>
-  )
+  );
 }
