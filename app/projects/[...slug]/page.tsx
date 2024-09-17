@@ -17,7 +17,6 @@ export default async function Page({ params }: props) {
 		},
 	};
 	const imageUrl = urlFor(imageExample).url();
-	console.log(imageUrl);
 
 	return (
 		<>
