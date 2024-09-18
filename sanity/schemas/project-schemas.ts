@@ -136,9 +136,6 @@ export const project = {
       name: 'orderRank', // Add this field
       title: 'Order Rank',
       type: 'string', // Ensure this is of type string
-      options: {
-        isHighlighted: true, // Optional: highlight this field in the studio
-      },
     },
     {
       name: "content",
@@ -217,9 +214,6 @@ export const Post = {
       name: 'orderRank', // Add this field
       title: 'Order Rank',
       type: 'string', // Ensure this is of type string
-      options: {
-        isHighlighted: true, // Optional: highlight this field in the studio
-      },
     },
     {
       name: 'postLinkSource',
@@ -278,9 +272,6 @@ export const teamMember = {
       name: 'orderRank', // Add this field
       title: 'Order Rank',
       type: 'string', // Ensure this is of type string
-      options: {
-        isHighlighted: true, // Optional: highlight this field in the studio
-      },
     },
     {
       name: "role",
