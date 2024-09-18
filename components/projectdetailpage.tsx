@@ -9,7 +9,7 @@ import { teamMember } from '@/sanity/schemas/project-schemas';
 
 const ProjectDetailPage = ({ viewProject }: any) => {
 	const project: ProjectType = viewProject;
-	console.log(project.collaborators);
+	// console.log(project.collaborators);
 
 	const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -52,6 +52,7 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 					height={1858}
 					alt='project image'
 					className='rounded-[2.5rem]'
+					priority
 				/>
 			</div>
 
