@@ -195,18 +195,19 @@ function Herosection() {
 							variants={item}
 							initial='initial'
 							animate='animate'
-							className='md:text-5xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center font-light font-outfit md:!tracking-[-1.5px] tracking-[-.5px] md:w-[70%] w-[70%]'
+							className='md:text-6xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center md:font-medium font-medium font-outfit md:!tracking-[-2.5px] tracking-[-.5px] md:w-[70%] w-[70%]'
 							style={{
 								scale: scale,
 							}}
 						>
-							A Product Designer with focus on
-							<span className='font-medium'> UX Research,</span>
+							A Product Designer bridging UX, Business Strategy &
+							Engineering.
+							{/* <span className='font-medium'> UX Research,</span>
 							<span className='font-medium'> </span>{' '}
 							<span className='font-medium'>
 								{' '}
 								business strategy & Engineering{' '}
-							</span>
+							</span> */}
 						</motion.h1>
 						<motion.div variants={item}>
 							{/* <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{

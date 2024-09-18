@@ -34,13 +34,13 @@ const newprojectcard = ({
 				</div>
 			</div>
 
-			<div className='md:w-[100%] w-full flex items-center md:pt-8 pb-12'>
+			<div className='md:w-[100%] w-full flex items-center md:pt-8 pt-4 pb-12'>
 				<div
 					className={`flex flex-col md:w-[100%] px-[2%] w-full gap-4 items-start justify-between !text-gray-900`}
 					style={{ color: textColor }}
 				>
 					{/* Title */}
-					<h1 className='font-outfit md:text-2xl text-base leading-[120%] md:font-semibold  font-medium tracking-[-.5px] md:w-[95%] w-full'>
+					<h1 className='font-outfit md:text-[1.7rem] text-base leading-[120%] md:font-semibold font-medium tracking-[-.5px] md:w-[95%] w-full'>
 						{title}
 					</h1>
 
@@ -73,11 +73,11 @@ const newprojectcard = ({
 									className='cursor-pointer font-normal px-5 py-2 rounded-full md:border-2 border hover:bg-black md:text-base text-sm hover:text-white border-black'
 									href={`/projects/${slug}`}
 								>
-									Read Case Study
+									Explore Case Study
 								</a>
 							) : (
 								<span className='font-normal px-5 py-2 rounded-full bg-gray-300 text-gray-500 cursor-not-allowed'>
-									Case Study Coming Soon
+									Coming Soon: Full Case Study
 								</span>
 							)}
 
