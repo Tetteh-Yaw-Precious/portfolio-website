@@ -1,42 +1,35 @@
 import { PortableTextBlock } from "sanity"
 
-export type ProjectType = {
-  _id: string;
-  _createdAt: Date
-  name: string
-  slug: string
-  thumbnail: string
-  image: string
-  url: string
-  company: string
-  aboutInformation: string
-  shortdescription: string
-  role: string
-  duration: string
-  content: PortableTextBlock[]
-  status: string,
-  teamMembers: Collaborator[]
-}
-
-export type Collaborator = {
-  member: {
-    name: string;
-  };
-  roleInProject: string;
+// Define the TeamMember type based on your team member schema
+export type TeamMember = {
+  _id: string; // Assuming you have an ID for the team member
+  name: string; // Name of the team member
+  // Add any other fields from the team member schema as needed
 };
 
+// Update the Collaborator type to reflect the correct structure
+export type Collaborator = {
+  teamMembers: TeamMember; // Reference to the TeamMember type
+  roleInProject: string; // Role in the project
+};
 
-export type TeamMember = {
-  _id: string;        // Automatically generated document ID
-  name: string;       // Name of the team member
-  role: string;       // Role of the team member
-  photo: {
-    asset: {
-      _ref: string;   // Reference to the image asset
-      _type: 'reference';
-    };
-    alt: string;      // Alt text for the photo
-  };
+// Update the ProjectType to include the correct Collaborator type
+export type ProjectType = {
+  _id: string;
+  _createdAt: Date;
+  name: string;
+  slug: string;
+  thumbnail: string;
+  image: string;
+  url: string;
+  company: string;
+  aboutInformation: string;
+  shortdescription: string;
+  role: string;
+  duration: string;
+  content: PortableTextBlock[];
+  status: string;
+  collaborators: Collaborator[]; // Array of Collaborator type
 };
 
 export type PostType = {

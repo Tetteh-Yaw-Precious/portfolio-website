@@ -61,12 +61,12 @@ export async function getProject(slug: string): Promise<ProjectType> {
       content,
       role,
       duration,
-      "teamMembers": teamMembers[]{
-        "member": member->{
-          name
-        },
-        roleInProject
-      }
+      "collaborators": collaborators[] {
+      "teamMember": teamMembers-> {
+      name,
+    },
+    roleInProject
+  }
     }`,
 		{ slug },
 		{ cache: 'no-store' }
