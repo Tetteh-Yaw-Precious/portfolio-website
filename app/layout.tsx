@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 import Head from 'next/head';
 import { Providers } from './providers';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 // export const metadata = {
 //   title: 'Yaw Precious | Product Designer',
@@ -48,6 +49,8 @@ export default function RootLayout({
 						<main className='md:max-w-[1440px] w-full'>
 							<Topnavbar />
 							{children}
+							<Analytics />
+
 							<Footer />
 						</main>
 					</main>
