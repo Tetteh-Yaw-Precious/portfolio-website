@@ -22,7 +22,7 @@ export default async function Home() {
 	// Fetch projects data
 	const projects = await getProjects();
 	// Debugging line (commented out)
-	console.log(projects);
+	// console.log(projects);
 
 	return (
 		<div className='flex flex-col font-bold scroll-smooth'>
