@@ -14,12 +14,18 @@ export async function getProjects(): Promise<ProjectType[]> {
       "slug": slug.current,
       "thumbnail": thumbnail.asset->url,
       role,
+      responsibilities,
       textcolor,
       bgcolor,
       shortdescription,status,
       showcase,
-      url
-    }`
+      url,
+        caseStudyReady,
+      shipped,
+      passwordProtected
+    }`,
+		undefined, // Pass undefined for params
+		{ cache: 'no-store' } // Add cache option to ensure fresh data
 	);
 }
 
@@ -59,17 +65,19 @@ export async function getProject(slug: string): Promise<ProjectType> {
       "image": image.asset->url,
       url,
       content,
+      aboutInformation,
       role,
       duration,
       "collaborators": collaborators[] {
-      "teamMember": teamMembers-> {
-      name,
-    },
-    roleInProject
-  }
+        "teamMember": teamMembers-> {
+          name,
+        },
+        roleInProject
+      },
+    
     }`,
-		{ slug },
-		{ cache: 'no-store' }
+		{ slug }, // Pass params as the second argument
+		{ cache: 'no-store' } as const // Pass options as the third argument with type assertion
 	);
 }
 

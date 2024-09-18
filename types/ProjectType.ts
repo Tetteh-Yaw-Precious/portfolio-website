@@ -26,6 +26,7 @@ export type ProjectType = {
   aboutInformation: string;
   shortdescription: string;
   role: string;
+  responsibilities: string;
   duration: string;
   content: PortableTextBlock[];
   status: string;

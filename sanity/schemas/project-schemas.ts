@@ -92,6 +92,11 @@ export const project = {
       type: "string",
     },
     {
+      name: "responsibilities",
+      title: "My Responsibilities",
+      type: "string",
+    },
+    {
       name: "status",
       title: "Project Status",
       type: "string",
@@ -177,6 +182,24 @@ export const project = {
           ],
         },
       ],
+    },
+    {
+      name: "caseStudyReady",
+      title: "Case Study Ready",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
+      name: "shipped",
+      title: "Shipped",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
+      name: "passwordProtected",
+      title: "Password Protected",
+      type: "boolean",
+      initialValue: false,
     },
   ],
 };

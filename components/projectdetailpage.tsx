@@ -40,12 +40,12 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 
 	return (
 		<motion.section
-			initial='initial'
-			animate='animate'
-			exit='exit'
-			className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%]'
+			// initial='initial'
+			// animate='animate'
+			// exit='exit'
+			className='case-study-detail flex flex-col items-center justify-center md:px-[10%] px-[5%] w-full'
 		>
-			<div className='pb-[5%]'>
+			<div className='pb-[5%] w-full md:py-12 flex items-center justify-center'>
 				<Image
 					src={project.image}
 					width={1000}
@@ -57,12 +57,13 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 			</div>
 
 			<motion.div
-			// initial={{ opacity: 0, scale: 0.5 }}
-			// animate={{ opacity: 1, scale: 1 }}
-			// transition={{ duration: 1.5 }}
+				// initial={{ opacity: 0, scale: 0.5 }}
+				// animate={{ opacity: 1, scale: 1 }}
+				// transition={{ duration: 1.5 }}
+				className='w-full'
 			>
-				<div className=''>
-					<motion.div className='md:px-[20%] px-[10%]'>
+				<div className='w-full'>
+					<motion.div className='md:px-[20%] px-[10%] w-full'>
 						<motion.h1
 							className='mb-3 leading-[120%] tracking-[-.5px] md:text-2xl text-lg font-semibold font-outfit'
 							//  variants={projectTitle}
