@@ -94,8 +94,8 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 												className='md:text-base text-sm font-outfit font-normal'
 												key={index}
 											>
-												{collaborator.member?.name ||
-													'Unknown'}{' '}
+												{collaborator.teamMember
+													?.name || 'Unknown'}{' '}
 												- {collaborator.roleInProject}
 											</p>
 										)
