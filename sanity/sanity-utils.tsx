@@ -8,7 +8,7 @@ import { revalidate } from '@/app/page';
 
 export async function getProjects(): Promise<ProjectType[]> {
 	return createClient(clientConfig).fetch(
-		groq`*[_type == "project" && showcase == 'forshowcase'] | order(orderRank asc) {
+		groq`*[_type == "project" && showcase == 'forshowcase']{
       _id,
       name,
       "slug": slug.current,
@@ -16,11 +16,9 @@ export async function getProjects(): Promise<ProjectType[]> {
       role,
       textcolor,
       bgcolor,
-      shortdescription,
-      status,
+      shortdescription,status,
       showcase,
-      url,
-      orderRank
+      url
     }`
 	);
 }

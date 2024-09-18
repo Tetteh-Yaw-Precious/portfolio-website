@@ -133,11 +133,6 @@ export const project = {
       type: "url",
     },
     {
-      name: 'orderRank', // Add this field
-      title: 'Order Rank',
-      type: 'string', // Ensure this is of type string
-    },
-    {
       name: "content",
       title: "Content",
       type: "array",
@@ -211,11 +206,6 @@ export const Post = {
       ]
     },
     {
-      name: 'orderRank', // Add this field
-      title: 'Order Rank',
-      type: 'string', // Ensure this is of type string
-    },
-    {
       name: 'postLinkSource',
       title: 'Post Link Source',
       type: 'string',
@@ -267,11 +257,6 @@ export const teamMember = {
       name: "name",
       title: "Name",
       type: "string",
-    },
-    {
-      name: 'orderRank', // Add this field
-      title: 'Order Rank',
-      type: 'string', // Ensure this is of type string
     },
     {
       name: "role",

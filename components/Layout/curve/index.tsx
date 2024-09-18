@@ -4,73 +4,71 @@ import { usePathname } from 'next/navigation';
 import { text, curve, translate } from './anim';
 
 interface InnerProps {
-	children: ReactNode;
+    children: ReactNode;
 }
 
+
+
 type RoutesEnum = {
-	'/': 'Home';
-	'/projects': 'Projects';
-	'/about': 'About Me';
-	[key: string]: string; // Index signature for dynamic keys
+    "/": "Home";
+    "/projects": "Projects";
+    "/about": "About Me";
+    [key: string]: string; // Index signature for dynamic keys
 };
 
+
 const routes: RoutesEnum = {
-	'/': 'Home',
-	'/projects': 'Projects',
-	'/about': 'About Me',
+    "/": "Home",
+    "/projects": "Projects",
+    "/about": "About Me",
 };
 
 const anim = (variants: any) => {
-	return {
-		variants,
-		initial: 'initial',
-		animate: 'enter',
-		exit: 'exit',
-	};
+    return {
+        variants,
+        initial: "initial",
+        animate: "enter",
+        exit: "exit"
+    };
 };
 
 const Curve: FC<InnerProps> = ({ children }) => {
-	const pathname: any = usePathname();
-	const [dimensions, setDimensions] = useState({
-		width: null,
-		height: null,
-	});
+    const pathname: any = usePathname();
+    const [dimensions, setDimensions] = useState({
+        width: null,
+        height: null
+    });
 
-	// Add back the useEffect for resizing
-	useEffect(() => {
-		function resize() {
-			setDimensions({
-				width: window.innerWidth as any,
-				height: window.innerHeight as any,
-			});
-		}
-		resize();
-		window.addEventListener('resize', resize);
-		return () => {
-			window.removeEventListener('resize', resize);
-		};
-	}, []);
+    // Add back the useEffect for resizing
+    useEffect(() => {
+        function resize() {
+            setDimensions({
+                width: window.innerWidth as any,
+                height: window.innerHeight as any
+            });
+        }
+        resize();
+        window.addEventListener("resize", resize);
+        return () => {
+            window.removeEventListener("resize", resize);
+        };
+    }, []);
 
-	return (
-		<div
-			className='page curve'
-			style={{ backgroundColor: '#yourBackgroundColor' }}
-		>
-			<div
-				style={{ opacity: dimensions.width == null ? 1 : 0 }}
-				className='background'
-			/>
-			<motion.p className='route font-outfit font-medium' {...anim(text)}>
-				{/* {routes[pathname] = 'home' ? `Hello, I'm Yaw Precious` : `${routes[pathname]}`} */}
-			</motion.p>
-			{dimensions.width != null && <SVG {...dimensions} />}
-			{children}
-		</div>
-	);
+    return (
+        <div className='page curve' style={{ backgroundColor: '#yourBackgroundColor' }}>
+            <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className='background' />
+            <motion.p className='route font-outfit font-medium' {...anim(text)}>
+                {routes[pathname] = 'home' ? `Hello, I'm Yaw Precious` : `${routes[pathname]}`}
+            </motion.p>
+            {dimensions.width != null && <SVG {...dimensions} />}
+            {children}
+        </div>
+    );
 };
 
 const SVG: FC<{ height: any; width: any }> = ({ height, width }) => {
-	const initialPath = `
+
+    const initialPath = `
         M0 300 
         Q${width / 2} 0 ${width} 300
         L${width} ${height + 300}
@@ -78,7 +76,7 @@ const SVG: FC<{ height: any; width: any }> = ({ height, width }) => {
         L0 300
     `;
 
-	const targetPath = `
+    const targetPath = `
         M0 300
         Q${width / 2} 0 ${width} 300
         L${width} ${height}
@@ -86,11 +84,11 @@ const SVG: FC<{ height: any; width: any }> = ({ height, width }) => {
         L0 300
     `;
 
-	return (
-		<motion.svg {...anim(translate)} className='backgroundsvg'>
-			<motion.path {...anim(curve(initialPath, targetPath))} />
-		</motion.svg>
-	);
+    return (
+        <motion.svg {...anim(translate)} className='backgroundsvg'>
+            <motion.path {...anim(curve(initialPath, targetPath))} />
+        </motion.svg>
+    );
 };
 
 export default Curve;
