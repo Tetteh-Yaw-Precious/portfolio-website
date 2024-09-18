@@ -15,8 +15,16 @@ export type ProjectType = {
   duration: string
   content: PortableTextBlock[]
   status: string,
-  teamMembers: TeamMember[]
+  teamMembers: Collaborator[]
 }
+
+export type Collaborator = {
+  member: {
+    name: string;
+  };
+  roleInProject: string;
+};
+
 
 export type TeamMember = {
   _id: string;        // Automatically generated document ID

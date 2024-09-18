@@ -88,7 +88,7 @@ export const project = {
     },
     {
       name: "role",
-      title: "Role",
+      title: "My Role",
       type: "string",
     },
     {
@@ -156,13 +156,25 @@ export const project = {
       ],
     },
     {
-      name: "teamMembers",
-      title: "Team Members",
+      name: "collaborators",
+      title: "Collaborators",
       type: "array",
       of: [
         {
-          type: "reference",
-          to: [{ type: "teamMember" }],
+          type: "object",
+          fields: [
+            {
+              name: "teamMembers",
+              title: "Team Members",
+              type: "reference",
+              to: [{ type: "teamMember" }],
+            },
+            {
+              name: "roleInProject",
+              title: "Role in this Project",
+              type: "string",
+            },
+          ],
         },
       ],
     },
@@ -266,4 +278,5 @@ export const teamMember = {
     }
   ]
 };
+
 

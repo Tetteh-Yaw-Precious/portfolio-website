@@ -11,8 +11,8 @@ export const myPortableTextComponents = {
 					alt='image'
 					className='object-contain w-full h-auto'
 					layout='responsive'
-					width={1280} // Adjust as needed
-					height={720} // Adjust as needed
+					width={1000} // Adjust as needed
+					height={600} // Adjust as needed
 					loading='lazy'
 				/>
 			</div>

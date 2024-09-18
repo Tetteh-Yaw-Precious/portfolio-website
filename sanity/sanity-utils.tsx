@@ -54,28 +54,21 @@ export async function getProject(slug: string): Promise<ProjectType> {
 		groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
-      teamMembers,
       name,
       "slug": slug.current,
       "image": image.asset->url,
-      "thumbnail": image.asset->url,
       url,
-      company,
-      aboutInformation,
       content,
-      duration,
       role,
-      shortdescription,
-      status,
-      teamMembers[]->{
-        _id,
-        name,
-        role,
-        "photo": photo.asset->url
+      duration,
+      "teamMembers": teamMembers[]{
+        "member": member->{
+          name
+        },
+        roleInProject
       }
     }`,
 		{ slug },
-		// { next: { revalidate: 3 } }
 		{ cache: 'no-store' }
 	);
 }

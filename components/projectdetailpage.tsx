@@ -9,6 +9,7 @@ import { teamMember } from '@/sanity/schemas/project-schemas';
 
 const ProjectDetailPage = ({ viewProject }: any) => {
 	const project: ProjectType = viewProject;
+	console.log(project.teamMembers);
 
 	const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -85,15 +86,24 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 								Team
 							</h5>
 							<div className='flex flex-col'>
-								{project?.teamMembers?.map(
-									(member: TeamMember, index: any) => (
-										<p
-											className='md:text-base text-sm font-outfit font-normal'
-											key={index}
-										>
-											{member?.name} - {member?.role}
-										</p>
+								{project?.teamMembers &&
+								project.teamMembers.length > 0 ? (
+									project.teamMembers.map(
+										(collaborator: any, index: number) => (
+											<p
+												className='md:text-base text-sm font-outfit font-normal'
+												key={index}
+											>
+												{collaborator.member?.name ||
+													'Unknown'}{' '}
+												- {collaborator.roleInProject}
+											</p>
+										)
 									)
+								) : (
+									<p className='md:text-base text-sm font-outfit font-normal'>
+										No team members specified
+									</p>
 								)}
 							</div>
 						</div>{' '}
