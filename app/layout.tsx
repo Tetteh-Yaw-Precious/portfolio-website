@@ -1,5 +1,3 @@
-'use client';
-import { usePathname } from 'next/navigation';
 import Topnavbar from '@/components/topnavbar';
 import './globals.css';
 import Footer from '@/components/footer';
@@ -13,8 +11,6 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const router = usePathname();
-
 	// Define default values
 	let title = 'Yaw Precious | Product Designer';
 	let description =
