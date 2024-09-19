@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 		<ChakraProvider theme={theme}>
 			<AnimatePresence mode='wait'>
 				<Component key={router.route} {...pageProps} />
-				<Analytics />
 			</AnimatePresence>
 		</ChakraProvider>
 	);

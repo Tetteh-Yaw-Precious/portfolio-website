@@ -1,6 +1,9 @@
 import { getProject } from '@/sanity/sanity-utils';
 import ProjectDetailPage from '@/components/projectdetailpage';
 import urlFor from '@/library/urlFor';
+import Head from 'next/head'; // Import Head component
+import { usePathname } from 'next/navigation';
+
 type props = {
 	params: { slug: string };
 };
@@ -17,9 +20,28 @@ export default async function Page({ params }: props) {
 		},
 	};
 	const imageUrl = urlFor(imageExample).url();
+	const pathname = usePathname();
+
+	// Check if project is defined
+	if (!project) {
+		return <div>Loading...</div>; // Handle loading state
+	}
 
 	return (
 		<>
+			{pathname === '/' && (
+				<head>
+					<title>{project?.name}</title> {/* Add dynamic title */}
+					<meta
+						name='description'
+						content={project?.aboutInformation}
+					/>
+					{/* Add description */}
+					<meta property='og:image' content={imageUrl} />
+					{/* Add Open Graph image */}
+				</head>
+			)}
+
 			<ProjectDetailPage viewProject={project} />
 		</>
 	);

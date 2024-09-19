@@ -16,27 +16,29 @@ import { getProjects } from '@/sanity/sanity-utils';
 
 // Import the ProjectType, which is likely used to type the projects data
 import { ProjectType } from '@/types/ProjectType';
+import Head from 'next/head';
 
 // Main component for the homepage
 export default async function Home() {
 	// Fetch projects data
 	const projects = await getProjects();
 	// Debugging line (commented out)
-	console.log(projects);
 
 	return (
-		<div className='flex flex-col font-bold scroll-smooth'>
-			{/* PageLoader component is commented out */}
-			{/* <PageLoader /> */}
-			<div className='scroll-smooth'>
-				<Herosection />
-				<AboutMe />
-				<ProjectSection projects={projects} />
-				{/* These sections are commented out, possibly for future implementation */}
-				{/* <NewsSection />
+		<>
+			<div className='flex flex-col font-bold scroll-smooth'>
+				{/* PageLoader component is commented out */}
+				{/* <PageLoader /> */}
+				<div className='scroll-smooth'>
+					<Herosection />
+					<AboutMe />
+					<ProjectSection projects={projects} />
+					{/* These sections are commented out, possibly for future implementation */}
+					{/* <NewsSection />
       <ResourcesSection /> */}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
