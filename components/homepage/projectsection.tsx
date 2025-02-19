@@ -1,13 +1,8 @@
 'use client';
-import { getPosts, getProjects } from '@/sanity/sanity-utils';
-import ProjectCard from './projectcard';
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import { useRef } from 'react';
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Newprojectcard from './newprojectcard';
-import { PostType, ProjectType } from '@/types/ProjectType';
-import Link from 'next/link';
 import YouTube, { YouTubeProps } from 'react-youtube';
 // import Video from 'next-video'
 // import awesomeVideo from 'https://youtu.be/95iB0X-R3wI';
@@ -71,15 +66,15 @@ const ProjectSection = ({ projects }: any) => {
 			className='flex flex-col items-center md:pt-[7.688rem] pt-[4rem]  md:px-0 px-[10%]'
 			id='works'
 		>
-			<div className='md:w-[50rem] w-full'>
-				<h1 className='text-xl font-medium md:text-3xl mb-[2rem] font-outfit tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0'>
+			<div className='md:w-[60rem] w-full'>
+				<h1 className='text-xl font-medium md:text-3xl mb-[2rem] font-inter tracking-[-1px] text-[#191819] leading-[100%]  m-0 p-0'>
 					~ Selected Works
 				</h1>
 			</div>
 			<Tabs
 				as='div'
 				variant='unstyled'
-				className='flex flex-col items-center md:max-w-[50rem] w-full'
+				className='flex flex-col items-center md:max-w-[76rem] w-full'
 				ref={targetRef}
 			>
 				{/*tab container */}
@@ -95,20 +90,20 @@ const ProjectSection = ({ projects }: any) => {
 					}}
 				>
 					{/* <TabList className='flex md:gap-4 gap-2 w-full items-center justify-center min-h-[10vh] bg-white'>
-            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-inter  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               All
             </Tab>
-            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-inter  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               Design
             </Tab>
-            <Tab _selected={{ color: 'red', bg: 'blue.500' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-outfit  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
+            <Tab _selected={{ color: 'red', bg: 'brand.wblue.100' }} className='md:px-12 px-6 border-2 md:text-lg bg-[#E5E7E3] text-sm text-[#191819] rounded-full font-inter  md:h-12 h-10 font-medium aria-selected:!bg-[#C9F1A6] aria-selected:border-transparent aria-selected:text-[#191819]'>
               Frontend Development
             </Tab>
           </TabList> */}
 				</motion.div>
 				<TabPanels>
-					<TabPanel className='!p-0'>
-						<div className='flex flex-col items-center md:gap-[4rem] gap-[1rem]'>
+					<TabPanel className='!p-0 w-full'>
+						<div className='flex flex-col items-center md:gap-[10rem] gap-[1rem]'>
 							{showCaseProjects?.map(
 								(project: any, index: any) => {
 									return (
@@ -132,6 +127,8 @@ const ProjectSection = ({ projects }: any) => {
 												project.caseStudyReady
 											}
 											shipped={project.shipped}
+											year={project.year}
+											InDevelopment={project.InDevelopment}
 										/>
 									);
 								}
@@ -150,7 +147,7 @@ const ProjectSection = ({ projects }: any) => {
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
 
           <div className="w-full md:my-4 my-8 px-[10%] gap-1 flex flex-col items-center justify-center">
-            <h1 className="text-3xl font-bold md:text-5xl heading-text font-outfit tracking-[-1px] text-[#191819] leading-[100%]">My Articles</h1>
+            <h1 className="text-3xl font-bold md:text-5xl heading-text font-inter tracking-[-1px] text-[#191819] leading-[100%]">My Articles</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">Aside keeping a journal, I enjoy writing these articles.</p>
 
           </div>
@@ -158,10 +155,10 @@ const ProjectSection = ({ projects }: any) => {
             {posts?.map((post: any, index) => {
               return (
                 <div key={index}>
-                  <Link href={post.url} target="_blank" className="flex flex-col md:gap-6 gap-4" key={index}>
+                  <Link href={post.url} target="_blank" className="flex flex-col gap-4 md:gap-6" key={index}>
                     <Image src={post.cover} width={450} height={288} alt='lenis' />
                     <div>
-                      <h6 className="font-outfit md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
+                      <h6 className="font-inter md:text-xl leading-[140%] font-medium md:tracking-[-1.5px] tracking-[-0.5px]">{post.title}</h6>
                     </div>
                   </Link>
                 </div>
@@ -174,7 +171,7 @@ const ProjectSection = ({ projects }: any) => {
 			{/* <section className="md:min-h-[100vh] py-[5%]">
         <div className="w-full md:my-4 my-8 px-[10%] md:gap-16 gap-8 flex flex-col items-center justify-center">
           <div className="md:px-[25%] px-[5%] flex flex-col items-center justify-center gap-4">
-            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-outfit text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
+            <h1 className="text-2xl font-semibold md:text-5xl heading-text font-inter text-[#191819] leading-[100%] md:tracking-[-2.5px] tracking-[-1.5px]">Sharing Knowledge</h1>
             <p className="md:text-xl text-base text-[#464646] leading-[150%] text-center">I’m always looking for ways to get better as a person, get knowledgeable and share what I know.</p>
           </div>
 

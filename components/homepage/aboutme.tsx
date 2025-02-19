@@ -14,13 +14,13 @@ const aboutme = () => {
 	];
 	return (
 		<div
-			className='md:min-h-[40vh] min-h-[100vh] flex flex-col justify-center md:py-0 scroll-smooth'
+			className='md:min-h-[70vh] min-h-[80vh] flex flex-col justify-center md:py-0 scroll-smooth'
 			id='about'
 		>
-			<div className='flex items-center justify-center md:px-[20%] px-[10%] md:py-[8rem] py-[4rem]'>
-				<div className='flex md:flex-row flex-col-reverse md:gap-32 gap-6'>
+			<div className='flex items-center justify-center md:px-[20%] px-[10%] md:py-[8rem] py-[2rem]'>
+				<div className='flex flex-col-reverse gap-6 md:flex-row md:gap-32'>
 					<div className='!leading-[120%] h-full flex justify-center items-center w-full'>
-						<p className='md:!text-xl text-base !leading-[190%] md:tracking-[-0.2px] tracking-[-0.2] md:text-left text-center font-outfit text-gray-900 !font-normal'>{`
+						<p className='md:!text-xl text-base !leading-[190%] md:tracking-[-0.2px] tracking-[-0.2] md:text-left text-center font-inter text-gray-900 !font-normal'>{`
                             Hello! I’m Yaw Precious, a Product Designer crafting intuitive apps and websites that enhance user experiences and streamline business operations. I conduct user research, translate insights into impactful designs, and think in systems—focusing on efficiency in both the teams I collaborate with and the artifacts I produce. In my free time, I enjoy tinkering with frontend technologies, currently exploring AstroJS.
         `}</p>
 					</div>
@@ -34,7 +34,7 @@ const aboutme = () => {
 				}}
 			>
 				<div className='md:w-[15%] w-full md:pr-[0rem] pr-0 flex md:items-center md:justify-normal justify-center md:bg-none !md:mb-0 md:mt-0  mt-5'>
-					<h4 className='font-outfit md:text-lg w-full text-base md:text-start text-center font-semibold leading-[120%]'>
+					<h4 className='font-inter md:text-lg w-full text-base md:text-start text-center font-semibold leading-[120%]'>
 						Where I’ve made an impact
 					</h4>
 				</div>

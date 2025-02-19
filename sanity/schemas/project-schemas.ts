@@ -201,6 +201,34 @@ export const project = {
       type: "boolean",
       initialValue: false,
     },
+    {
+      name: "InDevelopment",
+      title: "In Development",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
+      name: "projectDate",
+      title: "Project Date",
+      type: "date",
+      description: "Select when this project was completed or started",
+      validation: (Rule: any) => Rule.required()
+    },
+    {
+      name: "year",
+      title: "Project Year",
+      type: "number",
+      description: "Year is automatically set from the Project Date",
+      readOnly: true,
+      initialValue: new Date().getFullYear(),
+      options: {
+        source: 'projectDate',
+        calculateValue: (projectDate: string) => {
+          if (!projectDate) return new Date().getFullYear();
+          return new Date(projectDate).getFullYear();
+        }
+      }
+    },
   ],
 };
 
@@ -301,5 +329,3 @@ export const teamMember = {
     }
   ]
 };
-
-

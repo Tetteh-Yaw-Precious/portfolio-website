@@ -8,9 +8,6 @@ import ProjectSection from '@/components/homepage/projectsection';
 // Lenis is imported but not used in this file
 import Lenis from 'lenis';
 
-// These imports are commented out as they're not currently used
-// import { useEffect, useState } from "react";
-
 // Import utility function to fetch projects from Sanity
 import { getProjects } from '@/sanity/sanity-utils';
 
@@ -22,8 +19,7 @@ import Head from 'next/head';
 export default async function Home() {
 	// Fetch projects data
 	const projects = await getProjects();
-	// Debugging line (commented out)
-
+	console.log(projects);
 	return (
 		<>
 			<div className='flex flex-col font-bold scroll-smooth'>

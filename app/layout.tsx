@@ -5,6 +5,13 @@ import Head from 'next/head';
 import { Providers } from './providers';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+	subsets: ['latin'],
+	display: 'swap',
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+});
 
 export default function RootLayout({
 	children,
@@ -27,13 +34,13 @@ export default function RootLayout({
 	// Add more conditions as needed for other routes
 
 	return (
-		<html lang='en'>
+		<html lang='en' className={inter.className}>
 			<head>
 				<title>{title}</title>
 				<meta name='description' content={description} />
 				<meta charSet='UTF-8' />
 			</head>
-			<body className='flex justify-center '>
+			<body className='flex justify-center'>
 				<Script
 					strategy='afterInteractive' // Ensures script loads after initial render
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
@@ -50,7 +57,7 @@ export default function RootLayout({
 					}}
 				/>
 				<Providers>
-					<main className='w-full xl:w-full scroll-smooth flex flex-col items-center justify-center'>
+					<main className='flex flex-col justify-center items-center w-full xl:w-full scroll-smooth'>
 						<main className='md:max-w-[1440px] w-full'>
 							<Topnavbar />
 							{children}

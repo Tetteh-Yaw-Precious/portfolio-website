@@ -182,7 +182,7 @@ const Topnavbar = () => {
 
 			{isMedium && (
 				<div className='z-[100] sticky top-0 flex justify-center items-center h-[8vh]'>
-					<nav className='h-[8vh] fixed w-full border-gray-200 flex bg-white items-center justify-center text-base font-normal font-outfit'>
+					<nav className='h-[8vh] fixed w-full border-gray-200 flex bg-white items-center justify-center text-base font-normal font-inter'>
 						{menuLinks.map((link, index) => (
 							<a
 								href={link.href}

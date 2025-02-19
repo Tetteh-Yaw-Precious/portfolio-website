@@ -65,35 +65,35 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 				<div className='w-full'>
 					<motion.div className='md:px-[20%] px-[10%] w-full'>
 						<motion.h1
-							className='mb-3 leading-[120%] tracking-[-.5px] md:text-2xl text-lg font-semibold font-outfit'
-							//  variants={projectTitle}
+							className='mb-3 leading-[120%] tracking-[-.5px] md:text-2xl text-lg font-semibold font-inter'
+						//  variants={projectTitle}
 						>
 							{project.name}
 						</motion.h1>
-						<p className='!py-2 leading-[177k%] tracking-[0px] md:text-base text-sm font-outfit'>
+						<p className='!py-2 leading-[177k%] tracking-[0px] md:text-base text-sm font-inter'>
 							{project.aboutInformation}
 						</p>
 					</motion.div>
 					<motion.div className='md:px-[20%] px-[10%] md:border-y border-y-0 flex md:flex-row flex-col md:gap-0 gap-4 w-full min-h-[7rem] border-gray-700 md:mt-[2rem] mt-[1rem] md:py-[1.5rem] py-0 '>
 						<div className='justify-center md:w-1/3 w-full flex flex-col md:gap-1 gap-0.5 h-full'>
-							<h5 className='text-lg font-outfit md:font-medium font-semibold p-0 m-0'>
+							<h5 className='text-lg font-inter md:font-medium font-semibold p-0 m-0'>
 								Duration
 							</h5>
-							<p className='md:text-base text-sm font-outfit font-normal'>
+							<p className='md:text-base text-sm font-inter font-normal'>
 								{project.duration}
 							</p>
 						</div>{' '}
 						<div className='justify-center md:w-2/3 w-full flex flex-col md:gap-1 gap-0.5'>
-							<h5 className='text-lg font-outfit md:font-medium font-semibold p-0 m-0'>
+							<h5 className='text-lg font-inter md:font-medium font-semibold p-0 m-0'>
 								Team
 							</h5>
 							<div className='flex flex-col'>
 								{project?.collaborators &&
-								project.collaborators.length > 0 ? (
+									project.collaborators.length > 0 ? (
 									project.collaborators.map(
 										(collaborator: any, index: number) => (
 											<p
-												className='md:text-base text-sm font-outfit font-normal'
+												className='md:text-base text-sm font-inter font-normal'
 												key={index}
 											>
 												{collaborator.teamMember
@@ -103,17 +103,17 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 										)
 									)
 								) : (
-									<p className='md:text-base text-sm font-outfit font-normal'>
+									<p className='md:text-base text-sm font-inter font-normal'>
 										No team members specified
 									</p>
 								)}
 							</div>
 						</div>{' '}
 						{/* <div className='justify-center md:w-1/3 w-full flex flex-col md:gap-1 gap-0.5 h-full'>
-							<h5 className='text-lg font-outfit md:font-medium font-semibold p-0 m-0'>
+							<h5 className='text-lg font-inter md:font-medium font-semibold p-0 m-0'>
 								My Role(s)
 							</h5>
-							<p className='md:text-base text-sm font-outfit font-normal'>
+							<p className='md:text-base text-sm font-inter font-normal'>
 								Product & brand design{' '}
 							</p>
 						</div> */}
@@ -121,7 +121,7 @@ const ProjectDetailPage = ({ viewProject }: any) => {
 				</div>
 				<motion.div
 					className='case-study-content'
-					//  variants={letter}
+				//  variants={letter}
 				>
 					<PortableText
 						value={project.content}

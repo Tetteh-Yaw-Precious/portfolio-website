@@ -61,7 +61,7 @@ const Curve: FC<InnerProps> = ({ children }) => {
 				style={{ opacity: dimensions.width == null ? 1 : 0 }}
 				className='background'
 			/>
-			<motion.p className='route font-outfit font-medium' {...anim(text)}>
+			<motion.p className='route font-inter font-medium' {...anim(text)}>
 				{
 					(routes[pathname] = 'home'
 						? `Hello, I'm Yaw Precious`

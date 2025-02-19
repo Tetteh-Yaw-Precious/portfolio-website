@@ -4,11 +4,10 @@ import { ProjectType, PostType } from '@/types/ProjectType';
 import { createClient } from '@sanity/client';
 import { groq } from 'next-sanity';
 import clientConfig from './config/client-config';
-import { revalidate } from '@/app/page';
 
 export async function getProjects(): Promise<ProjectType[]> {
-	return createClient(clientConfig).fetch(
-		groq`*[_type == "project" && showcase == 'forshowcase']{
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "project" && showcase == 'forshowcase']{
       _id,
       name,
       "slug": slug.current,
@@ -20,18 +19,25 @@ export async function getProjects(): Promise<ProjectType[]> {
       shortdescription,status,
       showcase,
       url,
-        caseStudyReady,
+      projectDate,
+      caseStudyReady,
       shipped,
-      passwordProtected
-    }`,
-		undefined, // Pass undefined for params
-		{ cache: 'no-store' } // Add cache option to ensure fresh data
-	);
+      passwordProtected,
+      InDevelopment
+    } | order(projectDate asc)`,
+    undefined, // Pass undefined for params
+    { cache: 'no-store' } // Add cache option to ensure fresh data
+  ).then((projects: any[]) =>
+    projects.map((project: any) => ({
+      ...project,
+      year: project.projectDate ? new Date(project.projectDate).getFullYear() : null
+    }))
+  );
 }
 
 export async function getPosts(): Promise<PostType[]> {
-	return createClient(clientConfig).fetch(
-		groq`*[_type == "posts"] {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "posts"] {
   _id,
   title,
   "cover": cover.asset->url,
@@ -52,12 +58,12 @@ export async function getPosts(): Promise<PostType[]> {
     }
   }
 }`
-	);
+  );
 }
 
 export async function getProject(slug: string): Promise<ProjectType> {
-	return createClient(clientConfig).fetch(
-		groq`*[_type == "project" && slug.current == $slug][0]{
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
       _id,
       _createdAt,
       name,
@@ -76,14 +82,14 @@ export async function getProject(slug: string): Promise<ProjectType> {
       },
     
     }`,
-		{ slug }, // Pass params as the second argument
-		{ cache: 'no-store' } as const // Pass options as the third argument with type assertion
-	);
+    { slug }, // Pass params as the second argument
+    { cache: 'no-store' } as const // Pass options as the third argument with type assertion
+  );
 }
 
 export async function getAllProjectSlugs() {
-	// Fetch all project slugs from Sanity
-	return createClient(clientConfig).fetch(groq`
+  // Fetch all project slugs from Sanity
+  return createClient(clientConfig).fetch(groq`
     *[_type == "project"]{ slug }
   `);
 }

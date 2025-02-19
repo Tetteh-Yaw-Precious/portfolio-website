@@ -1,7 +1,6 @@
 import { getProject } from '@/sanity/sanity-utils';
 import ProjectDetailPage from '@/components/projectdetailpage';
 import urlFor from '@/library/urlFor';
-import Head from 'next/head'; // Import Head component
 
 type props = {
 	params: { slug: string };

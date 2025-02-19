@@ -22,34 +22,34 @@ const ProjectCard: FC<projectTypes> = ({
 	...props
 }) => {
 	return (
-		<div className='flex flex-col w-full gap-4 pb-8 md:odd:flex-col'>
-			<div className='image-ct'>
+		<div className='flex flex-col gap-4 pb-8 w-full md:odd:flex-col'>
+			<div className='border border-red-500 image-ct'>
 				<Image
 					src={image}
-					width={610}
-					height={560}
+					width={800}
+					height={700}
 					alt='project image'
 				/>
 			</div>
 			<div className='flex flex-col gap-3 content-ct'>
 				<div className='flex flex-col gap-4 content'>
 					<div className='w-full'>
-						<div className='text-base font-outfit font-light lg:w-[31rem] md:w-[100%] leading-[150%]'>
+						<div className='text-base font-inter font-light lg:w-[31rem] md:w-[100%] leading-[150%]'>
 							<p>lkjlkjkl</p>
 						</div>
-						<p className='text-xl font-semibold font-outfit'>
+						<p className='text-xl font-semibold font-inter'>
 							{title}
 						</p>
-						<h6 className='font-medium !text-gray-500 text-normal font-outfit'>
+						<h6 className='font-medium !text-gray-500 text-normal font-inter'>
 							Role: {role}
 						</h6>
 					</div>
 				</div>
 
-				<div className='flex items-center gap-2 link-ct'>
+				<div className='flex gap-2 items-center link-ct'>
 					<a
 						href={link}
-						className='text-base font-light underline font-outfit'
+						className='text-base font-light underline font-inter'
 					>
 						Read Case Study
 					</a>

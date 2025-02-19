@@ -119,7 +119,7 @@ function Herosection() {
 						variants={gridContainerVariants}
 						initial='hidden'
 						animate='show'
-						className='flex flex-col items-center justify-center md:gap-6 gap-8 content-container'
+						className='flex flex-col gap-8 justify-center items-center md:gap-6 content-container'
 					>
 						<motion.div
 							variants={item}
@@ -178,7 +178,7 @@ function Herosection() {
 									duration: 0.6,
 									ease: 'easeOut',
 								}}
-								className='md:text-base text-base italic !text-[#011019] md:leading-[110%] leading-[130%] text-center font-normal font-outfit md:!tracking-[-.1px] tracking-[-.2px]'
+								className='md:text-base text-base italic !text-[#011019] md:leading-[110%] leading-[130%] text-center font-normal font-inter md:!tracking-[-.1px] tracking-[-.2px]'
 								style={{
 									background:
 										'var(--gradient-stroke, linear-gradient(93deg, #000 4.71%, #727272 120.19%))',
@@ -195,7 +195,7 @@ function Herosection() {
 							variants={item}
 							initial='initial'
 							animate='animate'
-							className='md:text-6xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center md:font-medium font-medium font-outfit md:!tracking-[-2.5px] tracking-[-.5px] md:w-[70%] w-[70%]'
+							className='md:text-7xl text-2xl !text-[#011019] md:leading-[110%] leading-[130%] text-center md:font-semibold font-medium font-inter md:!tracking-[-2.5px] tracking-[-.5px] md:w-[70%] w-[70%]'
 							style={{
 								scale: scale,
 							}}
@@ -210,7 +210,7 @@ function Herosection() {
 							</span> */}
 						</motion.h1>
 						<motion.div variants={item}>
-							{/* <Button className='font-outfit font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
+							{/* <Button className='font-inter font-medium md:text-2xl text-lg md:px-16 px-10 py-8 md:!py-12 rounded-full' style={{
                 background: ' linear-gradient(90deg, #66DA00 27%, #E1FBCB 100%)',
               }}>{`Let's talk 👋`}
               </Button> */}

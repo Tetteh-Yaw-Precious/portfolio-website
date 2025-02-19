@@ -30,6 +30,12 @@ export type ProjectType = {
   duration: string;
   content: PortableTextBlock[];
   status: string;
+  year?: number; // Add optional year field
+  projectDate?: string; // Add optional projectDate
+  caseStudyReady: boolean;
+  shipped: boolean;
+  passwordProtected: boolean;
+  InDevelopment: boolean;
   collaborators: Collaborator[]; // Array of Collaborator type
 };
 
